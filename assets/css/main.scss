@@ -3,11 +3,12 @@
 search: false
 ---
 
+$primary-color: #323641 !default;
+
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-$primary-color: #323641 !default;
 
 
