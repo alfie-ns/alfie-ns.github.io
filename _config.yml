@@ -113,8 +113,8 @@ analytics:
 author:
   name             : "Alfie Nurse"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "Computer Science Under Graduate"
+  location         : "Plymouth University, UK"
   email            :
   links:
     - label: "Email"
@@ -131,7 +131,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/alfie-ns"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -147,7 +147,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/alfie-ns"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
