@@ -8,3 +8,5 @@ header:
 This is a test page.
 
 hello!
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.jpg" alt="">
