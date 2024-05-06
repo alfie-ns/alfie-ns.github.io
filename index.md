@@ -11,7 +11,7 @@ Hello, I'm Alfie (Martin) Nurse. I'm a student at the University of Plymouth, st
 
 ## Heading Level 2
 
-`<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">`
+<!-- `<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">` -->
 
 An image above that isn't in a table.
 
