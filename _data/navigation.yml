@@ -4,8 +4,13 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: /about
-  - title: "Dad"
-    url: /dad
+  - title: "Mathematics"
+    url: /mathematics
+  - title: "Business"
+    url: /business
+  - title: "Data Science"
+    url: /data-science
+    
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
