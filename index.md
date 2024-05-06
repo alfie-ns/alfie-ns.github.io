@@ -4,18 +4,17 @@ author_profile: true
 header:
   overlay_image: /assets/splash/header.png
 ---
-
 This is a test page.
 
-hello!
+Test
 
-| <img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt=""> | An image in a table |
+| `<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">` | An image in a table |
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## Heading Level 2
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt=""> 
+`<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">`
 
 An image above that isn't in a table.
 
