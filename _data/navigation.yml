@@ -5,7 +5,7 @@ main:
   - title: "About"
     url: /about
   - title: "Mathematics"
-    url: /mathematics
+    url: /maths
   - title: "Business"
     url: /business
   - title: "Data Science"
