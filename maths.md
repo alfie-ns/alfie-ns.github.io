@@ -1,3 +1,8 @@
+layout: archive
+author_profile: true
+header:
+overlay_image: /assets/splash/header.png
+
 # Welcome to My Mathematics Page
 
 ## Introduction
