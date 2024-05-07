@@ -6,15 +6,15 @@ header:
 title: "Mathematics"
 ---
 
-# Welcome to My Mathematics Page
+# Welcome to My Mathematics Page!
 
 ## Introduction
 
 As a fervent enthusiast of mathematics, I explore various mathematical concepts that captivate me. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests.
 
-## Theoretical Mathematics
+## Maths for Machine Learning
 
-Here, I delve into pure mathematical theories that have not only influenced my academic path but also my personal analytical approaches.
+{machine learning maths...}
 
 ## Applied Mathematics
 
