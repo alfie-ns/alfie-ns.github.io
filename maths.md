@@ -5,8 +5,8 @@ header:
   overlay_image: /assets/splash/header.png
   overlay_filter: 0.5
   caption: "Mathematics"
-title: "Welcome to My Mathematics Page"
 ---
+
 # Welcome to My Mathematics Page
 
 ## Introduction
@@ -23,9 +23,8 @@ This section showcases examples of applying mathematical principles in real-worl
 
 ## Tools and Software I Use
 
--**MATLAB**: A staple in my computational mathematics toolkit.
-
--**Python (NumPy, SciPy)**: Essential for data analysis and scientific computing.
+- **MATLAB**: A staple in my computational mathematics toolkit.
+- **Python (NumPy, SciPy)**: Essential for data analysis and scientific computing.
 
 ## My Mathematical Achievements
 
@@ -34,7 +33,6 @@ I highlight my recognitions and awards in mathematics, which reflect my dedicati
 ## Recent Blog Posts
 
 Stay updated with my latest thoughts and explorations in mathematics:
-
 - [Math in Machine Learning](/posts/math-in-ml)
 
 ## Contact Me
