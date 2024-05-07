@@ -6,15 +6,13 @@ header:
 ---
 ## Introduction
 
-Hello, I'm Alfie (Martin) Nurse. I'm a student at the University of Plymouth, studying BSc (Hons) Computer Science (Artificial Intelligence). Currently, I'm on my summer break, preparing to enter my second year after achieving first-class honours in my challenging first-year modules, particularly those related to maths—a subject I'm passionate about. I'm an eager learner; continually seeking to enhance my skills and knowledge, I am particularly focused on Artificial Intelligence, Machine Learning, Data Science, and Mathematics. Additionally, I have a keen interest in business, marketing, entrepreneurship, and product development.
+Hello, I'm Alfie (Martin) Nurse, currently studying BSc (Hons) Computer Science with a focus on Artificial Intelligence at the University of Plymouth. As I prepare to enter my second year this fall, I am on track to achieve first-class honours, especially excelling in mathematics, a subject I am deeply passionate about. An avid learner, I am continuously seeking to enhance my skills in Artificial Intelligence, Machine Learning, Data Science, and Mathematics. Additionally, I have a keen interest in business, marketing, entrepreneurship, and product development. I am using my summer break to further explore these areas and prepare for upcoming challenges.
 
 <!-- | `<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">` | An image in a table | -->
 
-
-
 <!-- `<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">` -->
 
-An image above that isn't in a table.
+<!--An image above that isn't in a table. -->
 
 ## Heading Level 2
 
