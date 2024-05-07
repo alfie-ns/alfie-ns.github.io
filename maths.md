@@ -3,8 +3,7 @@ layout: archive
 author_profile: true
 header:
   overlay_image: /assets/splash/header.png
-  overlay_filter: 0.5
-  caption: "Mathematics"
+title: "Mathematics"
 ---
 
 # Welcome to My Mathematics Page
