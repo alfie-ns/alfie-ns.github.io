@@ -4,12 +4,11 @@ author_profile: true
 header:
   overlay_image: /assets/splash/header.png
 ---
-
 # Welcome to My Mathematics Page
 
 ## Introduction
 
-As a fervent enthusiast of mathematics, I explore various mathematical concepts that captivate me. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical pursuits.
+As a fervent enthusiast of mathematics, I explore various mathematical concepts that captivate me. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests.
 
 ## Theoretical Mathematics
 
