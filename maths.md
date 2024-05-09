@@ -5,7 +5,6 @@ header:
   overlay_image: /assets/splash/header.png
 title: "Mathematics"
 ---
-
 # Welcome to My Mathematics Page!
 
 ## Introduction
@@ -30,11 +29,12 @@ This section showcases examples of applying mathematical principles in real-worl
 I highlight my recognitions and awards in mathematics, which reflect my dedication and skill in the field.
 
 - Received 83% in my foundation-year mathematics module. 97.92% in the coursework, and 62.86% in the exam.
-- In my first-year mathematics module, later-in-life following recovery of my brain injury, I achieved {...} in the module, 80.67% in the exam, and {...} in the coding report.
+- In my first-year mathematics module, after further recovery from my injury, I achieved {...} in the module, 80.67% in the exam, and {...} in the coding report.
 
 ## Recent Blog Posts
 
 Stay updated with my latest thoughts and explorations in mathematics:
+
 - [Math in Machine Learning](/posts/math-in-ml)
 
 ## Contact Me
