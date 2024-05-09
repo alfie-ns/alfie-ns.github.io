@@ -1,3 +1,4 @@
 - [ ] Make grades.md for all grades upto this point
-- [ ] Ask Plym if can copy their html(ask gpt4 if one should indeed ask)
+- [ ] make guiz.md
+- [ ] Ask Plym if can copy their html web pages
 - [ ] Make email sidebutton work
