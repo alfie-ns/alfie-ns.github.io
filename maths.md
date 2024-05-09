@@ -5,7 +5,6 @@ header:
   overlay_image: /assets/splash/header.png
 title: "Welcome to My Mathematics Page!"
 ---
- 
 As a fervent enthusiast of mathematics, I explore various mathematical concepts that captivate me. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests.
 
 ## Maths for Machine Learning
@@ -27,7 +26,7 @@ This section showcases examples of applying mathematical principles in real-worl
 
 I highlight my recognitions and awards in mathematics, which reflect my dedication and skill in the field:
 
-2022 - Received 83% in my foundation-year mathematics module: 97.92% in the coursework, and 62.86% in the exam.
+2022 - Received 83% in my foundation year mathematics module: 97.92% in the coursework, and 62.86% in the exam.
 
 2024 - In my first-year mathematics module, in my second semester, after prolonged recovery from my injury, I achieved {…} in the module, 80.67% in the exam, and {…} in the coding report.
 
@@ -39,6 +38,7 @@ Stay updated with my latest thoughts and explorations in mathematics:
 -->
 
 <!-- FIX THIS [ ] -->
+
 ## Contact Me
 
 I am always open to discussions about mathematical concepts or potential collaborations. Feel free to [get in touch](mailto:alfienurse@gmail.com)!
