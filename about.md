@@ -31,7 +31,7 @@ Once again, I performed well in my first year, achieving 80% in my maths test an
 
 - Strong background in mathematics (80% in recent assessment) to drive AI innovation
 
-- Demonstrated proactive initiative and ability to circumvent memory challenges by creating a maths notebook, thereby serving as an effective backup for      reference. This strategy has been instrumental in adapting to and managing recovery from a past severe health issue.
+- Demonstrated proactive initiative and ability to circumvent memory challenges by creating a maths notebook, thereby serving as an effective backup for      reference. This strategy has been instrumental in adapting to and managing recovery from said past severe health issue.
 
 - Aspiring to follow in the footsteps of previous Maths PhD mentor by pursuing advanced education in AI/ML
 
