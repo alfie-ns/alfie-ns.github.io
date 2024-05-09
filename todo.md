@@ -1,1 +1,2 @@
-- [ ] Make grades.html 
+- [ ] Make grades.html
+- [ ] Make email sidebutton work
