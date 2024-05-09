@@ -39,4 +39,4 @@ Stay updated with my latest thoughts and explorations in mathematics:
 -->
 ## Contact Me
 
-I am always open to discussions about mathematical concepts or potential collaborations. Feel free to [get in touch](mailto:email@example.com)!
+I am always open to discussions about mathematical concepts or potential collaborations. Feel free to [get in touch](mailto:alfienurse@gmail.com)!
