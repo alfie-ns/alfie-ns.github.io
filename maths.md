@@ -38,6 +38,8 @@ Stay updated with my latest thoughts and explorations in mathematics:
 
 - [Math in Machine Learning](/posts/math-in-ml)
 -->
-## Contact Me
+
 <!-- FIX THIS [ ] -->
+## Contact Me
+
 I am always open to discussions about mathematical concepts or potential collaborations. Feel free to [get in touch](mailto:alfienurse@gmail.com)!
