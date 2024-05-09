@@ -19,6 +19,8 @@ As a fervent enthusiast of mathematics, I explore various mathematical concepts 
 
 This section showcases examples of applying mathematical principles in real-world scenarios. Whether it's through programming projects, statistical analysis, or model simulations, the application of theory to practice is vividly depicted.
 
+{Elaborate...}
+
 ## Tools and Software I Use
 
 - **MATLAB**: A staple in my computational mathematics toolkit.
@@ -28,9 +30,9 @@ This section showcases examples of applying mathematical principles in real-worl
 
 I highlight my recognitions and awards in mathematics, which reflect my dedication and skill in the field:
 
-Received 83% in my foundation-year mathematics module: 97.92% in the coursework, and 62.86% in the exam.
+2022 - Received 83% in my foundation-year mathematics module: 97.92% in the coursework, and 62.86% in the exam.
 
-In my first-year mathematics module, after further recovery from my injury: I achieved {...} in the module, 80.67% in the exam, and {...} in the coding report.
+2024 - In my first-year mathematics module, in my second semester, after further recovery from my injury: I achieved {...} in the module, 80.67% in the exam, and {...} in the coding report.
 
 <!--## Recent Blog Posts
 
