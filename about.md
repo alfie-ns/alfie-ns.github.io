@@ -17,8 +17,8 @@ I performed well in my first year, achieving 80% in my maths test and {report gr
 <style>
 hr {
     border: none;
-    border-top: 2px solid red; /* Change color to your preference */
-    width: 50%; /* Change width as needed */
+    border-top: 2px solid black; 
+    width: 100%; 
     margin: auto; /* Center the line */
 }
 </style>
