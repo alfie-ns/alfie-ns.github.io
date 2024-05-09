@@ -23,7 +23,7 @@ hr {
 }
 </style>
 
-**Lines with empty checkboxes are concepts I wish to traverse fully and understand in-depth through my studies and career**
+**Lines with empty checkboxes are concepts I wish to traverse fully and understand in-depth throughout my studies **
 
 - [X] [ ] [ ]  Driven to excel and deliver impactful solutions
 
