@@ -31,12 +31,12 @@ I highlight my recognitions and awards in mathematics, which reflect my dedicati
 - Received 83% in my foundation-year mathematics module. 97.92% in the coursework, and 62.86% in the exam.
 - In my first-year mathematics module, after further recovery from my injury, I achieved {...} in the module, 80.67% in the exam, and {...} in the coding report.
 
-## Recent Blog Posts
+<!--## Recent Blog Posts
 
 Stay updated with my latest thoughts and explorations in mathematics:
 
 - [Math in Machine Learning](/posts/math-in-ml)
-
+-->
 ## Contact Me
 
 I am always open to discussions about mathematical concepts or potential collaborations. Feel free to [get in touch](mailto:email@example.com)!
