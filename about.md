@@ -13,7 +13,15 @@ I excelled during my foundation year, achieving 83.90% in MATH054, thanks to dis
 
 I performed well in my first year, achieving 80% in my maths test and {report grade} in my report for the maths module COMP1003, where I studied and implemented a complex C# AVL tree. I also achieved 71% in COMP1001, a challenging, weed-out type of module, where I learned C and C++. I am now preparing for my second year and particularly looking forward to my third-year modules, where I'll be studying Machine Learning and Human-Robot Interaction.
 
-**---**
+<hr>
+<style>
+hr {
+    border: none;
+    border-top: 2px solid red; /* Change color to your preference */
+    width: 50%; /* Change width as needed */
+    margin: auto; /* Center the line */
+}
+</style>
 
 **Lines with empty checkboxes are concepts I wish to traverse fully and understand in-depth through my studies and career**
 
