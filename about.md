@@ -13,15 +13,13 @@ I excelled during my foundation year, achieving 83.90% in MATH054, thanks to dis
 
 I performed well in my first year, achieving 80% in my maths test and {report grade} in my report for the maths module COMP1003, where I studied and implemented a complex C# AVL tree. I also achieved 71% in COMP1001, a challenging, weed-out type of module, where I learned C and C++. I am now preparing for my second year and particularly looking forward to my third-year modules, where I'll be studying Machine Learning and Human-Robot Interaction.
 
-<hr>
+<hr> 
 
-- [X] Driven to excel and deliver impactful solutions
+**Lines with empty checkboxes are concepts I wish to traverse fully and understand in-depth through my studies and career**
 
-- [X] Proven track record of academic achievement
+- [X] [ ] [ ]  Driven to excel and deliver impactful solutions
 
-- [ ] Dedicated to pushing the boundaries of AI innovation
-
-- [X] Strong analytical and problem-solving skills
+- [X] [ ] [ ] Strong analytical and problem-solving skills
 
 - [X] [ ] Passionate about applying AI to real-world challenges
 
@@ -33,11 +31,11 @@ I performed well in my first year, achieving 80% in my maths test and {report gr
 
 - [ ] Aspiring to follow in the footsteps of previous Maths PhD mentor by pursuing advanced education in AI/ML
 
-- [X] [ ] Hands-on experience in AI application development, including VidBriefs, an iOS app for AI-driven YouTube video summarisation
+- [X] [ ] [ ] Hands-on experience in AI application development, including VidBriefs, an iOS app for AI-driven YouTube video summarisation
 
 - [X] [X] [ ] Proficient in Python(Django,Numpy,SqlLite3), C, C++, C#, JavaScript, and HTML/CSS, R Studio, and learning MATLAB
 
-- [X] [X] [ ] Extensive study of linear algebra concepts such as vectors and matrices is fundamental to machine learning algorithms. I have also delved into calculus under the guidance of PhD student Henry Thomas, where I learned essential principles like the product rule, chain rule, and quotient rule. During my mathematics assessment; I successfully solved problems involving vector-matrix multiplication, probability, and dot products, thus showcasing my comprehension of these mathematical concepts.
+- [X] [X] [ ] Extensive study of linear algebra concepts such as vectors and matrices, fundamental to machine learning algorithms. I have also delved into calculus under the guidance of PhD student Henry Thomas, where I learned essential principles like the product rule, chain rule, and quotient rule. During my mathematics assessment, I successfully solved problems involving vector-matrix multiplication, probability, and dot products, showcasing comprehension of these mathematical concepts.
 
 - [ ] Enthusiastic collaborator, eager to learn from and contribute to the AI/ML community
 
