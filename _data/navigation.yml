@@ -6,10 +6,14 @@ main:
     url: /about
   - title: "Mathematics"
     url: /maths
-  - title: "Business"
-    url: /business
-  - title: "Data Science"
-    url: /data-science
+  - title: "Grades"
+    url: /grades
+
+  # TODO : [ ] [ ]
+  # - title: "Business"
+    #url: /business
+  # - title: "Data Science"
+  #  url: /data-science
     
   # - title: "Sample Posts"
   #   url: /year-archive/
