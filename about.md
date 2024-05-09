@@ -12,3 +12,36 @@ Indeed, the brain injury has profoundly affected my life, but it has also instil
 I excelled during my foundation year, achieving 83.90% in MATH054, thanks to discovering and being mentored by a PhD Maths student. I began my degree in Computer Science (Artificial Intelligence) in 2023. AI has been instrumental in my recovery and a life-saver, supporting me post-injury and significantly aiding in regaining my independence through personalised, summarising and one-to-one teaching. I utilise AI in every possible way, from my phone to my computers, where I manually adjust the titles of my chats with checkboxes ([ ]) to systematically traverse them, thereby ensuring a comprehensive understanding and mastery of all topics discussed.
 
 Once again, I performed well in my first year, achieving 80% in my maths test and {report grade} in my report for the maths module. I am now preparing for my second year and particularly looking forward to my third-year modules, where I'll be studying Machine Learning and Human-Robot Interaction.
+
+- Driven to excel and deliver impactful solutions
+
+- Proven track record of academic achievement
+
+- Collaborative team player bringing fresh ideas
+
+- Dedicated to pushing the boundaries of AI innovation
+
+- Strong analytical and problem-solving skills
+
+- Passionate about applying AI to real-world challenges
+
+- Quick learner adept at mastering new technologies
+
+- Proactively seeking opportunities to create impact
+
+- Strong background in mathematics (80% in recent assessment) to drive AI innovation
+
+- Demonstrated proactive initiative and ability to circumvent memory challenges by creating a maths notebook, thereby serving as an effective backup for      reference. This strategy has been instrumental in adapting to and managing recovery from a past severe health issue.
+
+- Aspiring to follow in the footsteps of previous Maths PhD mentor by pursuing advanced education in AI/ML
+
+- Hands-on experience in AI application development, including VidBriefs, an iOS app for AI-driven YouTube video summarisation
+
+- Deep knowledge of linear algebra concepts like vectors and matrices, fundamental to ML algorithms
+
+- Enthusiastic collaborator, eager to learn from and contribute to the AI/ML community
+
+- Committed to continuous upskilling through advanced ML coursework in 3rd-year module as well as self-directed learning
+
+- Driven to make a real-world impact through a career in AI, with aspirations in robotics, ML engineering, and AI product management, leveraging my knowledge in both AI/ML and business.
+
