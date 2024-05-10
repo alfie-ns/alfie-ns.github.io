@@ -1,5 +1,6 @@
 - [X] link to 1003-test.html after revising it
-- [ ] link to pdf in docs
-- [ ] Pic of 71% 1001
+- [X] link to pdf in docs
+- [X] proof of 71% 1001
+- [ ] Change comp1003 to comp1001(course details)
 - [ ] can i if can copy their html web pages from plymouth website?
 - [ ] Make email side button work
