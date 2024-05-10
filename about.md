@@ -20,7 +20,6 @@ hr {
     border: none;
     border-top: 2px solid black; 
     width: 100%; 
-    margin: auto; /* Center the line */
 }
 
 </style>
