@@ -25,7 +25,7 @@ hr {
 
 </style>
 
-**Lines with empty checkboxes are concepts I wish to traverse fully and understand in-depth throughout my studies **
+<b>Lines with empty checkboxes are concepts I wish to traverse fully and understand in-depth throughout my studies </b>
 
 - [X] [ ] Driven to excel and deliver impactful solutions
 
