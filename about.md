@@ -3,7 +3,7 @@ layout: archive
 author_profile: true
 header:
   overlay_image: /assets/splash/header.png
-title: "My life"
+title: "My life (relevant links below)"
 ---
 I was born in February 2003 and had a normal childhood and education. I developed an early interest in computers, setting up a fully functional Minecraft server at the age of 10 on an early-stage MacBook. I was also fascinated by my dad's work as a Solution Architect, and I found the concept of coding quite appealing. Fast forward to 2021: while watching the World Cup with friends, we dramatically crashed into a tree on our way to a football match. I was airlifted to St George's Hospital after sustaining a severe brain injury and narrowly survived a coma that lasted 3.5 weeks. Subsequently, I was moved to Epsom Hospital, where I spent six months.
 
