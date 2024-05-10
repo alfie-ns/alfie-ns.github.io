@@ -1,13 +1,13 @@
-# main links
+# main link
 main:
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "About"
-    url: /about
-  - title: "Mathematics"
-    url: /maths
-  - title: "Grades"
-    url: /
+  #- title: "About"
+  #  url: /about
+  #- title: "Mathematics"
+  #  url: /
+  #- title: "Grades"
+  #  url: /
 
   # TODO : [ ] [ ]
   # - title: "Business"
