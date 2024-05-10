@@ -14,6 +14,7 @@ I excelled during my foundation year, achieving 83.90% in MATH054, thanks to dis
 I performed well in my first year, achieving 80% in my [math test]({{ site.baseurl }}/test.md) and {report grade} in my report for the maths module COMP1003, where I studied and implemented a complex C# AVL tree. I also achieved 71% in COMP1001, a challenging, weed-out type of module, where I learned C and C++. I am now preparing to work relentlessly hard in year 2, while looking forward to and thus preparing for my third-year modules, where I'll be studying Machine Learning and Human-Robot Interaction.
 
 <hr>
+<!-- Styling for the horizontal line -->
 <style>
 hr {
     border: none;
@@ -25,9 +26,9 @@ hr {
 
 **Lines with empty checkboxes are concepts I wish to traverse fully and understand in-depth throughout my studies **
 
-- [X] [ ] [ ]  Driven to excel and deliver impactful solutions
+- [X] [ ] Driven to excel and deliver impactful solutions
 
-- [X] [ ] [ ] Strong analytical and problem-solving skills
+- [X] [ ] Strong analytical and problem-solving skills
 
 - [X] [ ] Passionate about applying AI to real-world challenges
 
