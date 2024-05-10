@@ -7,7 +7,7 @@ main:
   - title: "Mathematics"
     url: /maths
   - title: "Grades"
-    url: /grades
+    url: /
 
   # TODO : [ ] [ ]
   # - title: "Business"
