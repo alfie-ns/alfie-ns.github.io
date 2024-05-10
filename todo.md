@@ -1,4 +1,5 @@
-- [ ] link to 1003-test.html after revising it
+- [X] link to 1003-test.html after revising it
+- [ ] Pic of 71% 1002
 - [ ] make grades.md for all grades upto this point
 - [ ] can i if can copy their html web pages from plymouth website?
 - [ ] Make email side button work
