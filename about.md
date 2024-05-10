@@ -14,14 +14,13 @@ I excelled during my foundation year, achieving 83.90% in MATH054, thanks to dis
 I performed well in my first year, achieving 80% in my <a href="{{ site.baseurl }}/1003-test" target="_blank" style="color: #448c88;">math test</a> and {report grade} in my report for the maths module COMP1003, where I studied and implemented a complex <a href="https://github.com/alfie-ns/1003-CW/blob/main/Report/AVL/Solution/dotnet-program/Program.cs" target="_blank" style="color: #448c88;">C# AVL tree.</a> I also achieved <a href="https://github.com/alfie-ns/1001-CW" target="_blank" style="color: #448c88;">71% in COMP1001</a>, a challenging, weed-out type of module, where I learned C and C++. I am now preparing to work relentlessly hard in year 2, while looking forward to my third-year modules, where I'll be studying Machine Learning and Human-Robot Interaction.
 
 <hr>
-<!-- Styling for the horizontal line -->
+<!-- Styling for the horizontal line^ -->
 <style>
 hr {
     border: none;
     border-top: 2px solid black; 
     width: 100%;  
 }
-
 </style>
 
 <b>Lines with empty checkboxes are concepts I wish to traverse fully and understand in-depth throughout my studies </b>
