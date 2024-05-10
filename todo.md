@@ -1,4 +1,4 @@
-- [ ] Make grades.md for all grades upto this point
-- [ ] make guiz.md
-- [ ] Ask Plym if can copy their html web pages
-- [ ] Make email sidebutton work
+- [ ] link to 1003-test.html after revising it
+- [ ] make grades.md for all grades upto this point
+- [ ] can i if can copy their html web pages from plymouth website?
+- [ ] Make email side button work
