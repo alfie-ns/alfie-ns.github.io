@@ -1,6 +1,6 @@
 - [X] link to 1003-test.html after revising it
 - [X] link to pdf in docs
 - [X] proof of 71% 1001
-- [ ] upload picture of DFS 1003 comment-block
+- [ ] upload picture of DFS-Traversal.png on maths page
 - [ ] can i if can copy their html web pages from plymouth website?
 - [ ] Make email side button work
