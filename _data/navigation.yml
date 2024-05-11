@@ -5,19 +5,14 @@ main:
   #- title: "About"
   #  url: /about
   #- title: "Mathematics"
-  #  url: /
-  #- title: "Grades"
-  #  url: /
+  #  url: /maths/
 
   # TODO : [ ] [ ]
   # - title: "Business"
     #url: /business
   # - title: "Data Science"
   #  url: /data-science
-    
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+
+    #- title: "Grades"
+    #  url: 
+
