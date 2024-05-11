@@ -1,6 +1,6 @@
 - [X] link to 1003-test.html after revising it
 - [X] link to pdf in docs
 - [X] proof of 71% 1001
-- [ ] Change comp1003 to comp1001(course details)
+- [ ] upload picture of DFS 1003 comment-block
 - [ ] can i if can copy their html web pages from plymouth website?
 - [ ] Make email side button work
