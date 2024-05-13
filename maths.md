@@ -87,7 +87,7 @@ This section showcases examples of applying mathematical principles in real-worl
 
 ## Tools and Software I Use
 
-- **MATLAB**: A staple in my computational mathematics toolkit.
+- <a href="https://uk.mathworks.com/products/matlab.html" target="_blank" style="color: #448c88"><b>MATLAB</b></a>: A staple in my computational mathematics toolkit.
 - **Python (NumPy, SciPy)**: Essential for data analysis and scientific computing.
 
 ## My Mathematical Achievements
