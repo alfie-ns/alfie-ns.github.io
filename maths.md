@@ -5,9 +5,10 @@ header:
   overlay_image: /assets/splash/header.png
 title: "Welcome to My Mathematics Page!"
 ---
-As an enthusiast of mathematics, I explore various mathematical concepts that captivate me. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests. Recently, I've been creating an efficient C# AVL tree<a href="https://github.com/alfie-ns/1003-CW/tree/main/Report/AVL" target="_blank" style="color: #448c88"></a>, for my university coursework, which anyone can run with .NET SDK, to quickly and easily see a mathamatically intresting yet complex search algorithm in action. The program will print a visual representation of the AVL tree structured with box-drawing characters and necessary indentation, by quickly running ./AVL-run.sh in the terminal. This project showcases a very mathmatical complex search algorithm. Printing visually depth-first from the top-down of the root node, like so: 
+As an enthusiast of mathematics, I explore various mathematical concepts that captivate me. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests. Recently, I've been creating an efficient C# AVL tree`<a href="https://github.com/alfie-ns/1003-CW/tree/main/Report/AVL" target="_blank" style="color: #448c88"></a>`, for my university coursework, which anyone can run with .NET SDK, to quickly and easily see a mathamatically intresting yet complex search algorithm in action. The program will print a visual representation of the AVL tree structured with box-drawing characters and necessary indentation, by quickly running ./AVL-run.sh in the terminal. This project showcases a very mathmatical complex search algorithm. Printing visually depth-first from the top-down of the root node, like so:
+
 ```
--------------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------------
             | DFS Traversal logic to print box-drawing structured tree: |                       | 
             -------------------------------------------------------------                       |
             |                                                                                   |   
@@ -16,20 +17,20 @@ As an enthusiast of mathematics, I explore various mathematical concepts that ca
             |     {                                                                             |
             |            4            an AVL binary tree is a tree data structure where the     |
             |           /  \          left child or any given node is less than parent while    |
-            |          2     6        while right child is >right-child. Thus a function |
+            |          2     6        while right child is >right-child. Thus a function        |
             |         / \   / \       can traverse the tree more efficiently due to the boolean |
             |        1   3 5   7      constraint used in searching instead of searching whole   |
-            |                         datasets                                                  |                                                                             |    
+            |                         datasets                                                  |                                                                         
             |     }                                                                             |
             |                                                                                   |
             |     Using box-drawing characters and indentation, the output would                |
-            |     be:                                                                           |                                                                              |
+            |     be:                                                                           |                                                                            
             |     {                                                                             |
             |         └─4                                                                       |
             |           ├─2         note the box-drawing tree is indeed structured depth-first  |
-            |           | ├─1       ensuring each node and its children are visited before      |                                          
-            |           | └─3       moving on, and stuctured top-down to visually represent     |                                                        
-            |           └─6         the hierarchy                                               |                                                          
+            |           | ├─1       ensuring each node and its children are visited before      |  
+            |           | └─3       moving on, and stuctured top-down to visually represent     |        
+            |           └─6         the hierarchy                                               |          
             |             ├─5                                                                   |
             |             └─7  7(last)'s indent(6->7) accumulation used next call is NOT used   |                     |
             |     }                                                                             |
@@ -50,13 +51,13 @@ As an enthusiast of mathematics, I explore various mathematical concepts that ca
             |        standard unbalanced BST.                                                   |   
             |                                                                                   |
             ------------------------------------------------------------------------------------|
-            | each recursive traversal  |                                                       |              
-            -----------------------------                                                       |              
-            |   1. root(4) (indent="  ", last=true) --  prints:       '└─4'                     |                            
-            |   2. node(2) (indent="| ", last=false)--  prints:       '  ├─2'                   |          
-            |   3. node(1) (indent="| ", last=false)--  prints:       '  | ├─1'                 |          
-            |   4. node(3) (indent="  ", last=true) --  prints:       '  | └─3'                 |                              
-            |   5. node(6) (indent="    ", last=true) --  prints:     '  └─6'                   |                          
+            | each recursive traversal  |                                                       |  
+            -----------------------------                                                       |  
+            |   1. root(4) (indent="  ", last=true) --  prints:       '└─4'                     |  
+            |   2. node(2) (indent="| ", last=false)--  prints:       '  ├─2'                   |  
+            |   3. node(1) (indent="| ", last=false)--  prints:       '  | ├─1'                 |  
+            |   4. node(3) (indent="  ", last=true) --  prints:       '  | └─3'                 |  
+            |   5. node(6) (indent="    ", last=true) --  prints:     '  └─6'                   |  
             |   6. node(5) (indent="    ", last=false)--  prints:     '    ├─5'                 |
             |   7. node(7) (indent="      ", last=true) --  prints:   '    └─7'                 |
             |            ^^^NOT USED 6 indents^^^                                               |                    |
@@ -64,16 +65,15 @@ As an enthusiast of mathematics, I explore various mathematical concepts that ca
             |   over from the previous call due to 'indent' string accumulation from past calls,|
             |   if needed, to structure hierarchy to align child nodes under their respective   |
             |   parent nodes, the indent string is += and printed start of next recursive call; |
-            |   thus last time round indent is NOT printed as it it doesn't get that far in the |     
-            |   recusive call because it doesn't call itself again after node(7)                |                                                  |                                                                                                                                   
+            |   thus last time round indent is NOT printed as it it doesn't get that far in the |   
+            |   recusive call because it doesn't call itself again after node(7)                |                                                  |                                                                                   
             |   the final +2->'=6' indents NEVER used;                                          |
             |   last could also be thought of as first(before) next recusive call, or NOT       |
             |   intermediate. Thus the algorithm searches for nodes in given AVL tree FASTER    |
-            |   the a standard unbalanced BST, thereby improving time-complexity for searches   |                                                                                                                                             |                                                                              
+            |   the a standard unbalanced BST, thereby improving time-complexity for searches   |                                                                                                                                             |                              
             -------------------------------------------------------------------------------------
 
 ```
-
 
 ## Maths for Machine Learning
 

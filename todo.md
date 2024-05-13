@@ -3,4 +3,4 @@
 - [X] proof of 71% 1001
 - [ ] upload picture of DFS-Traversal.png on maths page - ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/filename.jpg)
 - [ ] can i if can copy their html web pages from plymouth website?
-- [ ] Make email side button work
+- [ ] Make email side button take user to my email
