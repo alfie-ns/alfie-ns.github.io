@@ -3,9 +3,9 @@ layout: archive
 author_profile: true
 header:
   overlay_image: /assets/splash/header.png
-title: "Welcome to My Mathematics Page!"
+title: "Mathematics!"
 ---
-As an enthusiast of mathematics, I explore various mathematical concepts that captivate me. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests. Recently, I've been creating an efficient <a href="https://github.com/alfie-ns/1003-CW/tree/main/Report/AVL" target="_blank" style="color: #448c88">C# AVL tree</a>, for my university coursework, which anyone can run with .NET SDK, to quickly and easily see a mathamatically intresting yet complex search algorithm in action. The program will print a visual representation of the <a href="https://en.wikipedia.org/wiki/AVL_tree" target="_blank" style="color: 448c88">AVL tree</a> structured with box-drawing characters and necessary indentation, by quickly running ./AVL-run.sh in the terminal. This project showcases a very mathmatical complex search algorithm. Printing visually depth-first from the top-down of the root node, like so:
+As an enthusiast of mathematics, I explore various mathematical concepts that captivate me. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests. Recently, I've been creating an efficient `<a href="https://github.com/alfie-ns/1003-CW/tree/main/Report/AVL" target="_blank" style="color: #448c88">`C# AVL tree`</a>`, for my university coursework, which anyone can run with .NET SDK, to quickly and easily see a mathamatically intresting yet complex search algorithm in action. The program will print a visual representation of the `<a href="https://en.wikipedia.org/wiki/AVL_tree" target="_blank" style="color: 448c88">`AVL tree`</a>` structured with box-drawing characters and necessary indentation, by quickly running ./AVL-run.sh in the terminal. This project showcases a very mathmatical complex search algorithm. Printing visually depth-first from the top-down of the root node, like so:
 
 ```
             -------------------------------------------------------------------------------------
@@ -20,17 +20,17 @@ As an enthusiast of mathematics, I explore various mathematical concepts that ca
             |          2     6        while right child is >right-child. Thus a function        |
             |         / \   / \       can traverse the tree more efficiently due to the boolean |
             |        1   3 5   7      constraint used in searching instead of searching whole   |
-            |                         datasets                                                  |                                                                         
+            |                         datasets                                                  |                                                                       
             |     }                                                                             |
             |                                                                                   |
             |     Using box-drawing characters and indentation, the output would                |
-            |     be:                                                                           |                                                                            
+            |     be:                                                                           |                                                                          
             |     {                                                                             |
             |         └─4                                                                       |
             |           ├─2         note the box-drawing tree is indeed structured depth-first  |
             |           | ├─1       ensuring each node and its children are visited before      |  
-            |           | └─3       moving on, and stuctured top-down to visually represent     |        
-            |           └─6         the hierarchy                                               |          
+            |           | └─3       moving on, and stuctured top-down to visually represent     |      
+            |           └─6         the hierarchy                                               |        
             |             ├─5                                                                   |
             |             └─7  7(last)'s indent(6->7) accumulation used next call is NOT used   |                     |
             |     }                                                                             |
@@ -66,11 +66,11 @@ As an enthusiast of mathematics, I explore various mathematical concepts that ca
             |   if needed, to structure hierarchy to align child nodes under their respective   |
             |   parent nodes, the indent string is += and printed start of next recursive call; |
             |   thus last time round indent is NOT printed as it it doesn't get that far in the |   
-            |   recusive call because it doesn't call itself again after node(7)                |                                                  |                                                                                   
+            |   recusive call because it doesn't call itself again after node(7)                |                                                  |                                                                                 
             |   the final +2->'=6' indents NEVER used;                                          |
             |   last could also be thought of as first(before) next recusive call, or NOT       |
             |   intermediate. Thus the algorithm searches for nodes in given AVL tree FASTER    |
-            |   the a standard unbalanced BST, thereby improving time-complexity for searches   |                                                                                                                                             |                              
+            |   the a standard unbalanced BST, thereby improving time-complexity for searches   |                                                                                                                                             |                            
             -------------------------------------------------------------------------------------
 
 ```
@@ -87,9 +87,9 @@ This section showcases examples of applying mathematical principles in real-worl
 
 ## Tools and Software I Use
 
-<a href="https://uk.mathworks.com/products/matlab.html" target="_blank" style="color: #448c88"><b>MATLAB</b></a>: A staple in my computational mathematics toolkit.
+`<a href="https://uk.mathworks.com/products/matlab.html" target="_blank" style="color: #448c88"><b>`MATLAB`</b></a>`: A staple in my computational mathematics toolkit.
 
-<a href="https://numpy.org/" target="_blank" style="color: #448c88"><b>NumPy</b></a>: Essential for data manipulation and numerical computations in Python.
+`<a href="https://numpy.org/" target="_blank" style="color: #448c88"><b>`NumPy`</b></a>`: Essential for data manipulation and numerical computations in Python.
 
 ## My Mathematical Achievements
 
