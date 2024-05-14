@@ -88,7 +88,7 @@ This section showcases examples of applying mathematical principles in real-worl
 ## Tools and Software I Use
 
 - <a href="https://uk.mathworks.com/products/matlab.html" target="_blank" style="color: #448c88"><b>MATLAB</b></a>: A staple in my computational mathematics toolkit.
-- <a href="https://numpy.org/" target="_blank" style="color: #448c88">NumPy</a>: Essential for data manipulation and numerical computations in Python.
+- <a href="https://numpy.org/" target="_blank" style="color: #448c88"><b>NumPy</b</a>: Essential for data manipulation and numerical computations in Python.
 
 ## My Mathematical Achievements
 
