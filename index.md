@@ -11,6 +11,7 @@ header:
     $('body').toggleClass('dark-mode');
   });
 </script>
+[ ] IMPLEMENT DARK MODE TOGGLE
 -->
 
 ## Introduction
