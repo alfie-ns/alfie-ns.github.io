@@ -4,12 +4,6 @@ author_profile: true
 header:
   overlay_image: /assets/splash/header.png
 ---
-<button id="dark-mode-toggle">Toggle Dark Mode</button>
-<script>
-  $('#dark-mode-toggle').click(function() {
-    $('body').toggleClass('dark-mode');
-  });
-</script>
 <!--
 [ ] IMPLEMENT DARK MODE TOGGLE
 -->
