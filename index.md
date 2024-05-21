@@ -4,6 +4,14 @@ author_profile: true
 header:
   overlay_image: /assets/splash/header.png
 ---
+
+<button id="dark-mode-toggle">Toggle Dark Mode</button>
+<script>
+  $('#dark-mode-toggle').click(function() {
+    $('body').toggleClass('dark-mode');
+  });
+</script>
+
 ## Introduction
 
 Hi, I’m Alfie Nurse, currently studying BSc (Hons) Computer Science with a focus on Artificial Intelligence at the University of Plymouth. As I prepare to enter my second year this Autumn, I am on track to achieve a first-class honours degree, with a particular strength in mathematical modules—a subject I am learning quickly and thoroughly.
