@@ -1,7 +1,7 @@
 - [X] link to 1003-test.html after revising it
 - [X] link to pdf in docs
 - [X] proof of 71% 1001
-- [ ] upload picture of DFS-Traversal.png on maths page - ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/filename.jpg)
+- [ ] upload picture ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/filename.jpg)
 - [ ] Make dark mode
 - [ ] can i if can copy their html web pages from plymouth website?
 - [ ] Make email side button take user to my email
