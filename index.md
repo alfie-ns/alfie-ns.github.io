@@ -10,8 +10,7 @@ header:
 
 ## Introduction
 
-Hi, I’m Alfie Nurse, currently studying BSc (Hons) Computer Science with a focus on Artificial Intelligence at the University of Plymouth. As I prepare to enter my second year this Autumn, I am on track to achieve a first-class honours degree, with a particular strength in mathematical modules—a subject I am learning thoroughly.
-I’m an avid learner, continuously seeking to enhance my skills in several areas: Artificial Intelligence, Machine Learning, Data Science, and Mathematics; additionally, my interests extend to Business: Marketing, Entrepreneurship, and Product Development.
+Hi, I’m Alfie Nurse, currently pursuing a BSc (Hons) in Computer Science with a specialisation in Artificial Intelligence at the University of Plymouth. As I prepare to enter my second year this Autumn, I am on track to secure a first-class honours degree, particularly excelling in mathematical modules—a subject in which I am thoroughly invested. I am an avid learner, continuously seeking to enhance my skills in several domains: Artificial Intelligence, Machine Learning, Data Science, and Mathematics. Additionally, my interests extend to Business, including Marketing, Entrepreneurship, and Product Development, where I aim to create innovative AI products and services.
 
 <!--
 <!-- | `<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">` | An image in a table | -->
