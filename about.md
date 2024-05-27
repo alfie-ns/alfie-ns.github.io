@@ -24,7 +24,7 @@ hr {
 }
 </style>
 
-  <b>Lines with empty checkboxes are concepts I wish to traverse conceptually, and understand fully and understand in-depth throughout my studies </b>
+  <b>Lines with empty checkboxes are concepts I wish to traverse conceptually, and understand fully and in-depth throughout my studies</b>
 
   
 
