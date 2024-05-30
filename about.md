@@ -54,3 +54,6 @@ hr {
 
   - [X] [ ] [ ] Driven to make a real-world impact through a career in AI, with aspirations in robotics, ML engineering, and AI product management; by leveraging my knowledge in both AI/ML and business, I aim to conceptualise and execute innovative projects incorporating AI/ML, demonstrating my ability to apply knowledge to practical applications by combining past experience(VidBriefs, DrFit) and future projects, with creative problem-solving to deliver innovative solutions.
   
+
+
+  
