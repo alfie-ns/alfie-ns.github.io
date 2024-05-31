@@ -1,6 +1,7 @@
 - [X] link to 1003-test.html after revising it
 - [X] link to pdf in docs
 - [X] proof of 71% 1001
+- [ ] print picture of 1-50 balanced tree
 - [ ] Talk about shoelace forumla where I achieved 86%
 - [ ] talk about how im hosting for free with github
 - [ ] upload picture ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/filename.jpg)
