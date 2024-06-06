@@ -10,6 +10,7 @@ fi # '! -x' means not executable
 if ./push.sh; then # is push.sh successful, backout to parent directory and rm repo
     echo "Pushed to GitHub; backout to parent directory"
     cd .. # Backout to parent directory
+    echo "Removing repo"
     rm -rf alfie-ns.github.io # Remove repo
     echo "Process complete"
 fi
