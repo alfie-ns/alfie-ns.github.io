@@ -6,10 +6,17 @@ header:
 title: "Mathematics"
 ---
 
-Grades so far: <a href="results_image_only.pdf" target="_blank">
+Mathematical modules so far: <a href="results_image_only.pdf" target="_blank"> 
+As an enthusiast of mathematics, I explore various captivating mathematical concepts. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests.
 
-As an enthusiast of mathematics, I explore various mathematical concepts that captivate me. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests, I'm due to study an AI module in Year2...elaborateNextYear... Recently, I've been creating an efficient <a href="https://github.com/alfie-ns/1003-CW/blob/main/Report/AVL/Solution/dotnet-program/Program.cs" target="_blank" style="color: #448c88">C# AVL tree</a> for my university coursework, which anyone can run quickly with the .NET SDK, to quickly and easily see a complex search algorithm in action. The program will print a visual representation of the <a href="https://en.wikipedia.org/wiki/AVL_tree" target="_blank" style="color: #448c88">AVL tree</a> structured with box-drawing characters and necessary indentation, by quickly running ./AVL-run.sh in the terminal. <a href="https://github.com/alfie-ns/1003-CW" target="_blank" style="color: #448c88">This project</a> showcases a very mathematically complex and interesting search algorithm, printing visually depth-first from the top-down of the root node, like so:
+<!--
+I am due to study an AI module in Year 2, which will further deepen my understanding and application of mathematical principles in AI.
+-->
+Recently, I have been developing an efficient <a href="https://github.com/alfie-ns/1003-CW/blob/main/Report/AVL/Solution/dotnet-program/Program.cs" target="_blank" style="color: #448c88">C# AVL tree</a> for my university coursework, achieving 81.6%. Anyone can quickly run this project with the .NET SDK to easily observe a complex search algorithm with a bashcript in the terminal.
 
+The program generates a visual representation of the <a href="https://en.wikipedia.org/wiki/AVL_tree" target="_blank" style="color: #448c88">AVL tree</a> using box-drawing characters and necessary indentation, by running ./AVL-run.sh in the terminal.
+
+<a href="https://github.com/alfie-ns/1003-CW" target="_blank" style="color: #448c88">This project</a> effectively demonstrates a mathematically intricate and intriguing search algorithm, displaying a depth-first traversal, thereby showing the structure from the root node downwards through its subtrees.
 ```
             -------------------------------------------------------------------------------------
             | DFS Traversal logic to print box-drawing structured tree: |                       | 
