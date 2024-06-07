@@ -1,17 +1,15 @@
 #!/bin/bash -euo pipefail
 
-# -e: Exit immediately if a command exits with a non-zero status.
-# -u: Treat unset variables as an error and exit immediately.
-# -o pipefail: Return the exit status of the first command that fails in a pipeline.
-
-# Function to bail with style
-# handle_error: Prints the error message and exits with the given status code.
+# Function to handle errors
 handle_error() {
-    local exit_code="$1"
-    local msg="$2"
-    echo "Error: $msg" >&2
-    exit "$exit_code"
+    local exit_code="$1" # '$1' is the first argument passed to the function, assigned to 'exit_code' as the exit status code.
+    local msg="$2"       # '$2' is the second argument passed to the function, assigned to 'msg' as the error message.
+    echo "Error: $msg" >&2 # Output the error message to standard error (stderr).
+    exit "$exit_code"    # Exit the script with the provided exit code.
 }
+
+# Critical command example
+# some_critical_command || handle_error 4 "Critical command failed."
 
 # Verify push.sh's existence and executability
 # if push.sh is not found, exit with error(2)
@@ -33,15 +31,16 @@ cd ..
 rm -rf alfie-ns.github.io
 echo "remove local repository..."
 
-# 'alfie-ns' ascii
+# 'alfie-ns' ASCII Art
 cat <<'EOF'
-
- ⚙️ Process complete ⚙️ 
-
-         _  __ _                     
-   __ _ | |/ _(_) ___       _ __  ___
-  / _` || | |_| |/ _ \_____| '_ \/ __|
- | (_| || |  _| |  __/_____| | | \__ \
-  \__,_||_|_| |_|\___|     |_| |_|___/
-  
+-----------------------------------------
+ ⚙️ Process complete ⚙️                   |
+-----------------------------------------
+|         _  __ _                       |
+|   __ _ | |/ _(_) ___       _ __  ___  | 
+|  / _` || | |_| |/ _ \_____| '_ \/ __| |
+| | (_| || |  _| |  __/_____| | | \__ \ |
+|  \__,_||_|_| |_|\___|     |_| |_|___/ |
+ ---------------------------------------- 
+ 
 EOF
