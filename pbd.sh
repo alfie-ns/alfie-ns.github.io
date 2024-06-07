@@ -31,6 +31,7 @@ cd ..
 # Remove alfie-ns.github.io directory recursively
 # if rm fails, script stops due to 'set -e'
 rm -rf alfie-ns.github.io
+echo "remove local repository..."
 
 # 'alfie-ns' ascii
 cat <<'EOF'
