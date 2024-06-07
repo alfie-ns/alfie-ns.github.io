@@ -27,13 +27,14 @@ handle_error() {
 ./push.sh
 
 # Post-push actions: navigating up and cleaning the directory
-echo "Pushed to GitHub; backing out to parent directory"
+echo "Pushed to GitHub; backing out to parent directory..."
 cd ..
 
 # Remove alfie-ns.github.io directory recursively
 # if rm fails, script stops due to 'set -e'
+echo "removing local repository..."
 rm -rf alfie-ns.github.io
-echo "remove local repository..."
+
 
 # 'alfie-ns' ASCII Art
 cat <<'EOF'
