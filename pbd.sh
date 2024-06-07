@@ -30,6 +30,8 @@ handle_error() {
 echo "Pushed to GitHub; backing out to parent directory..."
 cd ..
 
+sleep 2 # sleep for 2 seconds
+
 # Remove alfie-ns.github.io directory recursively
 # if rm fails, script stops due to 'set -e'
 echo "deleting local repository..."
