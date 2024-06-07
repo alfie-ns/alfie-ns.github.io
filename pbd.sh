@@ -1,5 +1,9 @@
 #!/bin/bash -euo pipefail
 
+# -e: Exit immediately if a command exits with a non-zero status.
+# -u: Treat unset variables as an error and exit immediately.
+# -o pipefail: The return value of a pipeline is the status of the last command to exit with a non-zero status, or zero if no command exited with a non-zero status.
+
 # Function to handle errors
 handle_error() {
     local exit_code="$1" # '$1' is the first argument passed to the function, assigned to 'exit_code' as the exit status code.
