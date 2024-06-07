@@ -21,10 +21,10 @@ handle_error() {
 [[ ! -x "./push.sh" ]] && handle_error 3 "push.sh is not executable."
 
 # Execute push.sh
-./push.sh
 # if it fails, script stops due to 'set -e'
+./push.sh
 
-# Post-push actions: navigating up and cleaning up
+# Post-push actions: navigating up and cleaning the directory
 echo "Pushed to GitHub; backing out to parent directory"
 cd ..
 
@@ -33,10 +33,14 @@ cd ..
 rm -rf alfie-ns.github.io
 
 # 'alfie-ns' ascii
-echo -e "\n ⚙️ Process complete ⚙️ \n"
-echo "         _  __ _   "                   
-echo "   __ _| |/ _(_) ___       _ __  ___" 
-echo "  / _` | | |_| |/ _ \_____| '_ \/ __|"
-echo " | (_| | |  _| |  __/_____| | | \__ \"
-echo "  \__,_|_|_| |_|\___|     |_| |_|___/"
-                                     
+cat <<'EOF'
+
+ ⚙️ Process complete ⚙️ 
+
+         _  __ _                     
+   __ _ | |/ _(_) ___       _ __  ___
+  / _` || | |_| |/ _ \_____| '_ \/ __|
+ | (_| || |  _| |  __/_____| | | \__ \
+  \__,_||_|_| |_|\___|     |_| |_|___/
+  
+EOF
