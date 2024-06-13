@@ -19,6 +19,7 @@ locale                   : "en-US"
 title                    : "Alfie Nurse"
 title_separator          : "-"
 icon                     : /assets/images/icon.png
+apple-touch-icon         : /assets/images/iphone-icon.png
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Alfie Nurse"
 description              : "Computer Science Under Graduate"
