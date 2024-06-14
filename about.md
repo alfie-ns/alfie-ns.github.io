@@ -23,10 +23,9 @@ hr {
 }
 </style>
 
-  <b>Lines with empty checkboxes are concepts I wish to explore conceptually, aiming to understand them fully and in-depth throughout my studies.</b>
+  <b>Lines with empty checkboxes are concepts I wish to explore fully and in-depth throughout my studies.</b>
 
   
-
   - [X] [ ] [ ] Driven to excel and deliver impactful solutions
 
   - [X] [ ] [ ] Strong analytical and problem-solving skills
@@ -39,15 +38,11 @@ hr {
 
   - [X] Demonstrated proactive initiative by creating a maths notebook to circumvent memory challenges, creating an effective backup for recall reference, and utilising GitHub for organisation. This strategy has been important in adapting to and managing recovery from the aforementioned severe health issue.
 
-  - [ ] Aspiring to follow in the footsteps of previous Maths PhD mentor by pursuing advanced education in AI/ML
-
   - [X] [ ] [ ] Hands-on experience in AI application development, including VidBriefs, an iOS app for AI-driven YouTube video summarisation
 
   - [X] [X] [ ] Proficient in Python(Django,Numpy,SqlLite3), C, C++, C#, JavaScript, and HTML/CSS, R Studio, and learning MATLAB
 
   - [X] [X] [ ] Extensive study of linear algebra concepts such as vectors and matrices, fundamental to machine learning algorithms. I have also delved into calculus under the guidance of PhD student Henry Thomas, where I learned essential principles like the product rule, chain rule, and quotient rule. During my mathematics assessment, I successfully solved problems involving vector-matrix multiplication, probability, and dot products, showcasing comprehension of these mathematical concepts.
-
-  - [ ] Enthusiastic collaborator, eager to learn from and contribute to the AI/ML community
 
   - [ ] Committed to continuous upskilling and exceling advanced ML coursework in 3rd-year module 
 
