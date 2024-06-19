@@ -2,6 +2,7 @@
 - [X] link to pdf in docs
 - [X] proof of 71% 1001
 - [X] proof of 81% 1003
+- [ ] make projects.md, with the project i made 
 - [ ] Incorpate 1003 report excel file in
 - [ ] print picture of 1-50 balanced tree housed in assets/images
 - [ ] Talk about shoelace forumla where I achieved 86%
