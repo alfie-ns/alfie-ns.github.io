@@ -2,7 +2,7 @@
 - [X] link to pdf in docs
 - [X] proof of 71% 1001
 - [X] proof of 81% 1003
-- [ ] make projects.md, with the project i made 
+- [ ] make projects.md, with the project i made
 - [ ] Incorpate 1003 report excel file in
 - [ ] print picture of 1-50 balanced tree housed in assets/images
 - [ ] Talk about shoelace forumla where I achieved 86%
@@ -11,3 +11,10 @@
 - [ ] Make dark mode
 - [ ] can i if can copy their html web pages from plymouth website?
 - [ ] Make email side button take user to my email
+
+**the scripts.md page will do the following:**
+
+- [ ] Get all bash scripts made on my mac
+- [ ] Make more python scripts
+- [ ] get all pygames from mac and dell
+- [ ] make more witty pygames
