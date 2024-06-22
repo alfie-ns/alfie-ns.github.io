@@ -5,11 +5,11 @@ header:
   overlay_image: /assets/splash/header.png
 title: "Projects"
 ---
-## Personal Entrepreneur-driven Projects
+# Personal AI Projects
 
-<a href="https://github.com/alfie-ns/drfit-api">DrFit</a>
+## DrFit
 
-DrFit is a comprehensive web application I developed for my COMP1004 project at the University of Plymouth. It serves as an AI-powered personal trainer, helping users track their fitness progress and create customized workout plans.
+<a href="https://github.com/alfie-ns/drfit-api"target="_blank" style="color: #448c88">DrFit</a> is a comprehensive web application I developed for my COMP1004 project at the University of Plymouth. It serves as an AI-powered personal trainer, helping users track their fitness progress and create customized workout plans.
 
 ### Key Features:
 
@@ -34,7 +34,9 @@ DrFit is a comprehensive web application I developed for my COMP1004 project at 
 
 - [  ] Integrate with wearable fitness devices for real-time data tracking
 
-## VidBriefs
+---
+
+## VidBriefs IOS App
 
 VidBriefs is an iOS app I created to generate concise video summaries, currently focusing on YouTube content. It allows users to quickly grasp the essence of long-form videos without watching them in full.
 
@@ -79,3 +81,7 @@ These projects showcase my abilities in:
 - Project planning and management
 
 Both DrFit and VidBriefs demonstrate my passion for creating innovative, user-centric applications that leverage AI to solve real-world problems in health and information consumption.
+
+```
+Loadings...
+```
