@@ -10,8 +10,13 @@ header:
 
 ## Introduction
 
-Hi, I’m Alfie, currently pursuing a BSc (Hons) in Computer Science with a specialisation in Artificial Intelligence at the University of Plymouth. As I prepare to enter my second year this Autumn, I am on track to secure a first-class honours degree, particularly excelling in mathematical modules—a subject in which I am thoroughly invested in and passionate about. I am an avid learner, continuously seeking to enhance my skills in several domains: Artificial Intelligence, Machine Learning, Data Science, and Mathematics. Additionally, my interests include Business, particularly Marketing, Entrepreneurship, and Product Development, where I aim to create innovative AI products and services in the coming years.
+Here's a revised version highlighting your projects:
 
+---
+
+I'm Alfie, currently pursuing a BSc (Hons) in Computer Science with a specialisation in Artificial Intelligence at the University of Plymouth. As I prepare to enter my second year this Autumn, I am on track to achieve a first-class honours degree, particularly excelling in mathematical modules—a subject I am deeply passionate about. My portfolio includes projects like **Dr. Fit**, a comprehensive health and fitness assistant using Python and Flask, and contributions to the **COMP1001 Computer Systems** project, showcasing advanced skills in AVX intrinsics and C++ for image processing. I am an avid learner, continually enhancing my skills in Artificial Intelligence, Machine Learning, Data Science, and Mathematics. Additionally, my interests span Business, especially in Marketing, Entrepreneurship, and Product Development, where I aim to innovate AI products and services in the coming years.
+
+---
 <!--
 <!-- | `<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">` | An image in a table | -->
 
