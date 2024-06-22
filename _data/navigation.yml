@@ -6,6 +6,8 @@ main:
     url: /about
   - title: "Mathematics"
     url: /maths/
+  - title: "Projects"
+    url: /projects/
 
   # TODO : [ ] [ ]
   # - title: "Business"
@@ -13,6 +15,4 @@ main:
   # - title: "Data Science"
   #  url: /data-science
 
-    #- title: "Grades"
-    #  url: 
 
