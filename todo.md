@@ -4,6 +4,7 @@
 - [X] proof of 81% 1003
 - [X] make projects.md, with the project i made
 - [X] Incorpate 1003 report excel file in
+- [ ] scripts.md
 - [ ] print all images on respective markdown files
 - [ ] print picture of 1-50 balanced tree housed in assets/images
 - [ ] Talk about shoelace forumla where I achieved 86%
