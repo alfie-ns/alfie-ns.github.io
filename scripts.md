@@ -1,13 +1,17 @@
 **the scripts.md page will do the following:**
-
-I use bash-scripts to automate nearly everything on my mac on my mac....
 - [ ] get picture of scripts on desktop
 - [ ] Get all bash scripts made on my mac
 - [ ] Make more python scripts
 - [ ] get all pygames from mac and dell
 - [ ] make more pygames
 
+# Bash Scripts
+I use bash-scripts to automate nearly everything on my mac, particularty for git and vscode...elaborate [ ] 
+
+
+### clone-all.sh
 ```
+
 #!/bin/bash
 
 # Function to clone a repository
@@ -36,7 +40,7 @@ wait
 
 # Check if both API and APP cloning were successful
 if [ $? -eq 0 ]; then # if last command's exit with success 
-    # In this case, it's the exit status of 'wait'
+    # if succesfully(0) waited
     # If it's 0, it means all background processes (API and APP cloning) succeeded
     echo "API and APP cloned successfully"
 else
@@ -57,7 +61,9 @@ else
     exit 1 # Exit the script with a failure status
 fi
 
-
-
-
 ```
+
+---
+# Python Scripts
+---
+# Apple Scripts
