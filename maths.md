@@ -6,7 +6,7 @@ header:
 title: "Mathematics"
 ---
 
-Mathematical modules so far: <a href="results_image_only.pdf" target="_blank"> 
+Mathematical modules so far: <a href="https://alfie-ns.github.io/results_image_only.pdf" target="_blank"> 
 As an enthusiast of mathematics, I explore various captivating mathematical concepts. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests.
 
 <!--
