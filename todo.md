@@ -7,6 +7,7 @@
 - [ ] print all images on respective markdown files
 - [ ] print picture of 1-50 balanced tree housed in assets/images
 - [ ] Talk about shoelace forumla where I achieved 86%
+- [ ] Dark mode toggle
 - [ ] talk about how im hosting for free with github
 - [ ] upload picture ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/filename.jpg)
 - [ ] Make dark mode
