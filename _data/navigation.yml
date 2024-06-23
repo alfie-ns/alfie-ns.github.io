@@ -8,6 +8,8 @@ main:
     url: /maths/
   - title: "Projects"
     url: /projects/
+  - title: "Scripts"
+    url: /scripts/
 
   # TODO : [ ] [ ]
   # - title: "Business"
