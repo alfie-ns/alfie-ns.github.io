@@ -1,4 +1,5 @@
 **the scripts.md page will do the following:**
+
 - [ ] get picture of scripts on desktop
 - [ ] Get all bash scripts made on my mac
 - [ ] Make more python scripts
@@ -6,10 +7,11 @@
 - [ ] make more pygames
 
 # Bash Scripts
-I use bash-scripts to automate nearly everything on my mac, particularty for git and vscode...elaborate [ ] 
 
+I use bash-scripts to automate nearly everything on my mac, particularty for git and vscode...elaborate [ ]
 
 ### clone-all.sh
+
 ```
 
 #!/bin/bash
@@ -64,6 +66,9 @@ fi
 ```
 
 ---
+
 # Python Scripts
+
 ---
+
 # Apple Scripts
