@@ -9,7 +9,7 @@ title: "Projects"
 
 ## DrFit
 
-<a href="https://github.com/alfie-ns/drfit-api"target="_blank" style="color: #448c88">DrFit</a> is a comprehensive web application I developed for my COMP1004 project at the University of Plymouth. It serves as an AI-powered personal trainer, helping users track their fitness progress and create customized workout plans.
+<a href="https://github.com/alfie-ns/drfit-api"target="_blank" style="color: #448c88">DrFit`</a>` is a comprehensive web application I developed for my COMP1004 project at the University of Plymouth. It serves as an AI-powered personal trainer, helping users track their fitness progress and create customized workout plans.
 
 ### Key Features:
 
@@ -47,10 +47,11 @@ VidBriefs is an iOS app I created to generate concise video summaries, currently
 
 ### Planned Improvements:
 
-- [ ] Expand compatibility to additional platforms (e.g., TedTalks, Movies)
+- [X] Expand compatibility to additional platforms (e.g., TedTalks, Movies)
+- [X] Create isolated conversations
 - [ ] Implement diverse AI prompting methods
 - [ ] Develop a learning algorithm to enhance AI summarization based on user viewing patterns
-- [ ] Transform the app into a 'ChatGPT for video summaries'
+- [X] Transform the app into a 'ChatGPT with video summaries'
 
 ### Project Structure:
 
@@ -74,11 +75,11 @@ These projects showcase my abilities in:
 
 - Full-stack web development (DrFit)
 - iOS app development (VidBriefs)
-- API integration and development
-- Database management
-- AI and machine learning implementation
-- User experience design
-- Project planning and management
+- API integration and development (DrFit, VidBriefs)
+- Database management (DrFit)
+- AI and machine learning implementation (DrFit, VidBriefs)
+- User experience design (DrFit, VidBriefs)
+- Project planning and management (DrFit, VidBriefs)x
 
 Both DrFit and VidBriefs demonstrate my passion for creating innovative, user-centric applications that leverage AI to solve real-world problems in health and information consumption.
 
