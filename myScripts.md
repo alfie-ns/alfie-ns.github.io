@@ -65,6 +65,65 @@ fi
 
 ```
 
+### xcode-clone.sh
+
+```
+#!/bin/bash
+
+# Function to print bold text
+print_bold() {
+  BOLD=$(tput bold)
+  NORMAL=$(tput sgr0)
+  echo -e "${BOLD}$1${NORMAL}"
+}
+
+cd APP
+
+# Clone the repository
+git clone https://github.com/alfie-ns/vidbriefs-app # Replace <your-repo-url> with the actual repository URL
+
+# Path to the .env file outside the cloned repo
+ENV_FILE="/Users/oladeanio/Library/CloudStorage/GoogleDrive-alfienurse@gmail.com/My Drive/Dev/VidBriefs/APP/.env"
+
+# Navigate to the cloned repository directory
+cd vidbriefs-app
+
+# Path to the xcscheme file
+SCHEME_FILE="VidBriefs-Final.xcodeproj/xcshareddata/xcschemes/VidBriefs-Final.xcscheme"
+
+# Check if the .env file exists
+if [ ! -f "$ENV_FILE" ]; then
+  echo ".env file not found."
+  exit 1
+fi
+
+# Read the API key from the .env file
+OPENAI_API_KEY=$(grep -E '^OPENAI_API_KEY=' "$ENV_FILE" | cut -d '=' -f 2)
+
+if [ -z "$OPENAI_API_KEY" ]; then
+  echo "API key not found in .env file."
+  exit 1
+fi
+
+# Backup the original scheme file
+cp "$SCHEME_FILE" "${SCHEME_FILE}.bak"
+
+# Use xmlstarlet to modify the environment variable value
+xmlstarlet ed -L -u '//EnvironmentVariable[@key="openai-apikey"]/@value' -v "$OPENAI_API_KEY" "$SCHEME_FILE"
+
+# Verify the change
+if grep -q "value=\"$OPENAI_API_KEY\"" "$SCHEME_FILE"; then
+    print_bold "openai-apikey has been set to $OPENAI_API_KEY in the Xcode scheme"
+    exit 0
+else
+    echo "Failed to set openai-apikey in the Xcode scheme"
+    exit 1
+fi
+
+# Open the API key page in Google Chrome
+open -a "Google Chrome" "https://platform.openai.com/api-keys"
+print_bold "Enter API key into: vidbriefs-app/VidBriefs-Final.xcodeproj/xcshareddata/xcschemes/VidBriefs-Final.xcscheme"
+```
 ---
 
 # Python Scripts
