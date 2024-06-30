@@ -14,7 +14,7 @@ title: "Projects"
 
 Key Features:
 - User registration with detailed fitness data collection
-- Personalized fitness plan generation
+- Personalised fitness plan generation
 - Secure password management with regex validation
 - Unit conversion for height and weight
 - SQLite database integration
@@ -33,17 +33,17 @@ Future Plans:
 
 ### VidBriefs iOS App
 
-VidBriefs is an iOS app designed to generate concise video summaries, currently focusing on YouTube content. It allows users to quickly grasp the essence of long-form videos.
+<a href="https://github.com/alfie-ns/vidbriefs-app" target="_blank" style="color: #4d4b38;">VidBriefs</a> is an iOS app designed to generate concise video summaries, currently focusing on YouTube content. It allows users to quickly grasp the essence of long-form videos.
 
 Current Features:
-- YouTube video summarization
+- YouTube video summarisation
 - Custom prompt selection for targeted summaries
 
 Planned Improvements:
 - Expand compatibility to additional platforms (e.g., TedTalks, Movies)
 - Create isolated conversations
 - Implement diverse AI prompting methods
-- Develop a learning algorithm to enhance AI summarization based on user viewing patterns
+- Develop a learning algorithm to enhance AI summarisation based on user viewing patterns
 - Transform the app into a 'ChatGPT with video summaries'
 
 Project Structure:
@@ -55,7 +55,7 @@ The project is divided into three GitHub repositories:
 VidBriefs Desktop:
 A Python script for rapid video insight extraction:
 - Uses YouTube API for transcript retrieval
-- Employs GPT-4 API for video summarization
+- Employs GPT-4 API in Python for quick video summarisation
 
 ```
 Loadings...

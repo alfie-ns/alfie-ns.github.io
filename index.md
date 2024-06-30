@@ -19,6 +19,8 @@ My portfolio includes:
 
 I'm passionate about AI, Machine Learning, Data Science, and Mathematics. My interests also extend to Business, particularly Marketing, Entrepreneurship, and Product Development, with the goal of innovating in AI products and services.
 
+
+
 <!--
 <!-- | `<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">` | An image in a table | -->
 
