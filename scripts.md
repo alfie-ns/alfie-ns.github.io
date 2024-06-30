@@ -6,9 +6,13 @@
 - [ ] get all pygames from mac and dell
 - [ ] make more pygames
 
+# ----------------------------------------------------------------------------------------------------------------------
+
 # Bash Scripts
 
-I use bash-scripts to automate nearly everything on my mac, particularty for git and vscode...elaborate [ ]
+<!--I use bash-scripts to automate nearly everything on my mac, particularty for git and vscode...elaborate [ ] -->
+
+# ----------------------------------------------------------------------------------------------------------------------
 
 ### clone-all.sh
 
@@ -65,9 +69,17 @@ fi
 
 ```
 
+# ----------------------------------------------------------------------------------------------------------------------
+
 ### xcode-clone.sh
 
+This Bash script will first define a function to bold the format of subsequent echos later in the script.
+
+Next it will go into VidBriefs/APP and clone the vidbriefs-app repo, it gets the path of the .env file to be get the OPENAI_API_KEY env variable to put into the xcode scheme_file for the project, it uses xmlstarlet to modify the value of the environment variable in the xcode scheme file, it will then check if the change was successful and if it was it will print a success message and exit the script, if not it will print an error message and exit the script.
+
+
 ```
+
 #!/bin/bash
 
 # Function to print bold text
@@ -123,7 +135,75 @@ fi
 # Open the API key page in Google Chrome
 open -a "Google Chrome" "https://platform.openai.com/api-keys"
 print_bold "Enter API key into: vidbriefs-app/VidBriefs-Final.xcodeproj/xcshareddata/xcschemes/VidBriefs-Final.xcscheme"
+
 ```
+
+# ----------------------------------------------------------------------------------------------------------------------
+
+### pbd.sh
+
+This script will first define a function to handle errors, then it will check if push.sh exists and is executable, if it is it will execute it, if it succeeds it will print a success message and delete the local repository, if it fails it will print an error message and exit the script before deleting local repository.
+
+```
+#!/bin/bash -euo pipefail
+
+# -e: Exit immediately if a command exits with a non-zero status.
+# -u: Treat unset variables as an error and exit immediately.
+# -o pipefail: The return value of a pipeline is the status of the last command to exit with a non-zero status, or zero if no command exited with a non-zero status.
+
+# Function to handle errors
+handle_error() {
+    local exit_code="$1"  # '$1' is the first argument passed to the function, assigned to 'exit_code' as the exit status code.
+    local msg="$2"        # '$2' is the second argument passed to the function, assigned to 'msg' as the error message.
+    echo "Error: $msg" >&2 # Output the error message to standard error (stderr).
+    exit "$exit_code"     # Exit the script with the provided exit code.
+}
+
+# Verify push.sh's existence and executability
+[[ ! -f "./push.sh" ]] && handle_error 2 "push.sh is missing."
+[[ ! -x "./push.sh" ]] && handle_error 3 "push.sh is not executable."
+
+# Execute push.sh
+if ./push.sh; then
+    # If push.sh succeeds
+    echo "Pushed to GitHub; backing out to parent directory..."
+    cd ..
+
+    # Remove alfie-ns.github.io directory recursively
+    echo "Deleting local repository..."
+    rm -rf alfie-ns.github.io
+
+    # 'alfie-ns' ASCII Art
+    cat <<'EOF'
+-----------------------------------------
+| ⚙️ Process complete ⚙️                  |
+-----------------------------------------
+|         _  __ _                       |
+|   __ _ | |/ _(_) ___       _ __  ___  | 
+|  / _` || | |_| |/ _ \_____| '_ \/ __| |
+| | (_| || |  _| |  __/_____| | | \__ \ |
+|  \__,_||_|_| |_|\___|     |_| |_|___/ |
+ ---------------------------------------- 
+EOF
+
+else
+    # If push.sh fails
+    handle_error $? "Execution of push.sh failed."
+fi
+
+```
+
+# ----------------------------------------------------------------------------------------------------------------------
+
+### scripts/
+#### run-migrations.sh
+#### setup-db.sh
+#### start-server.sh
+...
+# ----------------------------------------------------------------------------------------------------------------------
+
+### db-management.sh
+...
 ---
 
 # Python Scripts
