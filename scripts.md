@@ -17,55 +17,51 @@
 ### clone-all.sh
 
 ```
-
 #!/bin/bash
 
-# Function to clone a repository
-clone_repo() {
-    local dir=$1 # Get the directory name from the first argument
-    echo "Cloning $dir repository..." # Print which repository is being cloned (API or APP)
-    if (cd "$dir" && chmod +x clone.sh && ./clone.sh); then # attempt to cd into dir make clone.sh executable and run it
-        # If can cd into the directory, make clone.sh executable, and run it successfully
-        echo "$dir cloned successfully" # Print success message for the specific repository
-        return 0 # Return success (0 in bash means success)
-    else
-        # if attempt fails
-        echo "Error cloning $dir" >&2 # Print error message to stderr (standard error)
-        return 1 # Return failure (non-zero in bash=failure)
-    fi
+# Function to print bold text
+print_bold() {
+  BOLD=$(tput bold)
+  NORMAL=$(tput sgr0)
+  echo -e "${BOLD}$1${NORMAL}"
 }
 
-# Clone API and APP repositories in parallel as background processes(&)
-clone_repo API & 
-clone_repo APP &
+# Function to run clone script for a given directory
+run_clone_script() {
+  local dir=$1
+  cd "$dir"
+  if [ -f "clone.sh" ]; then
+    print_bold "Running clone script for $dir..."
+    echo "" # padding
+    bash clone.sh # run the clone script
+  else
+    echo "$dir/clone.sh not found."
+    return 1
+  fi
+  cd .. # back to VidBriefs directory for the next iteration
+}
 
-echo "API and APP cloning started in parallel..." # Print message to indicate that cloning has started
+# Main execution
+echo "" # padding
+print_bold "Cloning repositories in parallel..." # print bold text
+echo "" # padding
 
-# Wait for all background processes to finish
-wait
+#echo "" # padding
 
-# Check if both API and APP cloning were successful
-if [ $? -eq 0 ]; then # if last command's exit with success 
-    # if succesfully(0) waited
-    # If it's 0, it means all background processes (API and APP cloning) succeeded
-    echo "API and APP cloned successfully"
-else
-    # If $? is non-zero, it means at least one of the background processes failed
-    echo "Error occurred while cloning API or APP" >&2
-    # >&2 redirects the output to stderr instead of stdout
-    exit 1 # Exit the script with a failure status
-fi
+# Clone APP and API in parallel(& means run in background)
+run_clone_script "APP" & run_clone_script "API" &
+wait # wait for the background processes to finish
 
-# Clone Desktop repository
-if (cd Desktop && chmod +x clone.sh && ./clone.sh); then
-    # If we can cd into Desktop, make clone.sh executable, and run it successfully
-    echo "Desktop repository cloned successfully"
-    echo "All repositories cloned successfully"
-else
-    # If any part of the Desktop cloning process fails
-    echo "Error cloning Desktop repository" >&2
-    exit 1 # Exit the script with a failure status
-fi
+echo "" # padding
+
+# Clone Desktop
+echo "" # padding
+run_clone_script "Desktop"
+echo "" # padding
+
+echo "" # padding
+print_bold "All repositories cloned successfully!"
+echo "" # padding
 
 ```
 
@@ -79,7 +75,6 @@ Next, it will go into VidBriefs/APP and clone the vidbriefs-app repo; it gets th
 
 
 ```
-
 #!/bin/bash
 
 # Function to print bold text
@@ -89,10 +84,8 @@ print_bold() {
   echo -e "${BOLD}$1${NORMAL}"
 }
 
-cd APP
-
 # Clone the repository
-git clone https://github.com/alfie-ns/vidbriefs-app # Replace <your-repo-url> with the actual repository URL
+git clone https://github.com/alfie-ns/vidbriefs-app
 
 # Path to the .env file outside the cloned repo
 ENV_FILE="/Users/oladeanio/Library/CloudStorage/GoogleDrive-alfienurse@gmail.com/My Drive/Dev/VidBriefs/APP/.env"
@@ -117,24 +110,19 @@ if [ -z "$OPENAI_API_KEY" ]; then
   exit 1
 fi
 
-# Backup the original scheme file
-cp "$SCHEME_FILE" "${SCHEME_FILE}.bak"
-
 # Use xmlstarlet to modify the environment variable value
 xmlstarlet ed -L -u '//EnvironmentVariable[@key="openai-apikey"]/@value' -v "$OPENAI_API_KEY" "$SCHEME_FILE"
 
 # Verify the change
 if grep -q "value=\"$OPENAI_API_KEY\"" "$SCHEME_FILE"; then
+    echo ""
     print_bold "openai-apikey has been set to $OPENAI_API_KEY in the Xcode scheme"
+    echo ""
     exit 0
 else
     echo "Failed to set openai-apikey in the Xcode scheme"
     exit 1
 fi
-
-# Open the API key page in Google Chrome
-open -a "Google Chrome" "https://platform.openai.com/api-keys"
-print_bold "Enter API key into: vidbriefs-app/VidBriefs-Final.xcodeproj/xcshareddata/xcschemes/VidBriefs-Final.xcscheme"
 
 ```
 
