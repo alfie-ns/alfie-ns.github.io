@@ -75,7 +75,7 @@ fi
 
 This Bash script will first define a function to bold the format of subsequent echos later in the script.
 
-Next, it will go into VidBriefs/APP and clone the vidbriefs-app repo; it gets the full path of the .env file to be copied to the OPENAI_API_KEY env variable that gets put into the Xcode scheme_file for the project. It uses xmlstarlet to modify the value of the environment variable in the Xcode scheme file. It will then check if the change was successful; if it was, it will print a success message and exit the script with success(0); if the if statement is not true, it will print an error message and exit the script with failure(1).
+Next, it will go into VidBriefs/APP and clone the vidbriefs-app repo; it gets the full path of the .env file to be copied to the OPENAI_API_KEY env variable that gets put into the Xcode scheme_file for the project. It uses [xmlstarlet](http://xmlstar.sourceforge.net/) to modify the value of the environment variable in the Xcode scheme file. It will then check if the change was successful; if it was, it will print a success message and exit the script with success(0); if the if statement is not true, it will print an error message and exit the script with failure(1).
 
 
 ```
