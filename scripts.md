@@ -75,7 +75,7 @@ fi
 
 This Bash script will first define a function to bold the format of subsequent echos later in the script.
 
-Next it will go into VidBriefs/APP and clone the vidbriefs-app repo, it gets the path of the .env file to be get the OPENAI_API_KEY env variable to put into the xcode scheme_file for the project, it uses xmlstarlet to modify the value of the environment variable in the xcode scheme file, it will then check if the change was successful and if it was it will print a success message and exit the script, if not it will print an error message and exit the script.
+Next, it will go into VidBriefs/APP and clone the vidbriefs-app repo; it gets the full path of the .env file to be copied to the OPENAI_API_KEY env variable that gets put into the Xcode scheme_file for the project. It uses xmlstarlet to modify the value of the environment variable in the Xcode scheme file. It will then check if the change was successful; if it was, it will print a success message and exit the script with success(0); if the if statement is not true, it will print an error message and exit the script with failure(1).
 
 
 ```
@@ -142,7 +142,13 @@ print_bold "Enter API key into: vidbriefs-app/VidBriefs-Final.xcodeproj/xcshared
 
 ### pbd.sh
 
-This script will first define a function to handle errors, then it will check if push.sh exists and is executable, if it is it will execute it, if it succeeds it will print a success message and delete the local repository, if it fails it will print an error message and exit the script before deleting local repository.
+This script will first define a function to handle errors, then it will check if push.sh exists and is executable; if it is, it will execute it. If it succeeds, it will print a success message and delete the local repository; if it fails, it will print an error message and exit the script before deleting the local repository. The `-euo pipefail` options mean:
+
+- `-e`: Exit immediately if a command exits with a non-zero status. This ensures that any error in the script stops execution immediately, preventing subsequent commands from running and potentially causing more issues.
+- `-u`: Treat unset variables as an error and exit immediately. This prevents the script from continuing with uninitialised variables, which could lead to unexpected behaviour or difficult-to-debug errors.
+- `-o pipefail`: The return value of a pipeline is the status of the last command to exit with a non-zero status, or zero if no command exited with a non-zero status. This makes sure that any failure in a sequence of piped commands is caught, ensuring that the script doesn't inadvertently ignore errors in complex command chains. 
+
+These options are set to ensure robustness and reliability, making the script terminate promptly on encountering errors, thereby maintaining a clean and predictable execution flow.
 
 ```
 #!/bin/bash -euo pipefail
