@@ -12,9 +12,9 @@ As an enthusiast of mathematics, I explore various captivating mathematical conc
 <!--
 I am due to study an AI module in Year 2, which will further deepen my understanding and application of mathematical principles in AI.
 -->
-Recently, I have been developing an efficient <a href="https://github.com/alfie-ns/1003-CW/blob/main/Report/AVL/Solution/dotnet-program/Program.cs" target="_blank" style="color: #448c88">C# AVL tree</a> for my university coursework, achieving 81.6%. Anyone can quickly run this project with the .NET SDK to easily observe a complex search algorithm with a bashcript in the terminal.
+Recently, I have been developing an efficient <a href="https://github.com/alfie-ns/1003-CW/blob/main/Report/AVL/Solution/dotnet-program/Program.cs" target="_blank" style="color: #448c88">C# AVL tree</a> for my university coursework, achieving <a href="COMP1003-Report-Marks--24.xlsx" target="_blank">81.6%</a>. Anyone can quickly run this project with the .NET SDK to easily observe a complex search algorithm with a bashcript in the terminal.
 
-The program generates a visual representation of the <a href="https://en.wikipedia.org/wiki/AVL_tree" target="_blank" style="color: #448c88">AVL tree</a> using box-drawing characters and necessary indentation, by running ./AVL-run.sh in the terminal.
+The program generates a visual representation of the <a href="https://en.wikipedia.org/wiki/AVL_tree" target="_blank" style="color: #448c88">AVL tree</a> using box-drawing characters and necessary indentation, by running ./AVL-run.sh in the terminal. 
 
 <a href="https://github.com/alfie-ns/1003-CW" target="_blank" style="color: #448c88">This project</a> effectively demonstrates a mathematically intricate and intriguing search algorithm, displaying a depth-first traversal, thereby showing the structure from the root node downwards through its subtrees.
 ```
