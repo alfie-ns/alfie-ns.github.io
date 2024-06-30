@@ -10,7 +10,14 @@ header:
 
 ## Introduction
 
-I'm Alfie, currently **pursuing** a [**BSc (Hons) in Computer Science with a specialisation in Artificial Intelligence**](https://github.com/alfie-ns/alfie-ns.github.io/blob/main/BSc_Computer_Science.pdf) at the [University of Plymouth](https://plymouth.ac.uk). As I prepare to enter my second year this Autumn, I am on track to achieve a **first-class honours degree**, particularly excelling in **mathematical modules**—a subject I am deeply passionate about. My portfolio includes projects like [**Dr. Fit**](https://github.com/alfie-ns/1004-DrFit), a comprehensive health and fitness assistant using Python and Flask, the [**VidBriefs iOS app**](https://apps.apple.com/gb/app/vidbriefs/id6471598372) for summarising videos using [**Swift**](https://github.com/alfie-ns/VidBriefs-APP), the [**COMP1001 Computer Systems**](https://github.com/alfie-ns/1001-CW) report, learning advanced skills in AVX intrinsics and C++ for image processing using a directory iterator. I am an avid learner, continually enhancing my skills in **Artificial Intelligence, Machine Learning, Data Science**, and **Mathematics**. Additionally, my interests span **Business**, especially in **Marketing, Entrepreneurship**, and **Product Development**, where I aim to innovate AI products and services in the coming years.
+I'm Alfie, a Computer Science undergraduate at the University of Plymouth, specializing in Artificial Intelligence. Entering my second year, I'm aiming for a first-class honours degree, with a particular interest in mathematical modules.
+
+My portfolio includes:
+- Dr. Fit: A health and fitness assistant using Python and Flask
+- VidBriefs: An iOS app for video summarization, built with Swift
+- COMP1001 Computer Systems report: Exploring AVX intrinsics and C++ for image processing
+
+I'm passionate about AI, Machine Learning, Data Science, and Mathematics. My interests also extend to Business, particularly Marketing, Entrepreneurship, and Product Development, with the goal of innovating in AI products and services.
 
 <!--
 <!-- | `<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">` | An image in a table | -->
