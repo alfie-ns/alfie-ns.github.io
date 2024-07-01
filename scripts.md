@@ -178,7 +178,6 @@ This script will first define a function to handle errors, then it will check if
 
 These options are set to ensure robustness and reliability, making the script terminate promptly on encountering errors, thereby maintaining a clean and predictable execution flow.
 
-```
 #!/bin/bash -euo pipefail
 
 # -e: Exit immediately if a command exits with a non-zero status.
