@@ -148,7 +148,7 @@ git commit -m "update"
 git push origin main
 
 print_bold "PUSHED TO GIT"
-...
+-------
 OUTPUT:
 -------
 main 7a4d40e] update
