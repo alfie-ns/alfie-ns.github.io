@@ -8,7 +8,7 @@ title: "Projects"
 
 ## Personal AI Projects
 
-### DrFit
+### DrFit (Web App, Flask, SQLite)
 
 <a href="https://github.com/alfie-ns/drfit-api" target="_blank" style="color: #4d4b38;">DrFit</a> is a comprehensive AI-powered personal trainer web application developed for my COMP1004 project at the University of Plymouth.
 
@@ -31,7 +31,7 @@ Future Plans:
 - Add social features for user interaction and motivation
 - Integrate with wearable fitness devices for real-time data tracking
 
-### VidBriefs iOS App
+### VidBriefs (iOS App, Django API, Python Script)
 
 <a href="https://github.com/alfie-ns/vidbriefs-app" target="_blank" style="color: #4d4b38;">VidBriefs</a> is an iOS app designed to generate concise video summaries, currently focusing on YouTube content. It allows users to quickly grasp the essence of long-form videos.
 

@@ -1,7 +1,15 @@
+---
+layout: archive
+author_profile: true
+header:
+  overlay_image: /assets/splash/header.png
+title: "Scripts"
+---
+
 **the scripts.md page will do the following:**
 
 - [ ] get picture of scripts on desktop
-- [ ] Get all bash scripts made on my mac
+- [X] Get all bash scripts made on my mac
 - [ ] Make more python scripts
 - [ ] get all pygames from mac and dell
 - [ ] make more pygames
