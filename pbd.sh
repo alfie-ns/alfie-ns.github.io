@@ -17,7 +17,7 @@ handle_error() {
 [[ ! -x "./push.sh" ]] && handle_error 3 "push.sh is not executable."
 
 # Execute push.sh
-if ./push.sh; then
+if ./pu.sh; then
     # If push.sh succeeds
     echo "Pushed to GitHub; backing out to parent directory..."
     cd ..
