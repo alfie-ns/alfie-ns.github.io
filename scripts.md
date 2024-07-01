@@ -67,7 +67,7 @@ echo "" # padding
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
-### xcode-clone.sh
+### APP/clone.sh/vidbriefs-app
 
 This Bash script will first define a function to bold the format of subsequent echos later in the script.
 
@@ -128,7 +128,7 @@ fi
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
-### pbd.sh
+### alfie-ns.github.io/pbd.sh
 
 This script will first define a function to handle errors, then it will check if push.sh exists and is executable; if it is, it will execute it. If it succeeds, it will print a success message and delete the local repository; if it fails, it will print an error message and exit the script before deleting the local repository. The `-euo pipefail` options mean:
 
@@ -194,7 +194,7 @@ fi
 #### setup-db.sh
 #### start-server.sh
 
-### ../vidbriefs-api
+### API/clone.sh/vidbriefs-api
 
 ```
 #!/bin/bash
