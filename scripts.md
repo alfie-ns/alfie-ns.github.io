@@ -193,6 +193,33 @@ fi
 #### run-migrations.sh
 #### setup-db.sh
 #### start-server.sh
+
+### ../vidbriefs-api
+
+```
+#!/bin/bash
+
+# Find the next available number for multiple directories
+base_name="vidbriefs-api"
+I=1 # init as 1
+while [ -d "${base_name}-${I}" ]; do # while directory exist
+  I=$((I + 1)) # increment I
+done # end of while loop
+new_name="${base_name}-${I}" # new directory name = base_name - I
+
+# Clone the repository into the new directory, init into new_name variable
+git clone https://github.com/alfie-ns/vidbriefs-api "$new_name"
+
+# Change directory to the cloned repository
+cd "$new_name"
+
+# Copy the .env file - 
+cp ../.env .
+# backout 1 directory -> copy .env -> paste in current directory the cp command is executed in
+
+echo "Repository cloned as $new_name and .env file copied."
+```
+
 ...
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
