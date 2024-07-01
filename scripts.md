@@ -150,7 +150,7 @@ git push origin main
 print_bold "PUSHED TO GIT"
 ...
 OUTPUT:
-```
+-------
 main 7a4d40e] update
  2 files changed, 27 insertions(+), 1 deletion(-)
 Enumerating objects: 7, done.
@@ -161,8 +161,9 @@ Writing objects: 100% (4/4), 510 bytes | 510.00 KiB/s, done.
 Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To https://github.com/alfie-ns/alfie-ns.github.io
-   a41162e..7a4d40e  main -> main ```
+   a41162e..7a4d40e  main -> main 
 ***PUSHED TO GIT***
+```
 ```
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
