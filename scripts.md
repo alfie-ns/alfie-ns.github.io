@@ -224,7 +224,33 @@ echo "Repository cloned as $new_name and .env file copied."
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
 ### db-management.sh
+
+---
+
+### pu.sh
+
+```
+#!/bin/bash
+# alfie-ns.github.io/push.sh
+
+# Function to print bold text
+print_bold() {
+  BOLD=$(tput bold)
+  NORMAL=$(tput sgr0)
+  echo -e "\n${BOLD}$1${NORMAL}\n"
+}
+
+git add .
+git commit -m "update"
+git push origin main
+
+print_bold "PUSHED TO GIT"
 ...
+OUTPUT:
+
+***PUSHED TO GIT***
+```
+
 ---
 
 # Python Scripts

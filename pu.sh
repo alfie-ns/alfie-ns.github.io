@@ -12,4 +12,4 @@ git add .
 git commit -m "update"
 git push origin main
 
-print_bold "PUSHED TO GITHUB"
+print_bold "PUSHED TO GIT"
