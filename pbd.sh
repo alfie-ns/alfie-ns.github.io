@@ -13,8 +13,8 @@ handle_error() {
 }
 
 # Verify push.sh's existence and executability
-[[ ! -f "./push.sh" ]] && handle_error 2 "push.sh is missing."
-[[ ! -x "./push.sh" ]] && handle_error 3 "push.sh is not executable."
+[[ ! -f "./pu.sh" ]] && handle_error 2 "pu.sh is missing."
+[[ ! -x "./pu.sh" ]] && handle_error 3 "pu.sh is not executable."
 
 # Execute push.sh
 if ./pu.sh; then

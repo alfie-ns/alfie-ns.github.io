@@ -77,10 +77,9 @@ echo "" # padding
 
 ### APP/clone.sh/vidbriefs-app
 
-This Bash script will first define a function to bold the format of subsequent echos later in the script.
+This Bash script will first define a function to bold the format of subsequent echo statements later in the script.
 
-Next, it will go into VidBriefs/APP and clone the vidbriefs-app repo; it gets the full path of the .env file to be copied to the OPENAI_API_KEY env variable that gets put into the Xcode scheme_file for the project. It uses [xmlstarlet](http://xmlstar.sourceforge.net/) to modify the value of the environment variable in the Xcode scheme file. It will then check if the change was successful; if it was, it will print a success message and exit the script with success(0); if the if statement is not true, it will print an error message and exit the script with failure(1).
-
+Next, it will navigate to VidBriefs/APP and clone the vidbriefs-app repository. It retrieves the full path of the .env file to be copied to the OPENAI_API_KEY environment variable, which is then inserted into the Xcode scheme file for the project. It uses <a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> to modify the value of the environment variable in the Xcode scheme file. The script will then check if the change was successful; if it was, it will print a success message and exit the script with success(0). If the if statement is not true, it will print an error message and exit the script with failure(1).
 
 ```
 #!/bin/bash
@@ -237,8 +236,101 @@ fi
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
 ### vidbriefs-api/scripts
+
+In the process of initializing the API to run on a local machine, the following scripts are executed:
+
 #### run-migrations.sh
+This scripts handle the commands necessary to run the migrations for the API server.
+
+```
+#!/bin/bash
+
+# Load environment variables
+load_env() {
+    if [ -f .env ]; then
+        export $(grep -v '^#' .env | xargs)
+    else
+        echo ".env file not found."
+        exit 1
+    fi
+}
+
+load_env
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Run Django migrations
+echo "Applying Django database migrations..."
+python manage.py migrate
+
+echo "Migrations complete."
+```
 #### setup-db.sh
+This script setups up the database for the API server.
+
+```
+#!/bin/bash
+
+# Function to load environment variables from .env file
+load_env() {
+    if [ -f .env ]; then
+        while IFS='=' read -r key value; do
+            if [[ $key && ! $key =~ ^# ]]; then
+                # Remove leading/trailing spaces and quotes from the value
+                value=$(echo "$value" | sed 's/^ *//; s/ *$//; s/^"//; s/"$//')
+                # Export variable safely
+                export "$key=$value"
+            fi
+        done < .env
+    else
+        echo ".env file not found."
+        exit 1
+    fi
+}
+
+# Load environment variables
+load_env
+
+# Ensure PostgreSQL service is running
+if ! pg_isready -h $DB_HOST -p $DB_PORT > /dev/null 2>&1; then
+    echo "Starting PostgreSQL service..."
+    brew services start postgresql
+fi
+
+# Create the superuser role if not exists
+psql -h $DB_HOST -p $DB_PORT -d template1 -U $(whoami) <<EOF
+DO \$\$
+BEGIN
+    IF NOT EXISTS (
+        SELECT FROM pg_catalog.pg_roles
+        WHERE rolname = '$(whoami)') THEN
+        CREATE ROLE "$(whoami)" WITH SUPERUSER LOGIN PASSWORD '$DB_PASSWORD';
+    END IF;
+END
+\$\$;
+EOF
+
+# Create PostgreSQL role if it doesn't exist
+psql -h $DB_HOST -p $DB_PORT -d template1 -U $(whoami) <<EOF
+DO \$\$
+BEGIN
+    IF NOT EXISTS (
+        SELECT FROM pg_catalog.pg_roles
+        WHERE rolname = '$DB_USER') THEN
+        CREATE ROLE "$DB_USER" WITH LOGIN PASSWORD '$DB_PASSWORD';
+        ALTER ROLE "$DB_USER" CREATEDB;
+    END IF;
+END
+\$\$;
+EOF
+
+# Create the database if it doesn't exist
+psql -h $DB_HOST -p $DB_PORT -d template1 -U $(whoami) -c "
+SELECT 1 FROM pg_database WHERE datname = '$DB_NAME';" | grep -q 1 || psql -h $DB_HOST -p $DB_PORT -d template1 -U $(whoami) -c "CREATE DATABASE \"$DB_NAME\" OWNER \"$DB_USER\";"
+
+echo "Database setup complete."
+```
 #### start-server.sh
 
 ### API/clone.sh/vidbriefs-api
