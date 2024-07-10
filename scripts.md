@@ -22,9 +22,10 @@ title: "Scripts"
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
-### clone-all.sh
+### VidBriefs/clone-all.sh
 
-```
+```bash
+
 #!/bin/bash
 
 # Function to print bold text
@@ -54,6 +55,8 @@ echo "" # padding
 print_bold "Cloning repositories in parallel..." # print bold text
 echo "" # padding
 
+#if ./clone-all.sh; then
+
 #echo "" # padding
 
 # Clone APP and API in parallel(& means run in background)
@@ -61,27 +64,69 @@ run_clone_script "APP" & run_clone_script "API" &
 wait # wait for the background processes to finish
 
 echo "" # padding
-
-# Clone Desktop
 echo "" # padding
-run_clone_script "Desktop"
-echo "" # padding
-
+run_clone_script "Desktop" # Clone Desktop repo
 echo "" # padding
 print_bold "All repositories cloned successfully!"
 echo "" # padding
-
 ```
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
-### APP/clone.sh/vidbriefs-app
+### VidBriefs/clean-all.sh
+
+```bash
+#!/bin/bash
+
+# Function to print bold text
+print_bold() {
+  BOLD=$(tput bold)
+  NORMAL=$(tput sgr0)
+  echo -e "${BOLD}$1${NORMAL}"
+}
+
+print_bold "Starting clean-all.sh script..."
+
+if ./push-all.sh; then
+  print_bold "Push successful, cleaning up local repositories..."
+
+  # Debugging information
+  pwd
+  
+  print_bold "Removing API directory..."
+  cd api || { print_bold "Failed to change directory to api"; exit 1; }
+  pwd  # Print current directory
+  rm -rf vidbriefs-api
+  ls  # List files to verify deletion
+  cd .. || { print_bold "Failed to change directory back from api"; exit 1; }
+  
+  print_bold "Removing APP directory..."
+  cd app || { print_bold "Failed to change directory to app"; exit 1; }
+  pwd  # Print current directory
+  rm -rf vidbriefs-app
+  ls  # List files to verify deletion
+  cd .. || { print_bold "Failed to change directory back from app"; exit 1; }
+  
+  print_bold "Removing Desktop directory..."
+  cd desktop || { print_bold "Failed to change directory to desktop"; exit 1; }
+  pwd  # Print current directory
+  rm -rf vidbriefs-desktop
+  ls  # List files to verify deletion
+  cd .. || { print_bold "Failed to change directory back from desktop"; exit 1; }
+  
+  print_bold "Local repositories cleaned."
+else
+  print_bold "Push failed, not cleaning up local repositories."
+fi
+```
+<!-- ---------------------------------------------------------------------------------------------------------------------->
+### VidBriefs/APP/clone.sh/
 
 This Bash script will first define a function to bold the format of subsequent echo statements later in the script.
 
 Next, it will navigate to VidBriefs/APP and clone the vidbriefs-app repository. It retrieves the full path of the .env file to be copied to the OPENAI_API_KEY environment variable, which is then inserted into the Xcode scheme file for the project. It uses <a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> to modify the value of the environment variable in the Xcode scheme file. The script will then check if the change was successful; if it was, it will print a success message and exit the script with success(0). If the if statement is not true, it will print an error message and exit the script with failure(1).
 
-```
+```bash
 #!/bin/bash
 
 # Function to print bold text
@@ -132,12 +177,11 @@ else
 fi
 
 ```
-
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 ### pu.sh
 
 
-```
-
+```bash
 script to push local changes to global repo
 
 #!/bin/bash
@@ -155,6 +199,8 @@ git commit -m "update"
 git push origin main
 
 print_bold "PUSHED TO GIT"
+```
+```bash
 -------
 OUTPUT:
 -------
@@ -169,9 +215,10 @@ Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To https://github.com/alfie-ns/alfie-ns.github.io
    a41162e..7a4d40e  main -> main 
-***PUSHED TO GIT***
+   
+PUSHED TO GIT
 ```
-```
+
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
@@ -185,6 +232,7 @@ This script will first define a function to handle errors, then it will check if
 
 These options are set to ensure robustness and reliability, making the script terminate promptly on encountering errors, thereby maintaining a clean and predictable execution flow.
 
+```bash
 #!/bin/bash -euo pipefail
 
 # -e: Exit immediately if a command exits with a non-zero status.
@@ -235,14 +283,14 @@ fi
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
-### vidbriefs-api/scripts
+### VidBriefs/API/vidbriefs-api/scripts
 
 In the process of initializing the API to run on a local machine, the following scripts are executed:
 
 #### run-migrations.sh
 This scripts handle the commands necessary to run the migrations for the API server.
 
-```
+```bash
 #!/bin/bash
 
 # Load environment variables
@@ -269,7 +317,7 @@ echo "Migrations complete."
 #### setup-db.sh
 This script setups up the database for the API server.
 
-```
+```bash
 #!/bin/bash
 
 # Function to load environment variables from .env file
@@ -333,9 +381,9 @@ echo "Database setup complete."
 ```
 #### start-server.sh
 
-### API/clone.sh/vidbriefs-api
+### VidBriefs/API/clone.sh/vidbriefs-api
 
-```
+```bash
 #!/bin/bash
 
 # Find the next available number for multiple directories
