@@ -219,6 +219,18 @@ To https://github.com/alfie-ns/alfie-ns.github.io
 PUSHED TO GIT
 ```
 
+### xcode.sh
+
+```bash
+#!/bin/bash
+xed app/vidbriefs-app || { echo "Failed to open Xcode in app/vidbriefs-app"; exit 1; }
+
+<<EOF
+    try open Xcode in app/vidbriefs-app directory, 
+    if fails -> print error message and exit with failure status.
+EOF
+
+```
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
