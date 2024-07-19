@@ -5,7 +5,6 @@ header:
   overlay_image: /assets/splash/header.png
 title: "Scripts"
 ---
-
 **the scripts.md page will do the following:**
 
 - [ ] get picture of scripts on desktop
@@ -119,12 +118,14 @@ else
   print_bold "Push failed, not cleaning up local repositories."
 fi
 ```
+
 <!-- ---------------------------------------------------------------------------------------------------------------------->
+
 ### VidBriefs/APP/clone.sh/
 
 This Bash script will first define a function to bold the format of subsequent echo statements later in the script.
 
-Next, it will navigate to VidBriefs/APP and clone the vidbriefs-app repository. It retrieves the full path of the .env file to be copied to the OPENAI_API_KEY environment variable, which is then inserted into the Xcode scheme file for the project. It uses <a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> to modify the value of the environment variable in the Xcode scheme file. The script will then check if the change was successful; if it was, it will print a success message and exit the script with success(0). If the if statement is not true, it will print an error message and exit the script with failure(1).
+Next, it will navigate to VidBriefs/APP and clone the vidbriefs-app repository. It retrieves the full path of the .env file to be copied to the OPENAI_API_KEY environment variable, which is then inserted into the Xcode scheme file for the project. It uses `<a href="http://xmlstar.sourceforge.net/">`xmlstarlet`</a>` to modify the value of the environment variable in the Xcode scheme file. The script will then check if the change was successful; if it was, it will print a success message and exit the script with success(0). If the if statement is not true, it will print an error message and exit the script with failure(1).
 
 ```bash
 #!/bin/bash
@@ -177,9 +178,27 @@ else
 fi
 
 ```
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-### pu.sh
 
+### Function to run clone script for a given directory
+
+```bash
+run_clone_script() {
+  local dir=$1 # dir = APP || API || Desktop
+  cd "$dir" # change to respective directory
+  if [ -f "clone.sh" ]; then # if clone .sh file exists
+    print_bold "Running clone script for $dir...\n" # print bold text with padding
+    bash clone.sh # run the clone script
+  else
+    echo "$dir/clone.sh not found."
+    return 1
+  fi
+  cd .. # back to VidBriefs directory for the next iteration
+}
+```
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+### pu.sh
 
 ```bash
 script to push local changes to global repo
@@ -200,6 +219,7 @@ git push origin main
 
 print_bold "PUSHED TO GIT"
 ```
+
 ```bash
 -------
 OUTPUT:
@@ -240,7 +260,7 @@ This script will first define a function to handle errors, then it will check if
 
 - `-e`: Exit immediately if a command exits with a non-zero status. This ensures that any error in the script stops execution immediately, preventing subsequent commands from running and potentially causing more issues.
 - `-u`: Treat unset variables as an error and exit immediately. This prevents the script from continuing with uninitialised variables, which could lead to unexpected behaviour or difficult-to-debug errors.
-- `-o pipefail`: The return value of a pipeline is the status of the last command to exit with a non-zero status, or zero if no command exited with a non-zero status. This makes sure that any failure in a sequence of piped commands is caught, ensuring that the script doesn't inadvertently ignore errors in complex command chains. 
+- `-o pipefail`: The return value of a pipeline is the status of the last command to exit with a non-zero status, or zero if no command exited with a non-zero status. This makes sure that any failure in a sequence of piped commands is caught, ensuring that the script doesn't inadvertently ignore errors in complex command chains.
 
 These options are set to ensure robustness and reliability, making the script terminate promptly on encountering errors, thereby maintaining a clean and predictable execution flow.
 
@@ -300,6 +320,7 @@ fi
 In the process of initializing the API to run on a local machine, the following scripts are executed:
 
 #### run-migrations.sh
+
 This scripts handle the commands necessary to run the migrations for the API server.
 
 ```bash
@@ -326,7 +347,9 @@ python manage.py migrate
 
 echo "Migrations complete."
 ```
+
 #### setup-db.sh
+
 This script setups up the database for the API server.
 
 ```bash
@@ -391,6 +414,7 @@ SELECT 1 FROM pg_database WHERE datname = '$DB_NAME';" | grep -q 1 || psql -h $D
 
 echo "Database setup complete."
 ```
+
 #### start-server.sh
 
 ### VidBriefs/API/clone.sh/vidbriefs-api
@@ -420,13 +444,12 @@ echo "Repository cloned as $new_name and .env file copied."
 ```
 
 ...
+
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
 ### db-management.sh
 
 ---
-
-
 
 ---
 
