@@ -1,5 +1,5 @@
 #!/bin/bash
-# vidbriefs-app/push.sh
+# vidbriefs-app/pu.sh
 
 # Function to print bold text
 print_bold() {
