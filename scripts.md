@@ -119,13 +119,56 @@ else
 fi
 ```
 
+### Vidbriefs/push-all.sh
+
+```bash
+#!/bin/bash
+
+# Function to print bold text
+print_bold() {
+  BOLD=$(tput bold)
+  NORMAL=$(tput sgr0)
+  echo -e "${BOLD}$1${NORMAL}"
+}
+
+print_bold "Starting push-all.sh script..."
+
+for dir in api/vidbriefs-api app/vidbriefs-app desktop/vidbriefs-desktop; do
+  if [ -d "$dir" ]; then
+    print_bold "Entering directory $dir..."
+    cd $dir || { print_bold "Failed to change directory to $dir"; exit 1; }
+  
+    if [ -f ./pu.sh ]; then
+      print_bold "Running pu.sh in $dir"
+      ./pu.sh || { print_bold "pu.sh failed in $dir"; exit 1; }
+    else
+      print_bold "pu.sh not found in $dir"
+      exit 1
+    fi
+  
+    cd - || { print_bold "Failed to change directory back from $dir"; exit 1; }
+  else
+    print_bold "Directory $dir does not exist."
+    exit 1
+  fi
+done
+
+echo "All repositories pushed successfully"
+
+: <<'EOF'
+- 'dir' holds the directory name of the repository to be pushed
+- for each directory in the list of directories (api, app, desktop)
+- cd into the directory && push.sh && cd back to the root directory for the next iteration
+EOF
+```
+---
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
 ### VidBriefs/APP/clone.sh/
 
 This Bash script will first define a function to bold the format of subsequent echo statements later in the script.
 
-Next, it will navigate to VidBriefs/APP and clone the vidbriefs-app repository. It retrieves the full path of the .env file to be copied to the OPENAI_API_KEY environment variable, which is then inserted into the Xcode scheme file for the project. It uses `<a href="http://xmlstar.sourceforge.net/">`xmlstarlet`</a>` to modify the value of the environment variable in the Xcode scheme file. The script will then check if the change was successful; if it was, it will print a success message and exit the script with success(0). If the if statement is not true, it will print an error message and exit the script with failure(1).
+Next, it will navigate to VidBriefs/APP and clone the vidbriefs-app repository. It retrieves the full path of the .env file to be copied to the OPENAI_API_KEY environment variable, which is then inserted into the Xcode scheme file for the project. It uses `<a href="http://xmlstar.sourceforge.net/">`xmlstarlet `</a>` to modify the value of the environment variable in the Xcode scheme file. The script will then check if the change was successful; if it was, it will print a success message and exit the script with success(0). If the if statement is not true, it will print an error message and exit the script with failure(1).
 
 ```bash
 #!/bin/bash
@@ -178,7 +221,7 @@ else
 fi
 
 ```
-
+---
 ### Function to run clone script for a given directory
 
 ```bash
@@ -195,7 +238,7 @@ run_clone_script() {
   cd .. # back to VidBriefs directory for the next iteration
 }
 ```
-
+---
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 ### pu.sh
@@ -238,7 +281,7 @@ To https://github.com/alfie-ns/alfie-ns.github.io
    
 PUSHED TO GIT
 ```
-
+---
 ### xcode.sh
 
 ```bash
@@ -312,6 +355,7 @@ else
 fi
 
 ```
+---
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
@@ -443,7 +487,7 @@ cp ../.env .
 echo "Repository cloned as $new_name and .env file copied."
 ```
 
-...
+---
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
