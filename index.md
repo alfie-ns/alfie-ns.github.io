@@ -10,14 +10,17 @@ header:
 
 ## Introduction
 
-I'm Alfie, a Computer Science undergraduate at the University of Plymouth, specializing in Artificial Intelligence. Entering my second year, I'm aiming for a first-class honours degree, with a particular interest in mathematical modules.
+I'm Alfie, a Computer Science undergraduate at the University of Plymouth, specialising in Artificial Intelligence. Entering my second year, I'm aiming for a first-class honours degree, with a particular interest in mathematical modules.
 
-My portfolio includes:
-- Dr. Fit: A health and fitness assistant using Python and Flask
-- VidBriefs: An iOS app for video summarization, built with Swift
-- COMP1001 Computer Systems report: Exploring AVX intrinsics and C++ for image processing
+AI Products:
+- VidBriefs: An iOS app for video summarisation, built with Swift and Python(Django)
+- Dr. Fit: A health and fitness assistant website using HTML, JavaScript and Python(Flask)
 
-I'm passionate about AI, Machine Learning, Data Science, and Mathematics. My interests also extend to Business, particularly Marketing, Entrepreneurship, and Product Development, with the goal of innovating in AI products and services.
+University modules:
+- COMP1001 Computer Systems report: Exploring AVX intrinsics and image processing with C++
+- COMP1003 Algorithms and Data Structures report: Implementing an AVL Binary Search Tree in C#
+
+I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathematics. I am also interested in Business, particularly Marketing, Entrepreneurship, and Product Development, with the goal of innovating in AI products and services to improve quality-of-life in the coming years.
 
 
 
