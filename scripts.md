@@ -14,13 +14,14 @@ title: "Scripts"
 - [ ] make more pygames
 -->
 
-<!-- ---------------------------------------------------------------------------------
+<!-----------------------------------------------------------------------------------
 ------------------------------------->
 
-I'm a keen enthusiast of [Python](#python-scripts) and [Bash](#bash-scripts) scripting. I normally utilise Python for script programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac. Below are some of the scripts I've written for various projects and tasks.
+I'm a keen enthusiast of `<a href="#python-scripts" style="color: #448c88">`Python`</a>` and `<a href="#bash-scripts" style="color: #448c88">`Bash`</a>` scripting. I normally utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac. Below are some of the scripts I've written for various projects and tasks.
 
 ---
-# Python Scripts {#python-scripts}
+
+# Python Scripts
 
 ### VidBriefs/APP/vidbriefs-desktop/vidbriefs-desktop.py
 
@@ -34,7 +35,7 @@ This Python script utilizes OpenAI's GPT-4o-mini or Anthropic's Claude-3-sonnet-
 - **Markdown File Creation**: Generates formatted files from AI responses when applicable
 - **Personality Customization**: Select from various traits and intensities to tailor the AI's communication style
 
-This tool can be useful for content analysis, research, and extracting information from YouTube videos in a structured format personalised to 
+This tool can be useful for content analysis, research, and extracting information from YouTube videos in a structured format personalised to
 the user.
 
 ```python
@@ -113,8 +114,8 @@ def green(text):
 def chat_with_ai(messages, personality, ai_model, youtube_link):
     system_message = f"You are a helpful assistant with a {personality} personality."
     instruction = f"You will assist the user with their question about the video and generate markdown files. When referencing the video, always use this exact link: {youtube_link}. Do not generate or use any placeholder or example links."
-    
-    
+  
+  
     # [ ] Create functionality to give user option for how much tokens to use
 
     if ai_model == "gpt":
@@ -204,7 +205,7 @@ def get_transcript(url):
     # if url is a youtu.be link, it takes the last part of the URL.
     if not video_id:
         raise ValueError("No video ID found in URL")
-    
+  
     transcript = YouTubeTranscriptApi.get_transcript(video_id) # Get the transcript for the video
     sentences = [entry['text'] for entry in transcript] # Extract the text into a list of sentences
     return " ".join(sentences) # Join the sentences into a single string
@@ -217,13 +218,13 @@ def apply_markdown_styling(text):
     """
     def replace_bold(match):
         return bold(match.group(1))
-    
+  
     # Replace text between double asterisks, removing the asterisks
     text = re.sub(r'\*\*([^*]+)\*\*', replace_bold, text)
-    
+  
     # Replace text between colons, removing the colons
     text = re.sub(r':([^:]+):', replace_bold, text)
-    
+  
     return text
 
 def extract_markdown(text):
@@ -249,29 +250,29 @@ def generate_markdown_file(content, title, youtube_link):
     """Generate a Markdown file with the given content, title, and YouTube link in a 'Markdown' folder."""
     if not title or title.strip() == "":
         title = "Untitled Document"
-    
+  
     folder_name = "Markdown"
-    
+  
     # Create the folder if it doesn't exist
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
-    
+  
     # Generate a slug for the filename
     slug = slugify(title)
-    
+  
     # Create a unique filename with a timestamp
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{slug}_{timestamp}.md"
-    
+  
     # Full path for the file
     file_path = os.path.join(folder_name, filename)
-    
+  
     # Write the content to the markdown file
     with open(file_path, 'w') as f:
         f.write(f"# {title}\n\n")
         f.write(content)
         f.write(f"\n\n---\n\n[Link to Video]({youtube_link})")
-    
+  
     return file_path
 
 # ------------------------------------------------------------------------------
@@ -282,7 +283,7 @@ def main():
         os.system('clear')
         # ----------------- Main Program -----------------
         print(bold(blue("\nYoutube Transcript AI Assistant\n")))
-        
+      
         ai_model = input(bold("Choose your AI model (gpt/claude): ")).strip().lower() # Ask user to choose AI model, strip whitespace and convert to lowercase
         while ai_model not in ["gpt", "claude"]:
             print(red("Invalid choice. Please enter 'gpt' or 'claude'."))
@@ -296,12 +297,12 @@ def main():
         (Feel free to describe the personality in your own words, or use the suggestions below)
 
         You can specify intensity levels (LOW, MEDIUM, HIGH) and combine traits as you wish.
-        
+      
         Examples: ----------------------------------------------------------------
         - 'FRIENDLY and HELPFUL with a touch of HUMOR'
         - 'PROFESSIONAL and INFORMATIVE with a hint of SARCASM'
         - 'CASUAL and ENGAGING with a focus on PRACTICALITY' 
-        - Logical teacher                                                                                                    
+        - Logical teacher                                                                                                  
         - 'HIGH summarizer and MEDIUM explainer'
         - 'LOW questioner with HIGH practical focus'
         - 'MEDIUM friendly and HIGH professional'
@@ -328,9 +329,9 @@ def main():
         ----------------------------------------------------------------------------
 
         (BE AS CREATIVE AS YOU LIKE TO ENSURE OPTIMAL LEARNING EFFICACY) 
-        
-        Your choice:                                                       
-                                                        
+      
+        Your choice:                                                     
+                                                      
         """)))
 
         personality = personality_choice or "friendly and helpful" # Default personality
@@ -376,16 +377,16 @@ def main():
                     if not current_transcript:
                         print(red("Please load a YouTube video first by pasting its URL."))
                         continue
-                    
+                  
                     # Add user message to conversation history
                     messages.append({"role": "user", "content": user_input})
-                    
+                  
                     # Process the transcript with the entire conversation history
                     full_query = f"Based on this transcript and our conversation so far, please respond to the latest message: {user_input}\n\nTranscript:\n{current_transcript}"
                     response = chat_with_ai(messages + [{"role": "user", "content": full_query}], personality, ai_model, current_youtube_link)
-                    
+                  
                     print(bold(red("\nAssistant: ")) + apply_markdown_styling(response))
-                    
+                  
                     # Add assistant's response to conversation history
                     messages.append({"role": "assistant", "content": response})
 
@@ -394,7 +395,7 @@ def main():
                     if markdown_content:
                         title_prompt = f"Generate a brief, concise title (5 words or less) for this content:\n\n{markdown_content[:200]}..."
                         title_response = chat_with_ai([{"role": "user", "content": title_prompt}], "concise", ai_model, current_youtube_link)
-                        
+                      
                         file_path = generate_markdown_file(markdown_content, title_response, current_youtube_link)  # Pass the current YouTube link
                         print(green(f"\nMarkdown file generated: {file_path}\n"))
                     else:
@@ -442,7 +443,7 @@ CATEGORIES_DIR = "Categories"  # The directory containing all category folders
 def categorise_with_ai(content):
     """Use AI to categorize the content into CompSci, Gaming, Health, Sports, or Other."""
     prompt = f"Categorize the following content into one of these categories: {', '.join(CATEGORIES)}. Respond with just the category name.\n\nContent: {content[:500]}..."  # Limit content to 500 chars
-    
+  
     try:
         response = client.chat.completions.create(
             model="gpt-4o-mini", 
@@ -476,16 +477,16 @@ def move_file(source, destination):
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     markdown_files = get_markdown_files()
-    
+  
     for file in markdown_files:
         file_path = os.path.join(script_dir, MARKDOWN_DIR, file)
         content = read_markdown_content(file_path)
-        
+      
         category = categorise_with_ai(content)
-        
+      
         destination_folder = os.path.join(script_dir, CATEGORIES_DIR, category)
         destination_path = os.path.join(destination_folder, file)
-        
+      
         if os.path.exists(destination_folder):
             move_file(file_path, destination_path)
             print(f"Moved {file} to {CATEGORIES_DIR}/{category}")
@@ -499,7 +500,8 @@ if __name__ == "__main__":
 ```
 
 ---
-# Bash Scripts {#bash-scripts}
+
+# Bash Scripts
 
 <!--I use bash-scripts to automate nearly everything on my mac, particularty for git and vscode...elaborate [ ] -->
 
@@ -989,7 +991,5 @@ echo "Repository cloned as $new_name and .env file copied."
 ---
 
 ---
-
-
 
 # Apple Scripts
