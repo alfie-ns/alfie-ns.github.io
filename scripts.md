@@ -25,17 +25,17 @@ I'm a keen enthusiast of <a href="#python-scripts" style="color: #448c88">Python
 
 ### VidBriefs/APP/vidbriefs-desktop/vidbriefs-desktop.py
 
-This Python script utilizes OpenAI's GPT-4o-mini or Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
+This Python script utilises OpenAI's GPT-4o-mini or Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
 
 - **AI Model Options**: Choose between GPT-4o-mini and Claude-3-sonnet-20240229
 - **Customizable AI Personality**: Adjust the AI's approach to suit your preferences
-- **YouTube Integration**: Analyze videos by inputting their URL
+- **YouTube Integration**: Analyse videos by inputting their URL
 - **Interactive Querying**: Ask questions about the video content
 - **Transcript Processing**: Handles longer transcripts by splitting them into sections
 - **Markdown File Creation**: Generates formatted files from AI responses when applicable
 - **Personality Customization**: Select from various traits and intensities to tailor the AI's communication style
 
-This tool can be useful for content analysis, research, and extracting information from YouTube videos in a structured format personalised to
+This tool can be useful for content analysis, research, and extracting information from YouTube videos in a  fast structured format personalised to
 the user.
 
 ```python
