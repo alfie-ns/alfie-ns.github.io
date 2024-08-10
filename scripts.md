@@ -46,7 +46,7 @@ the user.
 import sys, os, re, time # system operations, regular expressions, time
 from dotenv import load_dotenv # for loading environment variables from .env file
 
-# --------------AI APIS----------------
+# --------------AI APIS---------------- 
 
 from openai import OpenAI
 import anthropic
@@ -86,7 +86,7 @@ claude_client = anthropic.Anthropic(api_key=claude_api_key)
 # Check if running in a terminal that supports formatting
 def supports_formatting():
     return sys.stdout.isatty()
-           #sys.stdout.isatty() returns True if the file descriptor
+           #sys.stdout.isatty() returns True if the file descriptor allows formatting
 
 # Formatting functions --------------------------------------------------------
 def format_text(text, format_code):
@@ -112,10 +112,23 @@ def green(text):
 
 # AI Communication Functions -----------------------------------------------------
 def chat_with_ai(messages, personality, ai_model, youtube_link):
-    system_message = f"You are a helpful assistant with a {personality} personality."
+    system_message = f"""You are a highly knowledgeable and articulate assistant with a {personality} personality.
+    Your primary goal is to provide comprehensive, well-structured, and educational responses.
+    
+    When responding:
+    1. Always provide detailed, multi-section responses with clear headings and subheadings.
+    2. Use markdown formatting to enhance readability (e.g., # for main headings, ## for subheadings, * for bullet points).
+    3. Include relevant examples, analogies, or case studies to illustrate complex concepts.
+    4. Summarize key points at the end of each major section.
+    5. Suggest practical applications or exercises for the user to reinforce their understanding.
+    6. When appropriate, include a "Further Reading" section with relevant resources.
+    7. Always reference the video using this exact link: {youtube_link}. Do not generate or use any placeholder or example links.
+    
+    Remember to maintain a balance between being informative and engaging, adapting your tone to match the {personality} style."""
+    
     instruction = f"You will assist the user with their question about the video and generate markdown files. When referencing the video, always use this exact link: {youtube_link}. Do not generate or use any placeholder or example links."
-  
-  
+    
+    
     # [ ] Create functionality to give user option for how much tokens to use
 
     if ai_model == "gpt":
@@ -193,10 +206,10 @@ def split_transcript(transcript, max_tokens=125000):
 
 def get_transcript(url):
     '''
-        Extract video ID from YouTube URL:
-        For youtu.be links: use the last part of the URL after '/'
-        For full URLs: parse query string and get 'v' parameter
-        Falls back to None if 'v' parameter is not found
+    Extract video ID from YouTube URL:
+    For youtu.be links: use the last part of the URL after '/'
+    For full URLs: parse query string and get 'v' parameter
+    Falls back to None if 'v' parameter is not found
     '''
     video_id = url.split('/')[-1] if 'youtu.be' in url else parse_qs(urlparse(url).query).get('v', [None])[0]
 
@@ -205,7 +218,7 @@ def get_transcript(url):
     # if url is a youtu.be link, it takes the last part of the URL.
     if not video_id:
         raise ValueError("No video ID found in URL")
-  
+    
     transcript = YouTubeTranscriptApi.get_transcript(video_id) # Get the transcript for the video
     sentences = [entry['text'] for entry in transcript] # Extract the text into a list of sentences
     return " ".join(sentences) # Join the sentences into a single string
@@ -218,13 +231,13 @@ def apply_markdown_styling(text):
     """
     def replace_bold(match):
         return bold(match.group(1))
-  
+    
     # Replace text between double asterisks, removing the asterisks
     text = re.sub(r'\*\*([^*]+)\*\*', replace_bold, text)
-  
+    
     # Replace text between colons, removing the colons
     text = re.sub(r':([^:]+):', replace_bold, text)
-  
+    
     return text
 
 def extract_markdown(text):
@@ -250,91 +263,80 @@ def generate_markdown_file(content, title, youtube_link):
     """Generate a Markdown file with the given content, title, and YouTube link in a 'Markdown' folder."""
     if not title or title.strip() == "":
         title = "Untitled Document"
-  
+    
     folder_name = "Markdown"
-  
+    
     # Create the folder if it doesn't exist
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
-  
+    
     # Generate a slug for the filename
     slug = slugify(title)
-  
+    
     # Create a unique filename with a timestamp
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{slug}_{timestamp}.md"
-  
+    
     # Full path for the file
     file_path = os.path.join(folder_name, filename)
-  
+    
     # Write the content to the markdown file
     with open(file_path, 'w') as f:
         f.write(f"# {title}\n\n")
         f.write(content)
         f.write(f"\n\n---\n\n[Link to Video]({youtube_link})")
-  
+    
     return file_path
 
 # ------------------------------------------------------------------------------
-# Main 🟥 -------------------------------------------------------------- 
+# Main 🟥 ----------------------------------------------------------------------
 # ------------------------------------------------------------------------------
 def main():
     while True:  # Outer loop for restart 'break' functionality
         os.system('clear')
         # ----------------- Main Program -----------------
         print(bold(blue("\nYoutube Transcript AI Assistant\n")))
-  
+        
         ai_model = input(bold("Choose your AI model (gpt/claude): ")).strip().lower() # Ask user to choose AI model, strip whitespace and convert to lowercase
-        while ai_model not in ["gpt", "claude"]:
+        while ai_model not in ["gpt", "claude"]: # While ai not in the ...
             print(red("Invalid choice. Please enter 'gpt' or 'claude'."))
             ai_model = input(bold("Choose your AI model (gpt/claude): ")).strip().lower()
 
         # Personalise assistant ------------------------------------------------
 
         # dedent() removes leading whitespace from the text, thus allowing cleaner formatting
-        personality_choice = input(bold(textwrap.dedent(""" 
-        How would you like to personalise the assistant?
-        (Feel free to describe the personality in your own words, or use the suggestions below)
+        personality_choice = input(bold(textwrap.dedent("""
+            How would you like to personalise the assistant?
+            (Feel free to describe the personality in your own words, or use the suggestions below)
 
-        You can specify intensity levels (LOW, MEDIUM, HIGH) and combine traits as you wish.
-  
-        Examples: ----------------------------------------------------------------
-        - 'FRIENDLY and HELPFUL with a touch of HUMOR'
-        - 'PROFESSIONAL and INFORMATIVE with a hint of SARCASM'
-        - 'CASUAL and ENGAGING with a focus on PRACTICALITY' 
-        - Logical teacher                                                                                              
-        - 'HIGH summarizer and MEDIUM explainer'
-        - 'LOW questioner with HIGH practical focus'
-        - 'MEDIUM friendly and HIGH professional'
-        - 'mentor with a focus on practical applications'
+            Learning Style Examples:
+            - 🧠 ANALYTICAL: "HIGH 🧠 ANALYTICAL with MEDIUM 🔬 TECHNICAL focus"
+            - 🎨 CREATIVE: "MEDIUM 🎨 CREATIVE with LOW 🌈 VISUAL emphasis"
+            - 🗣️ PERSUASIVE: "BALANCED 🗣️ PERSUASIVE-🧠 LOGICAL approach"
+            - 🌐 MULTIDISCIPLINARY: "HIGH 🌐 MULTIDISCIPLINARY with MEDIUM 🔗 CONTEXTUALIZING"
+            - 📚 ACADEMIC: "HIGH 📚 ACADEMIC with LOW 🧪 EXPERIMENTAL style"
+            - 🤔 SOCRATIC: "MEDIUM 🤔 SOCRATIC with HIGH 🔍 QUESTIONING focus"
+            - 🤝 EMPATHETIC: "HIGH 🤝 EMPATHETIC with MEDIUM 👥 COLLABORATIVE approach"
+            - 💡 INNOVATIVE: "BALANCED 💡 INNOVATIVE-🔬 TECHNICAL style"
+            - 📊 DATA-DRIVEN: "HIGH 📊 DATA-DRIVEN with LOW 🖼️ CONCEPTUAL emphasis"
+            - 🧩 PROBLEM-SOLVING: "MEDIUM 🧩 PROBLEM-SOLVING with HIGH 🔀 ADAPTIVE focus"
 
-        Learning trait suggestions (feel free to use your own):
-        ---------------------------------------------------------------------------
-        Communication:
-        - informative    - engaging       - persuasive     - critical
-        - concise        - analytical     - descriptive    - eloquent
+            Combine these or create your own to define the AI's learning style and personality.
+            Remember, you can specify intensity levels (LOW, MEDIUM, HIGH, BALANCED) and combine
+            traits.
+                                                        
+            BALANCED 🧠 ANALYTICAL-🎨 CREATIVE with HIGH 🌐 MULTIDISCIPLINARY focus.
+            MEDIUM 🗣️ PERSUASIVE with LOW 🤔 SOCRATIC questioning.                                             
+            HIGH 📊 DATA-DRIVEN and MEDIUM 🤝 EMPATHETIC approach
+                                                        
+            EXTENSIVE MARKDOWN FILE CREATOR  
+            EXTENSIVE TRAVERSAL OF ALL VIDEO INSIGHTS
 
-        Style:
-        - creative       - technical      - casual         - formal
-        - friendly       - professional   - humorous       - serious
+            Teacher                                      
 
-        Approach:
-        - teaching       - mentoring      - motivational   - skeptical
-        - empathetic     - logical        - practical      - academic
+            Your choice: """)))
 
-        Focus:
-        - summarizing    - explaining     - contextualizing - questioning
-        - comparing      - historical     - visual         - socratic
-        - analogical     - fact-checking  - multidisciplinary
-        ----------------------------------------------------------------------------
-
-        (BE AS CREATIVE AS YOU LIKE TO ENSURE OPTIMAL LEARNING EFFICACY) 
-  
-        Your choice:                                                 
-                                                  
-        """)))
-
-        personality = personality_choice or "friendly and helpful" # Default personality
+        personality = personality_choice or "BALANCED 🧠 ANALYTICAL-🎨 CREATIVE with HIGH 🌐 MULTIDISCIPLINARY focus. MEDIUM 🗣️ PERSUASIVE with LOW 🤔 SOCRATIC questioning. HIGH 📊 DATA-DRIVEN and MEDIUM 🤝 EMPATHETIC approach."
 
         print(f"\nGreat! Your {ai_model.upper()} assistant will be", bold(personality))
         print("Paste a YouTube URL to start chatting about videos of your interest.")
@@ -374,19 +376,19 @@ def main():
                         print(red(f"Error loading video transcript: {str(e)}"))
                         continue
                 else:
-                    if not current_transcript:
+                    if not current_transcript: # If transcript hasnt been initially loaded prior to conversation 
                         print(red("Please load a YouTube video first by pasting its URL."))
                         continue
-              
+                    
                     # Add user message to conversation history
                     messages.append({"role": "user", "content": user_input})
-              
+                    
                     # Process the transcript with the entire conversation history
                     full_query = f"Based on this transcript and our conversation so far, please respond to the latest message: {user_input}\n\nTranscript:\n{current_transcript}"
-                    response = chat_with_ai(messages + [{"role": "user", "content": full_query}], personality, ai_model, current_youtube_link)
-              
+                    response = chat_with_ai(messages + [{"role": "user", "content": full_query}], personality, ai_model, current_youtube_link) # response = 
+                    
                     print(bold(red("\nAssistant: ")) + apply_markdown_styling(response))
-              
+                    
                     # Add assistant's response to conversation history
                     messages.append({"role": "assistant", "content": response})
 
@@ -395,7 +397,7 @@ def main():
                     if markdown_content:
                         title_prompt = f"Generate a brief, concise title (5 words or less) for this content:\n\n{markdown_content[:200]}..."
                         title_response = chat_with_ai([{"role": "user", "content": title_prompt}], "concise", ai_model, current_youtube_link)
-                  
+                        
                         file_path = generate_markdown_file(markdown_content, title_response, current_youtube_link)  # Pass the current YouTube link
                         print(green(f"\nMarkdown file generated: {file_path}\n"))
                     else:
@@ -408,11 +410,13 @@ def main():
             os.system('clear')
             sys.exit()
 
-if __name__ == "__main__": # Run the main function if the script is executed in any way other than being imported as a module
+if __name__ == "__main__": # Run the main function if the script is executed directly, not when imported as a module
     main()
 ```
-
 ---
+
+<!--### VidBriefs/APP/vidbriefs-desktop/tedtalks.py-->
+
 
 ### VidBriefs/Desktop/vidbriefs-desktop/categorise-md.py
 
@@ -422,9 +426,7 @@ This Python script reorganises markdown files into categories based on their con
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Dependencies:
-import os, time
-import shutil
+import os, shutil
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -435,23 +437,45 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Constants
-CATEGORIES = ["CompSci", "Gaming", "Health", "Other", "Sports"]
+CATEGORIES = [
+    "CompSci", 
+    "AI & Machine Learning",
+    "Gaming",
+    "Health & Medicine",
+    "Fitness & Nutrition",
+    "Neuroscience",
+    "Sports",
+    "Technology",
+    "Politics & Current Events",
+    "Economics & Finance",
+    "History",
+    "Investing",
+    "Military & Defense",
+    "Entertainment",
+    "Science",
+    "Mental Health",
+    "Cybersecurity",
+    "Environmental Science",
+    "Social Issues",
+    "Business & Entrepreneurship",
+    "Education",
+    "Travel",
+    "Other"
+]
 MARKDOWN_DIR = "Markdown"
-CATEGORIES_DIR = "Categories"  # The directory containing all category folders
+CATEGORIES_DIR = "Categories"
 
-# AI Communication Function --------------------------------------------------
 def categorise_with_ai(content):
-    """Use AI to categorize the content into CompSci, Gaming, Health, Sports, or Other."""
-    prompt = f"Categorize the following content into one of these categories: {', '.join(CATEGORIES)}. Respond with just the category name.\n\nContent: {content[:500]}..."  # Limit content to 500 chars
-  
+    prompt = f"Categorise the following content into one of these categories: {', '.join(CATEGORIES)}. Respond with just the category name.\n\nContent: {content[:500]}..."
+    
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini", 
+            model="gpt-4o-mini",  # Updated to a more recent model
             messages=[
-                {"role": "system", "content": "You are a helpful assistant that categorises content."},
+                {"role": "system", "content": "You are a helpful assistant that categorises content into their respective categories."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=10 # limit response to 10 tokens because we only need the category name
+            max_tokens=10
         )
         category = response.choices[0].message.content.strip()
         return category if category in CATEGORIES else "Other"
@@ -459,46 +483,42 @@ def categorise_with_ai(content):
         print(f"Error in AI categorization: {e}")
         return "Other"
 
-# File Processing Functions --------------------------------------------------
 def get_markdown_files():
-    """Get all Markdown files in the Markdown directory."""
     return [f for f in os.listdir(MARKDOWN_DIR) if f.endswith('.md')]
 
 def read_markdown_content(file_path):
-    """Read the content of a Markdown file."""
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8') as file:
         return file.read()
 
 def move_file(source, destination):
-    """Move a file from source to destination."""
     shutil.move(source, destination)
 
-# Main function --------------------------------------------------------------
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     markdown_files = get_markdown_files()
-  
-    for file in markdown_files:
-        file_path = os.path.join(script_dir, MARKDOWN_DIR, file)
-        content = read_markdown_content(file_path)
-  
-        category = categorise_with_ai(content)
-  
+    
+    for file in markdown_files: # for each markdown file
+        file_path = os.path.join(script_dir, MARKDOWN_DIR, file) # file path = 
+        content = read_markdown_content(file_path) # read the content of the file
+        
+        category = categorise_with_ai(content) # categorise file into respective category
+        
         destination_folder = os.path.join(script_dir, CATEGORIES_DIR, category)
         destination_path = os.path.join(destination_folder, file)
-  
-        if os.path.exists(destination_folder):
+        
+        if not os.path.exists(destination_folder):
+            os.makedirs(destination_folder)
+            print(f"\nCreated category folder: {destination_folder}\n")
+        
+        try: # try to move into respective category, catch error and print if exception
             move_file(file_path, destination_path)
-            print(f"Moved {file} to {CATEGORIES_DIR}/{category}")
-        else:
-            print(f"Category folder {CATEGORIES_DIR}/{category} does not exist. Keeping {file} in Markdown folder.")
-        time.sleep(1.75)
-        os.system('clear')
+            print(f"Moved {file} to {os.path.relpath(destination_path, script_dir)}")
+        except Exception as e:
+            print(f"Error moving {file}: {e}")
 
 if __name__ == "__main__":
     main()
 ```
-
 ---
 
 # Bash Scripts
