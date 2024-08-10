@@ -17,7 +17,7 @@ title: "Scripts"
 <!-----------------------------------------------------------------------------------
 ------------------------------------->
 
-I'm a keen enthusiast of `<a href="#python-scripts" style="color: #448c88" target="_blank">`Python`</a>` and `<a href="#bash-scripts" style="color: #448c88" target="_blank">`Bash`</a>` scripting. I utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac. Below are some of the scripts I've written for various projects and tasks.
+I'm a keen enthusiast of <a href="#python-scripts" style="color: #448c88" target="_blank">Python</a> and <a href="#bash-scripts" style="color: #448c88" target="_blank">Bash</a> scripting. I utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac. Below are some of the scripts I've written for various projects and tasks.
 
 ---
 
@@ -25,7 +25,7 @@ I'm a keen enthusiast of `<a href="#python-scripts" style="color: #448c88" targe
 
 ### VidBriefs/APP/vidbriefs-desktop/youtube.py
 
-This `<a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448c88"  target="_blank">`Python script`</a>` utilises OpenAI's GPT-4o-mini and Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
+This <a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448c88"  target="_blank">Python script</a> utilises OpenAI's GPT-4o-mini and Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
 
 - **AI Model Options**: Choose between GPT-4o-mini and Claude-3-sonnet-20240229
 - **Customizable AI Personality**: Adjust the AI's approach to suit your preferences
@@ -283,7 +283,7 @@ def main():
         os.system('clear')
         # ----------------- Main Program -----------------
         print(bold(blue("\nYoutube Transcript AI Assistant\n")))
-    
+  
         ai_model = input(bold("Choose your AI model (gpt/claude): ")).strip().lower() # Ask user to choose AI model, strip whitespace and convert to lowercase
         while ai_model not in ["gpt", "claude"]:
             print(red("Invalid choice. Please enter 'gpt' or 'claude'."))
@@ -297,12 +297,12 @@ def main():
         (Feel free to describe the personality in your own words, or use the suggestions below)
 
         You can specify intensity levels (LOW, MEDIUM, HIGH) and combine traits as you wish.
-    
+  
         Examples: ----------------------------------------------------------------
         - 'FRIENDLY and HELPFUL with a touch of HUMOR'
         - 'PROFESSIONAL and INFORMATIVE with a hint of SARCASM'
         - 'CASUAL and ENGAGING with a focus on PRACTICALITY' 
-        - Logical teacher                                                                                                
+        - Logical teacher                                                                                              
         - 'HIGH summarizer and MEDIUM explainer'
         - 'LOW questioner with HIGH practical focus'
         - 'MEDIUM friendly and HIGH professional'
@@ -329,9 +329,9 @@ def main():
         ----------------------------------------------------------------------------
 
         (BE AS CREATIVE AS YOU LIKE TO ENSURE OPTIMAL LEARNING EFFICACY) 
-    
-        Your choice:                                                   
-                                                    
+  
+        Your choice:                                                 
+                                                  
         """)))
 
         personality = personality_choice or "friendly and helpful" # Default personality
@@ -377,16 +377,16 @@ def main():
                     if not current_transcript:
                         print(red("Please load a YouTube video first by pasting its URL."))
                         continue
-                
+              
                     # Add user message to conversation history
                     messages.append({"role": "user", "content": user_input})
-                
+              
                     # Process the transcript with the entire conversation history
                     full_query = f"Based on this transcript and our conversation so far, please respond to the latest message: {user_input}\n\nTranscript:\n{current_transcript}"
                     response = chat_with_ai(messages + [{"role": "user", "content": full_query}], personality, ai_model, current_youtube_link)
-                
+              
                     print(bold(red("\nAssistant: ")) + apply_markdown_styling(response))
-                
+              
                     # Add assistant's response to conversation history
                     messages.append({"role": "assistant", "content": response})
 
@@ -395,7 +395,7 @@ def main():
                     if markdown_content:
                         title_prompt = f"Generate a brief, concise title (5 words or less) for this content:\n\n{markdown_content[:200]}..."
                         title_response = chat_with_ai([{"role": "user", "content": title_prompt}], "concise", ai_model, current_youtube_link)
-                    
+                  
                         file_path = generate_markdown_file(markdown_content, title_response, current_youtube_link)  # Pass the current YouTube link
                         print(green(f"\nMarkdown file generated: {file_path}\n"))
                     else:
@@ -481,12 +481,12 @@ def main():
     for file in markdown_files:
         file_path = os.path.join(script_dir, MARKDOWN_DIR, file)
         content = read_markdown_content(file_path)
-    
+  
         category = categorise_with_ai(content)
-    
+  
         destination_folder = os.path.join(script_dir, CATEGORIES_DIR, category)
         destination_path = os.path.join(destination_folder, file)
-    
+  
         if os.path.exists(destination_folder):
             move_file(file_path, destination_path)
             print(f"Moved {file} to {CATEGORIES_DIR}/{category}")
