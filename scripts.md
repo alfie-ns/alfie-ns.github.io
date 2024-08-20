@@ -532,6 +532,7 @@ if __name__ == "__main__":
 <!--I use bash-scripts to automate nearly everything on my mac, particularty for git and vscode...elaborate [ ] -->
 
 ### 1001-CW q3a.sh
+this script is a revised version if my q3a.sh hand in; first checks if MaccOS thus no need for g++ compilation, f
 '''bash
 #!/bin/bash
 
