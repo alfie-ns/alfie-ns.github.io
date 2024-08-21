@@ -897,6 +897,7 @@ PUSHED TO GIT
 
 ```bash
 #!/bin/bash
+# open vidbriefs-app in Xcode; if fail, print error and exit with failure status
 xed app/vidbriefs-app || { echo "Failed to open Xcode in app/vidbriefs-app"; exit 1; }
 
 <<EOF
