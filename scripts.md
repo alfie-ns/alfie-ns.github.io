@@ -17,7 +17,7 @@ title: "Scripts"
 <!-----------------------------------------------------------------------------------
 ------------------------------------->
 
-I'm a keen enthusiast of <a href="#python-scripts" style="color: #448c88">Python</a>and<a href="#bash-scripts" style="color: #448c88">Bash</a> scripting. I utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac
+I'm a keen enthusiast of <a href="#python-scripts" style="color: #448c88">Python</a> and <a href="#bash-scripts" style="color: #448c88">Bash</a> scripting. I utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac
 Below are some of the scripts I've written for various projects and tasks.
 
 ---
