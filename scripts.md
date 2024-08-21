@@ -533,7 +533,7 @@ if __name__ == "__main__":
 
 ### 1001-CW q3a.sh
 this script is a revised version if my q3a.sh hand in; first checks if MaccOS thus no need for g++ compilation, f
-'''bash
+```bash
 #!/bin/bash
 
 print_red() { tput setaf 1; echo -e "$1"; tput sgr0; }
@@ -617,7 +617,7 @@ The script also includes error handling, printing messages in different colours
 (green for success, amber for warnings, and red for errors) using the functions:
 print_green, print_amber, and print_red.
 END
-'''
+```
 
 ---
 
