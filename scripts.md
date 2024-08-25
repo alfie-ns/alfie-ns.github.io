@@ -17,7 +17,7 @@ title: "Scripts"
 <!-----------------------------------------------------------------------------------
 ------------------------------------->
 
-I'm a keen enthusiast of <a href="#python-scripts" style="color: #448c88">Python</a> and <a href="#bash-scripts" style="color: #448c88">Bash</a> scripting. I utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac
+I'm a keen enthusiast of `<a href="#python-scripts" style="color: #448c88">`Python`</a>` and `<a href="#bash-scripts" style="color: #448c88">`Bash`</a>` scripting. I utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac
 Below are some of the scripts I've written for various projects and tasks.
 
 ---
@@ -30,7 +30,7 @@ Below are some of the scripts I've written for various projects and tasks.
 
 ### VidBriefs/APP/vidbriefs-desktop/youtube.py
 
-This <a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448c88"  target="_blank">Python script </a> utilises OpenAI's GPT-4o-mini and Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
+This `<a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448c88"  target="_blank">`Python script `</a>` utilises OpenAI's GPT-4o-mini and Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
 
 - **AI Model Options**: Choose between GPT-4o-mini and Claude-3-sonnet-20240229
 - **Customizable AI Personality**: Adjust the AI's approach to suit your preferences
@@ -329,15 +329,15 @@ def main():
             Combine these or create your own to define the AI's learning style and personality.
             Remember, you can specify intensity levels (LOW, MEDIUM, HIGH, BALANCED) and combine
             traits.
-                                                  
+                                                
             BALANCED 🧠 ANALYTICAL-🎨 CREATIVE with HIGH 🌐 MULTIDISCIPLINARY focus.
-            MEDIUM 🗣️ PERSUASIVE with LOW 🤔 SOCRATIC questioning.                                       
+            MEDIUM 🗣️ PERSUASIVE with LOW 🤔 SOCRATIC questioning.                                     
             HIGH 📊 DATA-DRIVEN and MEDIUM 🤝 EMPATHETIC approach
-                                                  
+                                                
             EXTENSIVE MARKDOWN FILE CREATOR  
             EXTENSIVE TRAVERSAL OF ALL VIDEO INSIGHTS
 
-            Teacher                                
+            Teacher                              
 
             Your choice: """)))
 
@@ -384,16 +384,16 @@ def main():
                     if not current_transcript: # If transcript hasnt been initially loaded prior to conversation 
                         print(red("Please load a YouTube video first by pasting its URL."))
                         continue
-              
+            
                     # Add user message to conversation history
                     messages.append({"role": "user", "content": user_input})
-              
+            
                     # Process the transcript with the entire conversation history
                     full_query = f"Based on this transcript and our conversation so far, please respond to the latest message: {user_input}\n\nTranscript:\n{current_transcript}"
                     response = chat_with_ai(messages + [{"role": "user", "content": full_query}], personality, ai_model, current_youtube_link) # response = 
-              
+            
                     print(bold(red("\nAssistant: ")) + apply_markdown_styling(response))
-              
+            
                     # Add assistant's response to conversation history
                     messages.append({"role": "assistant", "content": response})
 
@@ -402,7 +402,7 @@ def main():
                     if markdown_content:
                         title_prompt = f"Generate a brief, concise title (5 words or less) for this content:\n\n{markdown_content[:200]}..."
                         title_response = chat_with_ai([{"role": "user", "content": title_prompt}], "concise", ai_model, current_youtube_link)
-                  
+                
                         file_path = generate_markdown_file(markdown_content, title_response, current_youtube_link)  # Pass the current YouTube link
                         print(green(f"\nMarkdown file generated: {file_path}\n"))
                     else:
@@ -532,7 +532,9 @@ if __name__ == "__main__":
 <!--I use bash-scripts to automate nearly everything on my mac, particularty for git and vscode...elaborate [ ] -->
 
 ### 1001-CW q3a.sh
+
 this script is a revised version if my q3a.sh hand in; first checks if MaccOS thus no need for g++ compilation, f
+
 ```bash
 #!/bin/bash
 
@@ -621,7 +623,6 @@ END
 
 ---
 
-
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
 ### VidBriefs/clone-all.sh
@@ -674,6 +675,117 @@ echo "" # padding
 ```
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
+
+### VidBriefs/Desktop/vidbriefs-desktop/run-desktop.sh
+
+This script is used to run the VidBriefs-Desktop application. It checks if the user is in a virtual environment, displays a menu with various options, and launches the selected AI assistant or categorization script. The user can choose an option by entering a number from 1 to 6 or exit the script by pressing Ctrl+C.
+
+```bash
+#!/bin/bash
+
+# Function to handle the exit command
+exit_script() {
+    clear
+    echo "Exiting..."
+    sleep 0.5 # wait for half a second
+    clear
+    exit 0 # exit successfully
+}
+
+# Trap the SIGINT signal (Ctrl+C) and call the exit_script function
+trap exit_script SIGINT
+
+clear
+
+# Check if the user is in a virtual environment
+if [[ -z "$VIRTUAL_ENV" ]]; then
+    printf '\n%s\n' "$(tput bold)ERROR: Not in a virtual environment$(tput sgr0)"
+    echo ""
+    echo "Please follow these steps to set up and activate a virtual environment:"
+    echo ""
+    echo "1. Create a virtual environment:"
+    echo "   python3 -m venv venv"
+    echo ""
+    echo "2. Activate the virtual environment:"
+    echo "   source venv/bin/activate"
+    echo ""
+    echo "3. Install required packages:"
+    echo "   cd setup"
+    echo "   ./install-requirements.sh"
+    echo ""
+    echo "After completing these steps, please run this script again."
+    exit 1
+fi
+
+# Function to display the menu
+display_menu() {
+    echo "╔══════════════════════════════════════════════╗"
+    echo "║              VidBriefs-Desktop               ║"
+    echo "╠══════════════════════════════════════════════╣"
+    echo "║ 1. 🌟 Enhanced AI Assistant (Nexus)          ║"
+    echo "╠══════════════════════════════════════════════╣"
+    echo "║ 2. YouTube Transcript AI Assistant           ║"
+    echo "║ 3. TED Talk Analysis Assistant               ║"
+    echo "║ 4. Sight Repo Assistant                      ║"
+    echo "║ 5. Huberman.py                               ║"
+    echo "╠══════════════════════════════════════════════╣"
+    echo "║ 6. Categorize your insights                  ║"
+    echo "╚══════════════════════════════════════════════╝"
+    echo "Enter your choice (1-6) or press Ctrl+C to exit:"
+}
+# Main loop -------------------------------------
+while true; do
+    display_menu
+    read -rsn1 input # read a single character immediately without waiting for Enter
+
+    if [[ $input == $'\x1B' ]]; then # detect escape sequence
+        read -rsn2 input # read the next two characters
+        if [[ $input == "[C" ]]; then # detect Shift+C (right arrow key)
+            exit_script
+        fi
+
+    elif [[ $input =~ ^[1-6]$ ]]; then
+        echo $input # echo the input so the user can see what they've chosen
+        case $input in
+            1)  
+                echo -e "\nLaunching Nexus (Enhanced AI Chatbot Assistant)...\n"
+                python3 AI-Scripts/nexus.py
+                ;;
+            2)
+                echo -e "\nLaunching YouTube Transcripts AI Assistant...\n"
+                python3 AI-Scripts/youtube.py
+                ;; 
+            3)
+                echo -e "\nLaunching TED Talk Analysis Assistant...\n"
+                python3 AI-Scripts/tedtalk.py
+                ;;
+            4)
+                echo -e "Launching Sight Repo Assistant...\n"
+                python3 AI-Scripts/sight.py
+                ;;
+            5)
+                echo -e "\nLaunching Huberman.py...\n"
+                python3 AI-Scripts/huberman.py
+                ;;
+
+            6) 
+                echo -e "\nCategorising the .md files...\n"
+                python3 catergorise.py
+                ;;
+        esac
+
+      
+
+        # Pause before clearing the screen and showing the menu again
+        echo
+        echo "Press Enter to continue..."
+        read # waits for input
+        clear
+    else
+        echo "Invalid choice. Please try again."
+    fi
+done
+```
 
 ### VidBriefs/clean-all.sh
 
