@@ -545,6 +545,11 @@ The script allows selective Git staging, customised importance levels with , and
 ```bash
 #!/bin/bash
 
+# Enhanced Git Commit Importance Script
+# The script allows selective Git staging, customized importance levels with 
+# a message, and local backup of the Categories/ and prompts/ directories.
+
+# https://claude.ai/chat/3420f343-5909-49ab-93cc-ba5360bb51e0
 
 set -e  # Exit immediately if a command exits with a non-zero status
 
@@ -606,7 +611,7 @@ selective_add() {
 
 # Main Execution
 # 1. Exclude Categories/ from Git tracking; ignore messages for each file
-git rm -r --cached Categories/ 2>/dev/null || true
+git rm -r --cached Categories/ 2>/dev/null || true # or true ensures contonuation even if the command fails
 
 # 2. Selectively add changes to staging area
 selective_add
@@ -620,7 +625,7 @@ echo "4. Significant" >&2
 echo -e "5. Milestone\n" >&2
 commit_message=$(get_commit_details)
 
-# 4. Backup Categories/ and prompts/ directories
+# 4. Backup/Sync the Categories/ and prompts/ directories; ignore error messages; do this in parallel
 if rsync -avh --update --delete "Categories/" "../../base/Categories/" > /dev/null 2>&1 & \
    rsync -avh --update --delete "prompts/" "../../base/desktop-prompts/" > /dev/null 2>&1 & \
    wait; then
@@ -632,6 +637,7 @@ if rsync -avh --update --delete "Categories/" "../../base/Categories/" > /dev/nu
         if git push origin main; then
             echo -e '\nLocal repo pushed to remote origin\n' >&2
             print_bold "Commit message: $commit_message" >&2
+            exit 0
         else
             echo "Error: Failed to push to remote. Check your network connection and try again." >&2
             exit 1
@@ -645,7 +651,6 @@ else
     exit 1
 fi
 ```
-
 ### 1001-CW q3a.sh
 
 this script is a revised version if my q3a.sh hand in; first checks if MaccOS thus no need for g++ compilation, f
