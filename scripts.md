@@ -17,20 +17,27 @@ title: "Scripts"
 <!-----------------------------------------------------------------------------------
 ------------------------------------->
 
-I'm a keen enthusiast of `<a href="#python-scripts" style="color: #448c88">`Python`</a>` and `<a href="#bash-scripts" style="color: #448c88">`Bash`</a>` scripting. I utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac
+I'm a keen enthusiast of <a href="#python-scripts" style="color: #448c88">Python</a> and <a href="#bash-scripts" style="color: #448c88">Bash</a> scripting. I utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac. I also use <a href="#windows-batch-scripts" style="color: #448c88">Windows Batch</a> scripts for various tasks on my Dell laptop.
 Below are some of the scripts I've written for various projects and tasks.
 
 ---
 
 # Windows batch scripts
 
-**...**
+### 1001-CW/q3/q3/run.bat
+
+```batch
+@echo off
+g++ q3b.cpp -o q3 -O3 -lm
+q3 .\q3-images\input_images\ .\q3-images\output_images
+```
+
 
 # Python Scripts
 
 ### VidBriefs/APP/vidbriefs-desktop/youtube.py
 
-This `<a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448c88"  target="_blank">`Python script `</a>` utilises OpenAI's GPT-4o-mini and Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
+This <a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448c88"  target="_blank">Python script </a> utilises OpenAI's GPT-4o-mini and Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
 
 - **AI Model Options**: Choose between GPT-4o-mini and Claude-3-sonnet-20240229
 - **Customizable AI Personality**: Adjust the AI's approach to suit your preferences
@@ -531,6 +538,114 @@ if __name__ == "__main__":
 
 <!--I use bash-scripts to automate nearly everything on my mac, particularty for git and vscode...elaborate [ ] -->
 
+### Nexus-API/scripts/pu.sh
+<u>Enhanced Git-Commit Importance</u>
+The script allows selective Git staging, customised importance levels with , and local backup of the Categories/ and prompts/ directories.
+
+```bash
+#!/bin/bash
+
+
+set -e  # Exit immediately if a command exits with a non-zero status
+
+# Function to print bold text
+print_bold() {
+    echo -e "\033[1m$1\033[0m"
+}
+
+# Function to get commit importance and custom message
+get_commit_details() {
+    local importance_text
+    while true; do
+        echo -n "Enter the importance (1-5): " >&2
+        read -rsn1 importance
+        echo >&2
+
+        case $importance in
+            1) importance_text="Trivial"; break;;
+            2) importance_text="Minor"; break;;
+            3) importance_text="Moderate"; break;;
+            4) importance_text="Significant"; break;;
+            5) importance_text="Milestone"; break;;
+            *) echo "Invalid input. Please try again." >&2;;
+        esac
+    done
+
+    echo -n "Enter a custom message for the commit: " >&2
+    read custom_message
+    echo >&2
+
+    echo "${importance_text}: ${custom_message}"
+}
+
+# Function to selectively add files to staging
+selective_add() {
+    print_bold "\nUnstaged changes:"
+    git status --porcelain | grep -E '^\s*[\?M]' | sed 's/^...//'
+    # the above command lists all untracked and modified files;
+    # untracked(?) and modified(M); the final sed command removes
+    # the first three characters which are the status flags.
+    while true; do
+        echo -n "Enter file/directory to add, 'all' (or 'done' to finish): "
+        read item
+
+        if [ "$item" = "done" ]; then
+            break
+        elif [ "$item" = "all" ]; then
+            git add .
+            echo "Added all changes"
+            break
+        elif [ -e "$item" ]; then
+            git add "$item"
+            echo "Added: $item"
+        else
+            echo "File/directory not found. Please try again."
+        fi
+    done
+}
+
+# Main Execution
+# 1. Exclude Categories/ from Git tracking; ignore messages for each file
+git rm -r --cached Categories/ 2>/dev/null || true
+
+# 2. Selectively add changes to staging area
+selective_add
+
+# 3. Get commit importance and custom message
+print_bold "\nCommit importance:" >&2
+echo "1. Trivial" >&2
+echo "2. Minor" >&2
+echo "3. Moderate" >&2
+echo "4. Significant" >&2
+echo -e "5. Milestone\n" >&2
+commit_message=$(get_commit_details)
+
+# 4. Backup Categories/ and prompts/ directories
+if rsync -avh --update --delete "Categories/" "../../base/Categories/" > /dev/null 2>&1 & \
+   rsync -avh --update --delete "prompts/" "../../base/desktop-prompts/" > /dev/null 2>&1 & \
+   wait; then
+    print_bold "\nBackup completed; Categories/ and prompts/ directories synchronised and backed up.\n" >&2
+    
+    # 5. Commit and push changes
+    if git commit -m "$commit_message"; then
+        echo "Changes committed successfully" >&2
+        if git push origin main; then
+            echo -e '\nLocal repo pushed to remote origin\n' >&2
+            print_bold "Commit message: $commit_message" >&2
+        else
+            echo "Error: Failed to push to remote. Check your network connection and try again." >&2
+            exit 1
+        fi
+    else
+        echo "Error: Failed to commit changes. Check Git configuration." >&2
+        exit 1
+    fi
+else
+    echo -e "\nFailed to back up Categories/ directory and prompts/; push aborted" >&2
+    exit 1
+fi
+```
+
 ### 1001-CW q3a.sh
 
 this script is a revised version if my q3a.sh hand in; first checks if MaccOS thus no need for g++ compilation, f
@@ -885,7 +1000,7 @@ EOF
 
 This Bash script will first define a function to bold the format of subsequent echo statements later in the script.
 
-Next, it will navigate to VidBriefs/APP and clone the vidbriefs-app repository. It retrieves the full path of the .env file to be copied to the OPENAI_API_KEY environment variable, which is then inserted into the Xcode scheme file for the project. It uses `<a href="http://xmlstar.sourceforge.net/">`xmlstarlet `</a>` to modify the value of the environment variable in the Xcode scheme file. The script will then check if the change was successful; if it was, it will print a success message and exit the script with success(0). If the if statement is not true, it will print an error message and exit the script with failure(1).
+Next, it will navigate to VidBriefs/APP and clone the vidbriefs-app repository. It retrieves the full path of the .env file to be copied to the OPENAI_API_KEY environment variable, which is then inserted into the Xcode scheme file for the project. It uses <a href="http://xmlstar.sourceforge.net/">xmlstarlet </a> to modify the value of the environment variable in the Xcode scheme file. The script will then check if the change was successful; if it was, it will print a success message and exit the script with success(0). If the if statement is not true, it will print an error message and exit the script with failure(1).
 
 ```bash
 #!/bin/bash
