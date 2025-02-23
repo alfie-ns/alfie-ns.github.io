@@ -1,8 +1,9 @@
 ---
-layout: single
-title: "Year 2"
-permalink: /year-2/
+layout: archive
 author_profile: true
+header:
+  overlay_image: /assets/splash/header.png
+title: "Year 2"
 ---
 
 # Test

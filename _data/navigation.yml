@@ -10,6 +10,8 @@ main:
     url: /maths/
   - title: "Projects"
     url: /projects/
+  - title: "Year 2"
+    url: /year-2/
   
 
   # TODO : [ ] [ ]
