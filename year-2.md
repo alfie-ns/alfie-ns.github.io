@@ -12,7 +12,7 @@ In COMP2000, I am create an Android app called StaffSync which is essentially an
 For more details, refer to the <a href="https://github.com/alfie-ns/StaffSync-APP/blob/main/docs/Report_COMP2000_StaffSync.md" style="color: blue;">StaffSync Project Report</a>.
 
 
-![1740323353822](image/year-2/1740323353822.png)
+![2000-grade](image/year-2/2000-grade.png)
 
 # COMP2002
 
