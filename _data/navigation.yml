@@ -4,14 +4,14 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Year 2"
     url: /year-2/
-  - title: "Scripts"
-    url: /scripts/
   - title: "About"
     url: /about
   - title: "Mathematics"
     url: /maths/
   - title: "Projects"
     url: /projects/
+  - title: "Scripts"
+    url: /scripts/
   
 
   # TODO : [ ] [ ]
