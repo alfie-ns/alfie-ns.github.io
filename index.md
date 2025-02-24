@@ -19,9 +19,9 @@ AI Products:
 
 University modules I excelled at:
 
-- COMP1001 Computer Systems report: Exploring AVX intrinsics and image processing with C++
-- COMP1003 Algorithms and Data Structures report: Implementing an AVL Binary Search Tree in C#
-- COMP2000 Software Engineering report: Android App REST API for admins and employees
+- [COMP1001 Computer Systems report: Exploring AVX intrinsics and image processing with C++](https://github.com/alfie-ns/1001-cw)
+- [COMP1003 Algorithms and Data Structures report: Implementing an AVL Binary Search Tree in C#](https://github.com/alfie-ns/1003-cw)
+- [COMP2000 Software Engineering report: Android App REST API for admins and employees with Java](https://github.com//alfie-ns/staffsync-app)
 
 I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathematics. I am also interested in Business, particularly Marketing, Entrepreneurship, and Product Development, with the goal of innovating in AI products and services to improve quality-of-life in the coming years.
 
