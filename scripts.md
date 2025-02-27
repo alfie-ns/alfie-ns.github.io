@@ -36,15 +36,15 @@ q3 .\q3-images\input_images\ .\q3-images\output_images
 
 ### VidBriefs/APP/vidbriefs-desktop/youtube.py
 
-This `<a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448c88"  target="_blank">`Python script `</a>` utilises OpenAI's GPT-4o-mini and Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
+This <a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448c88"  target="_blank">Python script</a> utilises OpenAI's GPT-4o-mini and Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
 
 - **AI Model Options**: Choose between GPT-4o-mini and Claude-3-sonnet-20240229
-- **Customizable AI Personality**: Adjust the AI's approach to suit your preferences
+- **Customisable AI Personality**: Adjust the AI's approach to suit your preferences
 - **YouTube Integration**: Analyse videos by inputting their URL
 - **Interactive Querying**: Ask questions about the video content
 - **Transcript Processing**: Handles longer transcripts by splitting them into sections
 - **Markdown File Creation**: Generates formatted files from AI responses when applicable
-- **Personality Customization**: Select from various traits and intensities to tailor the AI's communication style
+- **Personality Customisation**: Select from various traits and intensities to tailor the AI's communication style
 
 This tool can be useful for content analysis, research, and extracting information from YouTube videos in a  fast structured format personalised to
 the user.
@@ -71,7 +71,7 @@ from urllib.parse import urlparse, parse_qs
 
 import textwrap # for text formatting
 import datetime # for timestamping files
-import tiktoken # for tokenizing text
+import tiktoken # for tokenising text
 import argparse # for command-line arguments
 
 # ------------------------------------------------------------------------------
@@ -130,7 +130,7 @@ def chat_with_ai(messages, personality, ai_model, youtube_link):
     1. Always provide detailed, multi-section responses with clear headings and subheadings.
     2. Use markdown formatting to enhance readability (e.g., # for main headings, ## for subheadings, * for bullet points).
     3. Include relevant examples, analogies, or case studies to illustrate complex concepts.
-    4. Summarize key points at the end of each major section.
+    4. Summarise key points at the end of each major section.
     5. Suggest practical applications or exercises for the user to reinforce their understanding.
     6. When appropriate, include a "Further Reading" section with relevant resources.
     7. Always reference the video using this exact link: {youtube_link}. Do not generate or use any placeholder or example links.
@@ -324,7 +324,7 @@ def main():
             - 🧠 ANALYTICAL: "HIGH 🧠 ANALYTICAL with MEDIUM 🔬 TECHNICAL focus"
             - 🎨 CREATIVE: "MEDIUM 🎨 CREATIVE with LOW 🌈 VISUAL emphasis"
             - 🗣️ PERSUASIVE: "BALANCED 🗣️ PERSUASIVE-🧠 LOGICAL approach"
-            - 🌐 MULTIDISCIPLINARY: "HIGH 🌐 MULTIDISCIPLINARY with MEDIUM 🔗 CONTEXTUALIZING"
+            - 🌐 MULTIDISCIPLINARY: "HIGH 🌐 MULTIDISCIPLINARY with MEDIUM 🔗 CONTEXTUALISING"
             - 📚 ACADEMIC: "HIGH 📚 ACADEMIC with LOW 🧪 EXPERIMENTAL style"
             - 🤔 SOCRATIC: "MEDIUM 🤔 SOCRATIC with HIGH 🔍 QUESTIONING focus"
             - 🤝 EMPATHETIC: "HIGH 🤝 EMPATHETIC with MEDIUM 👥 COLLABORATIVE approach"
@@ -444,7 +444,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Initialize OpenAI client
+# Initialise OpenAI client
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Constants
@@ -491,7 +491,7 @@ def categorise_with_ai(content):
         category = response.choices[0].message.content.strip()
         return category if category in CATEGORIES else "Other"
     except Exception as e:
-        print(f"Error in AI categorization: {e}")
+        print(f"Error in AI categorisation: {e}")
         return "Other"
 
 def get_markdown_files():
@@ -546,7 +546,7 @@ The script allows selective Git staging, customised importance levels with , and
 #!/bin/bash
 
 # Enhanced Git Commit Importance Script
-# The script allows selective Git staging, customized importance levels with 
+# The script allows selective Git staging, customised importance levels with 
 # a message, and local backup of the Categories/ and prompts/ directories.
 
 # https://claude.ai/chat/3420f343-5909-49ab-93cc-ba5360bb51e0
@@ -799,7 +799,7 @@ echo "" # padding
 
 ### VidBriefs/Desktop/vidbriefs-desktop/run-desktop.sh
 
-This script is used to run the VidBriefs-Desktop application. It checks if the user is in a virtual environment, displays a menu with various options, and launches the selected AI assistant or categorization script. The user can choose an option by entering a number from 1 to 6 or exit the script by pressing Ctrl+C.
+This script is used to run the VidBriefs-Desktop application. It checks if the user is in a virtual environment, displays a menu with various options, and launches the selected AI assistant or categorisation script. The user can choose an option by entering a number from 1 to 6 or exit the script by pressing Ctrl+C.
 
 ```bash
 #!/bin/bash
@@ -850,7 +850,7 @@ display_menu() {
     echo "║ 4. Sight Repo Assistant                      ║"
     echo "║ 5. Huberman.py                               ║"
     echo "╠══════════════════════════════════════════════╣"
-    echo "║ 6. Categorize your insights                  ║"
+    echo "║ 6. Categorise your insights                  ║"
     echo "╚══════════════════════════════════════════════╝"
     echo "Enter your choice (1-6) or press Ctrl+C to exit:"
 }
@@ -1329,7 +1329,7 @@ fi
 
 ### VidBriefs/API/vidbriefs-api/scripts
 
-In the process of initializing the API to run on a local machine, the following scripts are executed:
+In the process of initialising the API to run on a local machine, the following scripts are executed:
 
 #### run-migrations.sh
 
