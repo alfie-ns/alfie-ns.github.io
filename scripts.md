@@ -17,7 +17,7 @@ title: "Scripts"
 <!-----------------------------------------------------------------------------------
 ------------------------------------->
 
-I'm a keen enthusiast of `<a href="#python-scripts" style="color: #448c88">`Python`</a>` and `<a href="#bash-scripts" style="color: #448c88">`Bash`</a>` scripting. I utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac. I also use `<a href="#windows-batch-scripts" style="color: #448c88">`Windows Batch`</a>` scripts for various tasks on my Dell laptop.
+I'm a keen enthusiast of <a href="#python-scripts" style="color: #448c88">Python</a> and <a href="#bash-scripts" style="color: #448c88">Bash</a> scripting. I utilise Python for effective, easy-to-use programs, Data Science and nearly everything I develop in the backend, whilst Bash is my go-to for automation on my Mac. I also use <a href="#windows-batch-scripts" style="color: #448c88">Windows Batch</a> scripts for various tasks on my Dell laptop.
 Below are some of the scripts I've written for various projects and tasks.
 
 ---
@@ -26,17 +26,17 @@ Below are some of the scripts I've written for various projects and tasks.
 
 ### 1001-CW/q3/q3/run.bat
 
-```batch
+batch
 @echo off
 g++ q3b.cpp -o q3 -O3 -lm
 q3 .\q3-images\input_images\ .\q3-images\output_images
-```
+
 
 # Python Scripts
 
 ### VidBriefs/APP/vidbriefs-desktop/youtube.py
 
-This `<a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448c88"  target="_blank">`Python script `</a>` utilises OpenAI's GPT-4o-mini and Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
+This <a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448c88"  target="_blank">Python script </a> utilises OpenAI's GPT-4o-mini and Anthropic's Claude-3-sonnet-20240229 to analyse YouTube video transcripts and generate markdown files with insights. Features include:
 
 - **AI Model Options**: Choose between GPT-4o-mini and Claude-3-sonnet-20240229
 - **Customizable AI Personality**: Adjust the AI's approach to suit your preferences
@@ -49,7 +49,7 @@ This `<a href="https://github.com/alfie-ns/vidbriefs-desktop" style="color: #448
 This tool can be useful for content analysis, research, and extracting information from YouTube videos in a  fast structured format personalised to
 the user.
 
-```python
+python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
 
@@ -423,7 +423,7 @@ def main():
 
 if __name__ == "__main__": # Run the main function if the script is executed directly, not when imported as a module
     main()
-```
+
 
 ---
 
@@ -433,7 +433,7 @@ if __name__ == "__main__": # Run the main function if the script is executed dir
 
 This Python script reorganises markdown files into categories based on their content. It uses OpenAI's GPT-4o-mini(cheapest model) to categorise the content into CompSci, Gaming, Health, Sports, or Other. The script reads the content of each markdown file, sends it to the AI model for categorisation, and moves the file to the corresponding category folder based on the AI's response. If the category folder does not exist, the file remains in the Markdown folder.
 
-```python
+python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -529,7 +529,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
+
 
 ---
 
@@ -539,10 +539,10 @@ if __name__ == "__main__":
 
 ### Nexus-API/scripts/pu.sh
 
-`<u>`Enhanced Git-Commit Importance`</u>`
+<u>Enhanced Git-Commit Importance</u>
 The script allows selective Git staging, customised importance levels with , and local backup of the Categories/ and prompts/ directories.
 
-```bash
+bash
 #!/bin/bash
 
 # Enhanced Git Commit Importance Script
@@ -650,13 +650,13 @@ else
     echo -e "\nFailed to back up Categories/ directory and prompts/; push aborted" >&2
     exit 1
 fi
-```
+
 
 ### 1001-CW q3a.sh
 
 this script is a revised version if my q3a.sh hand in; first checks if MaccOS thus no need for g++ compilation, f
 
-```bash
+bash
 #!/bin/bash
 
 print_red() { tput setaf 1; echo -e "$1"; tput sgr0; }
@@ -740,7 +740,7 @@ The script also includes error handling, printing messages in different colours
 (green for success, amber for warnings, and red for errors) using the functions:
 print_green, print_amber, and print_red.
 END
-```
+
 
 ---
 
@@ -748,7 +748,7 @@ END
 
 ### VidBriefs/clone-all.sh
 
-```bash
+bash
 
 #!/bin/bash
 
@@ -793,7 +793,7 @@ run_clone_script "Desktop" # Clone Desktop repo
 echo "" # padding
 print_bold "All repositories cloned successfully!"
 echo "" # padding
-```
+
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
@@ -801,7 +801,7 @@ echo "" # padding
 
 This script is used to run the VidBriefs-Desktop application. It checks if the user is in a virtual environment, displays a menu with various options, and launches the selected AI assistant or categorization script. The user can choose an option by entering a number from 1 to 6 or exit the script by pressing Ctrl+C.
 
-```bash
+bash
 #!/bin/bash
 
 # Function to handle the exit command
@@ -906,11 +906,11 @@ while true; do
         echo "Invalid choice. Please try again."
     fi
 done
-```
+
 
 ### VidBriefs/clean-all.sh
 
-```bash
+bash
 #!/bin/bash
 
 # Function to print bold text
@@ -953,11 +953,11 @@ if ./push-all.sh; then
 else
   print_bold "Push failed, not cleaning up local repositories."
 fi
-```
+
 
 ### Vidbriefs/push-all.sh
 
-```bash
+bash
 #!/bin/bash
 
 # Function to print bold text
@@ -996,7 +996,7 @@ echo "All repositories pushed successfully"
 - for each directory in the list of directories (api, app, desktop)
 - cd into the directory && push.sh && cd back to the root directory for the next iteration
 EOF
-```
+
 
 ---
 
@@ -1006,9 +1006,9 @@ EOF
 
 This Bash script will first define a function to bold the format of subsequent echo statements later in the script.
 
-Next, it will navigate to VidBriefs/APP and clone the vidbriefs-app repository. It retrieves the full path of the .env file to be copied to the OPENAI_API_KEY environment variable, which is then inserted into the Xcode scheme file for the project. It uses `<a href="http://xmlstar.sourceforge.net/">`xmlstarlet `</a>` to modify the value of the environment variable in the Xcode scheme file. The script will then check if the change was successful; if it was, it will print a success message and exit the script with success(0). If the if statement is not true, it will print an error message and exit the script with failure(1).
+Next, it will navigate to VidBriefs/APP and clone the vidbriefs-app repository. It retrieves the full path of the .env file to be copied to the OPENAI_API_KEY environment variable, which is then inserted into the Xcode scheme file for the project. It uses <a href="http://xmlstar.sourceforge.net/">xmlstarlet </a> to modify the value of the environment variable in the Xcode scheme file. The script will then check if the change was successful; if it was, it will print a success message and exit the script with success(0). If the if statement is not true, it will print an error message and exit the script with failure(1).
 
-```bash
+bash
 #!/bin/bash
 
 # Function to print bold text
@@ -1058,13 +1058,13 @@ else
     exit 1
 fi
 
-```
+
 
 ---
 
 ### Function to run clone script for a given directory
 
-```bash
+bash
 run_clone_script() {
   local dir=$1 # dir = APP || API || Desktop
   cd "$dir" # change to respective directory
@@ -1077,7 +1077,7 @@ run_clone_script() {
   fi
   cd .. # back to VidBriefs directory for the next iteration
 }
-```
+
 
 ---
 
@@ -1085,7 +1085,7 @@ run_clone_script() {
 
 ### pu.sh
 
-```bash
+bash
 script to push local changes to global repo
 
 #!/bin/bash
@@ -1103,9 +1103,9 @@ git commit -m "update"
 git push origin main
 
 print_bold "PUSHED TO GIT"
-```
 
-```bash
+
+bash
 -------
 OUTPUT:
 -------
@@ -1122,11 +1122,11 @@ To https://github.com/alfie-ns/alfie-ns.github.io
    a41162e..7a4d40e  main -> main 
    
 PUSHED TO GIT
-```
+
 
 ### pu.sh 2
 
-```bash
+bash
 #!/bin/bash
 # Git Commit Importance Script(DEPRECATED) -> GitHub Desktop
 
@@ -1242,7 +1242,7 @@ else
     echo "Error: Failed to commit changes..." >&2
     exit 1
 fi
-```
+
 
 
 
@@ -1250,7 +1250,7 @@ fi
 
 ### xcode.sh
 
-```bash
+bash
 #!/bin/bash
 # open vidbriefs-app in Xcode; if fail, print error and exit with failure status
 xed app/vidbriefs-app || { echo "Failed to open Xcode in app/vidbriefs-app"; exit 1; }
@@ -1260,21 +1260,21 @@ xed app/vidbriefs-app || { echo "Failed to open Xcode in app/vidbriefs-app"; exi
     if fails -> print error message and exit with failure status.
 EOF
 
-```
+
 
 <!-- ---------------------------------------------------------------------------------------------------------------------->
 
 ### alfie-ns.github.io/pbd.sh
 
-This script will first define a function to handle errors, then it will check if push.sh exists and is executable; if it is, it will execute it. If it succeeds, it will print a success message and delete the local repository; if it fails, it will print an error message and exit the script before deleting the local repository. The `-euo pipefail` options mean:
+This script will first define a function to handle errors, then it will check if push.sh exists and is executable; if it is, it will execute it. If it succeeds, it will print a success message and delete the local repository; if it fails, it will print an error message and exit the script before deleting the local repository. The -euo pipefail options mean:
 
-- `-e`: Exit immediately if a command exits with a non-zero status. This ensures that any error in the script stops execution immediately, preventing subsequent commands from running and potentially causing more issues.
-- `-u`: Treat unset variables as an error and exit immediately. This prevents the script from continuing with uninitialised variables, which could lead to unexpected behaviour or difficult-to-debug errors.
-- `-o pipefail`: The return value of a pipeline is the status of the last command to exit with a non-zero status, or zero if no command exited with a non-zero status. This makes sure that any failure in a sequence of piped commands is caught, ensuring that the script doesn't inadvertently ignore errors in complex command chains.
+- -e: Exit immediately if a command exits with a non-zero status. This ensures that any error in the script stops execution immediately, preventing subsequent commands from running and potentially causing more issues.
+- -u: Treat unset variables as an error and exit immediately. This prevents the script from continuing with uninitialised variables, which could lead to unexpected behaviour or difficult-to-debug errors.
+- -o pipefail: The return value of a pipeline is the status of the last command to exit with a non-zero status, or zero if no command exited with a non-zero status. This makes sure that any failure in a sequence of piped commands is caught, ensuring that the script doesn't inadvertently ignore errors in complex command chains.
 
 These options are set to ensure robustness and reliability, making the script terminate promptly on encountering errors, thereby maintaining a clean and predictable execution flow.
 
-```bash
+bash
 #!/bin/bash -euo pipefail
 
 # -e: Exit immediately if a command exits with a non-zero status.
@@ -1310,7 +1310,7 @@ if ./push.sh; then
 -----------------------------------------
 |         _  __ _                       |
 |   __ _ | |/ _(_) ___       _ __  ___  | 
-|  / _` || | |_| |/ _ \_____| '_ \/ __| |
+|  / _ || | |_| |/ _ \_____| '_ \/ __| |
 | | (_| || |  _| |  __/_____| | | \__ \ |
 |  \__,_||_|_| |_|\___|     |_| |_|___/ |
  ---------------------------------------- 
@@ -1321,7 +1321,7 @@ else
     handle_error $? "Execution of push.sh failed."
 fi
 
-```
+
 
 ---
 
@@ -1335,7 +1335,7 @@ In the process of initializing the API to run on a local machine, the following 
 
 This scripts handle the commands necessary to run the migrations for the API server.
 
-```bash
+bash
 #!/bin/bash
 
 # Load environment variables
@@ -1358,13 +1358,13 @@ echo "Applying Django database migrations..."
 python manage.py migrate
 
 echo "Migrations complete."
-```
+
 
 #### setup-db.sh
 
 This script setups up the database for the API server.
 
-```bash
+bash
 #!/bin/bash
 
 # Function to load environment variables from .env file
@@ -1425,13 +1425,13 @@ psql -h $DB_HOST -p $DB_PORT -d template1 -U $(whoami) -c "
 SELECT 1 FROM pg_database WHERE datname = '$DB_NAME';" | grep -q 1 || psql -h $DB_HOST -p $DB_PORT -d template1 -U $(whoami) -c "CREATE DATABASE \"$DB_NAME\" OWNER \"$DB_USER\";"
 
 echo "Database setup complete."
-```
+
 
 #### start-server.sh
 
 ### VidBriefs/API/clone.sh/vidbriefs-api
 
-```bash
+bash
 #!/bin/bash
 
 # Find the next available number for multiple directories
@@ -1453,7 +1453,7 @@ cp ../.env .
 # backout 1 directory -> copy .env -> paste in current directory the cp command is executed in
 
 echo "Repository cloned as $new_name and .env file copied."
-```
+
 
 ---
 
