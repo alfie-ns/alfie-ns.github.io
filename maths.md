@@ -10,7 +10,7 @@ Mathematical modules so far: <a href="https://alfie-ns.github.io/results_image_o
 As an enthusiast of mathematics, I explore various captivating mathematical concepts. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests.
 
 <!--
-I am due to study  an AI module in Year 2, which will further deepen my understanding and application of mathematical principles in AI.
+I am due to study an AI module in Year 2, which will further deepen my understanding and application of mathematical principles in AI. Make sure to link it here. [ ]
 -->
 Recently, I have been developing an efficient <a href="https://github.com/alfie-ns/1003-CW/blob/main/Report/AVL/Solution/dotnet-program/Program.cs" target="_blank" style="color: #448c88">C# AVL tree</a> for my university coursework, achieving <a href="COMP1003-Report-Marks--24.xlsx" target="_blank">81.6%</a>. Anyone can quickly run this project with the .NET SDK to easily observe a complex search algorithm with a bashcript in the terminal.
 
@@ -113,7 +113,7 @@ I highlight my recognitions and awards in mathematics, which reflect my dedicati
 
 2022 - Received 83% in my foundation year mathematics module: 97.92% in the coursework, and 62.86% in the exam.
 
-2024 - In my first-year mathematics module, in my second semester, after prolonged recovery from my injury, I achieved {…} in the module, 80.67% in the exam, and {…} in the coding report.
+2024 - In my first-year mathematics module, in my second semester, after prolonged recovery from my injury, I achieved {…} in the module, 80.67% in the exam, and 81.6 i.e. the second-highest grade in the coding report.
 
 <!--## Recent Blog Posts
 
