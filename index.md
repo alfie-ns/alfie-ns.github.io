@@ -35,53 +35,53 @@ I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathema
 
 **Programming Language Portfolio:**
 
-•   **C++, C#** [X] [X] [X]
+•   C++, C# [X] [X] [X]
 
-•   **Python (Django, Flask)** [X] [X] [X]
+•   Python (Django, Flask) [X] [X] [X]
 
-•   **Bash Shell scripts** [X] [X] [ ]
+•   Bash Shell scripts [X] [X] [ ]
 
-•   **Swift** [X] [X] [ ]
+•   Swift [X] [X] [ ]
 
-•   **R** [X] [ ] [ ]
+•   R [X] [ ] [ ]
 
-•   **HTML, CSS, JavaScript** [X] [X] [ ]
+•   HTML, CSS, JavaScript [X] [X] [ ]
 
-•   **Java** [X] [X] [X]
+•   Java [X] [X] [X]
 
-•   **LaTex** [X] [ ] [ ]
+•   LaTex [X] [ ] [ ]
 
-•   **Markdown** [X] [X] [X]
+•   Markdown [X] [X] [X]
 
 **Software Development Tools**
 
-•   **Git** [X] [X] [X]
+•   Git [X] [X] [X]
 
-•   **Cryptool2** [X] [ ] [ ]
+•   Cryptool2 [X] [ ] [ ]
 
-•   **Docker** [X] [ ] [ ]
+•   Docker [X] [ ] [ ]
 
-•   **Visual Studio Code** [X] [X] [X]
+•   Visual Studio Code [X] [X] [X]
 
-•   **Xcode** [X] [X] [ ]
+•   Xcode [X] [X] [ ]
 
-•   **Postman** [X] [X] [ ]
+•   Postman [X] [X] [ ]
 
 **General Technical Skills**
 
-•   **Data Structures & Algorithms** [X] [X] [X]
+•   Data Structures & Algorithms [X] [X] [X]
 
-•   **Object Oriented Programming** [X] [X] [X]
+•   Object Oriented Programming [X] [X] [X]
 
-•   **Linux** [X] [ ] [ ]
+•   Linux [X] [ ] [ ]
 
-•   **Command Line Interface (CLI)** [X] [X] [ ]
+•   Command Line Interface (CLI) [X] [X] [ ]
 
-•   **RESTful APIs** [X] [X] [ ]
+•   RESTful APIs [X] [X] [ ]
 
-•   **JSON/XML** [X] [ ] [ ]
+•   JSON/XML [X] [ ] [ ]
 
-•   **UML & Software Design Patterns** [X] [X] [ ]
+•   UML & Software Design Patterns [X] [X] [ ]
 
 <!--
 <!-- | `<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">` | An image in a table | -->
