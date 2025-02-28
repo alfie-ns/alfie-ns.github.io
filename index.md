@@ -37,26 +37,19 @@ I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathema
 
 •   **C++, C#** [X] [X] [X]
 
-
 •   **Python (Django, Flask)** [X] [X] [X]
-
 
 •   **Bash Shell scripts** [X] [X] [ ]
 
-
 •   **Swift** [X] [X] [ ]
 
-
 •   **R** [X] [ ] [ ]
-
 
 •   **HTML, CSS, JavaScript** [X] [X] [ ]
 
 •   **Java** [X] [X] [X]
 
-
 •   **LaTex** [X] [ ] [ ]
-
 
 •   **Markdown** [X] [X] [X]
 
@@ -64,18 +57,13 @@ I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathema
 
 •   **Git** [X] [X] [X]
 
-
 •   **Cryptool2** [X] [ ] [ ]
-
 
 •   **Docker** [X] [ ] [ ]
 
-
 •   **Visual Studio Code** [X] [X] [X]
 
-
 •   **Xcode** [X] [X] [ ]
-
 
 •   **Postman** [X] [X] [ ]
 
@@ -83,21 +71,15 @@ I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathema
 
 •   **Data Structures & Algorithms** [X] [X] [X]
 
-
 •   **Object Oriented Programming** [X] [X] [X]
-
 
 •   **Linux** [X] [ ] [ ]
 
-
 •   **Command Line Interface (CLI)** [X] [X] [ ]
-
 
 •   **RESTful APIs** [X] [X] [ ]
 
-
 •   **JSON/XML** [X] [ ] [ ]
-
 
 •   **UML & Software Design Patterns** [X] [X] [ ]
 
