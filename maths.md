@@ -5,18 +5,17 @@ header:
   overlay_image: /assets/splash/header.png
 title: "Mathematics"
 ---
-
-Mathematical modules so far: <a href="https://alfie-ns.github.io/results_image_only.pdf" target="_blank" style="color: #448c88;"> 
-As an enthusiast of mathematics, I explore various captivating mathematical concepts. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests.
+ 
+As an enthusiast of mathematics, I explore various captivating mathematical concepts. <a href="https://alfie-ns.github.io/results_image_only.pdf" target="_blank" style="color: #448c88;">My studies</a> at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests.
 
 <!--
 I am due to study an AI module in Year 2, which will further deepen my understanding and application of mathematical principles in AI. Make sure to link it here. [ ]
 -->
-Recently, I have been developing an efficient <a href="https://github.com/alfie-ns/1003-CW/blob/main/Report/AVL/Solution/dotnet-program/Program.cs" target="_blank" style="color: #448c88">C# AVL tree</a> for my university coursework, achieving <a href="COMP1003-Report-Marks--24.xlsx" target="_blank">81.6%</a>. Anyone can quickly run this project with the .NET SDK to easily observe a complex search algorithm with a bashcript in the terminal.
+Recently, I have been developing an efficient <a href="https://github.com/alfie-ns/1003-CW/blob/main/Report/AVL/Solution" target="_blank" style="color: #448c88">C# AVL tree</a> for my university coursework, achieving <a href="COMP1003-Report-Marks--24.xlsx" target="_blank">81.6%</a>. Anyone can quickly run this project with the .NET SDK to easily observe a complex search algorithm with a bashcript in the terminal.
 
 The program generates a visual representation of the <a href="https://en.wikipedia.org/wiki/AVL_tree" target="_blank" style="color: #448c88">AVL tree</a> using box-drawing characters and necessary indentation, by running ./AVL-run.sh in the terminal. 
 
-<a href="https://github.com/alfie-ns/1003-CW" target="_blank" style="color: #448c88">This project</a> effectively demonstrates a mathematically intricate and intriguing search algorithm, displaying a depth-first traversal, thereby showing the structure from the root node downwards through its subtrees.
+<a href="https://github.com/alfie-ns/1003-CW/tree/main/Report/AVL/Solution" target="_blank" style="color: #448c88">This project</a> effectively demonstrates a mathematically intricate and intriguing search algorithm, displaying a depth-first traversal, thereby showing the structure from the root node downwards through its subtrees.
 ```
             -------------------------------------------------------------------------------------
             | DFS Traversal logic to print box-drawing structured tree: |                       | 
