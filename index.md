@@ -30,7 +30,6 @@ I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathema
 **Programming Language Portfolio:**
 
 •   C, C++, C# [X] [X] [X]
-
 •   Python (Django, Flask) [X] [X] [X]
 
 •   Bash Shell scripts [X] [X] [ ]
