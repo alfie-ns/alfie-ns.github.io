@@ -21,9 +21,61 @@ University modules I excelled at:
 
 - [COMP1001 Computer Systems report: Exploring AVX intrinsics and image processing with C++](https://github.com/alfie-ns/1001-cw)
 - [COMP1003 Algorithms and Data Structures report: Implementing an AVL Binary Search Tree in C#](https://github.com/alfie-ns/1003-cw)
-- [COMP2000 Software Engineering report: Android App REST API for admins and employees with Java](https://github.com//alfie-ns/staffsync-app)
+- [COMP2000 Software Engineering report: Android App REST API for admins and employees with Java](https://github.com/alfie-ns/staffsync-app)
 
 I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathematics. I am also interested in Business, particularly Marketing, Entrepreneurship, and Product Development, with the goal of innovating in AI products and services to improve quality-of-life in the coming years.
+
+---
+
+**Programming Language Portfolio:**
+
+•   C, C++, C# [X] [X] [X]
+
+•   Python (Django, Flask) [X] [X] [X]
+
+•   Bash Shell scripts [X] [X] [ ]
+
+•   Swift [X] [X] [ ]
+
+•   R [X] [ ] [ ]
+
+•   HTML, CSS, JavaScript [X] [X] [ ]
+
+•   Java [X] [X] [X]
+
+•   LaTex [X] [ ] [ ]
+
+•   Markdown [X] [X] [X]
+
+**Software Development Tools**
+
+•   Git [X] [X] [ ]
+
+•   Cryptool2 [X] [ ] [ ]
+
+•   Docker [X] [ ] [ ]
+
+•   Visual Studio Code [X] [X] [X]
+
+•   Xcode [X] [X] [ ]
+
+•   Postman [X] [X] [ ]
+
+**General Technical Skills**
+
+•   Data Structures & Algorithms [X] [X] [X]
+
+•   Object Oriented Programming [X] [X] [X]
+
+•   Linux [X] [ ] [ ]
+
+•   Command Line Interface (CLI) [X] [X] [ ]
+
+•   RESTful APIs [X] [X] [ ]
+
+•   JSON/XML [X] [X] [ ]
+
+•   UML & Software Design Patterns [X] [X] [ ]
 
 <!--
 <!-- | `<img src="{{ site.url }}{{ site.baseurl }}/assets/images/test-image.png" alt="">` | An image in a table | -->
