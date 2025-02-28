@@ -55,7 +55,7 @@ I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathema
 •   Linux [X] [ ] [ ]
 •   Command Line Interface (CLI) [X] [X] [ ]
 •   RESTful APIs [X] [X] [ ]
-•   JSON/XML [X] [X] [ ]
+•   JSON/XML [X] [ ] [ ]
 •   UML & Software Design Patterns [X] [X] [ ]
 
 <!--
