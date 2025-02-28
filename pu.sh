@@ -9,7 +9,7 @@ print_bold() {
 }
 
 if git add . && git commit -m 'update'; then
-  git push origin main
+  git push -f origin main
   print_bold "PUSHED TO GIT"
 else
   print_bold "FAILED TO PUSH TO GIT"
