@@ -6,7 +6,7 @@ header:
 title: "Mathematics"
 ---
  
-As an enthusiast of mathematics, I explore various captivating mathematical concepts. <a href="https://alfie-ns.github.io/results_image_only.pdf" target="_blank" style="color: #448c88;">My studies</a> at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests.
+<a href="https://alfie-ns.github.io/results_image_only.pdf" target="_blank" style="color: #448c88;">As an enthusiast of mathematics</a>, I explore various captivating mathematical concepts. My studies at the University of Plymouth, where I am pursuing a BSc (Hons) in Computer Science with a focus on Artificial Intelligence, often intertwine with my mathematical interests.
 
 <!--
 I am due to study an AI module in Year 2, which will further deepen my understanding and application of mathematical principles in AI. Make sure to link it here. [ ]
