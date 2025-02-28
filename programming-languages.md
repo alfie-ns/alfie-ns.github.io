@@ -1,7 +1,7 @@
 **Programming Language Portfolio:**
 
 •	C, C++, C# [X] [X] [X]
-•	Python (Django) [X] [X] [X]
+•	Python (Django, Flask) [X] [X] [X]
 •	Bash Shell scripts [X] [X] [ ]
 •	Swift [X] [X] [ ]
 •	R [X] [ ] [ ]
