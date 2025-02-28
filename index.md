@@ -48,8 +48,9 @@ I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathema
 
 
 •   **R** [X] [ ] [ ]
-•   **HTML, CSS, JavaScript** [X] [X] [ ]
 
+
+•   **HTML, CSS, JavaScript** [X] [X] [ ]
 
 •   **Java** [X] [X] [X]
 
