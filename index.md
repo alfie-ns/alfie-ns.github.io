@@ -41,7 +41,7 @@ I’m genuinely passionate about AI, Machine Learning, Data Science, and Mathema
 
 **Software Development Tools**
 
-•   Git [X] [X] [ ]
+•   Git [X] [X] [X]
 •   Cryptool2 [X] [ ] [ ]
 •   Docker [X] [ ] [ ]
 •   Visual Studio Code [X] [X] [X]
