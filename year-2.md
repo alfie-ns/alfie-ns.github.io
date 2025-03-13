@@ -11,7 +11,7 @@ In COMP2000, I had to create an Android app called StaffSync which is essentiall
 
 For more details, refer to the `<a href="https://alfie-ns.github.io/Report_COMP2000_StaffSync.pdf" style="color: #448c88;">`StaffSync Project Report`</a>`.
 
-![2000-grade](image/year-2/2000-grade.png)
+![2000-grade](image/year-2/2000-grade.jpeg)
 
 # COMP2002
 
