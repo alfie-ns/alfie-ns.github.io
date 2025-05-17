@@ -1,14 +1,16 @@
-body.dark-mode {
+html[data-theme='dark'] {
   background-color: #121212;
   color: #ffffff;
 }
 
-/* Style adjustments for other elements */
-a.dark-mode {
+html[data-theme='dark'] a {
   color: #bb86fc;
 }
 
-header.dark-mode, footer.dark-mode {
+html[data-theme='dark'] header,
+html[data-theme='dark'] footer,
+html[data-theme='dark'] .masthead,
+html[data-theme='dark'] .page__footer {
   background-color: #1f1f1f;
 }
 
