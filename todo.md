@@ -4,6 +4,10 @@
 - [X] proof of 81% 1003
 - [X] make projects.md, with the project i made
 - [X] Incorpate 1003 report excel file in
+- [ ] TALK ABOUT STAFFSYNC, maybe a whole different page
+
+> Achieved likely inside the top-3 marks in software engineering assignments, including 78% in an COMP2000 Software Engineering (Android app) and 81.6%(second-highest in this coursework) in the COMP1003 data-structure assingment
+
 - [ ] scripts.md
 - [ ] UPDATE VIDBRIEFS
 - [ ] print all images on respective markdown files
