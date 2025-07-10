@@ -10,19 +10,17 @@ header:
 
 ## Introduction
 
->I'm Alfie, a Computer Science undergraduate at the University of Plymouth, specialising in Artificial Intelligence. Entering my second year, I'm aiming for a first-class honours degree, with a particular interest in mathematical modules.
+>I’m Alfie, a Computer Science (AI) student at The University of Plymouth. My journey has been "incredible" (as noted by Dr Jeffes): in June 2021, at age 18, I suffered a severe brain injury ([subdural haematoma and diffuse axonal injury](https://en.wikipedia.org/wiki/Subdural_hematoma?utm_source=chatgpt.com)) leaving me in a coma for one month and hospitalised for six months...
 
-I’m Alfie, a Computer Science (AI) student at The University of Plymouth. My journey has been "incredible" (as noted by Dr Jeffes): in June 2021, at age 18, I suffered a severe brain injury ([subdural haematoma and diffuse axonal injury](https://en.wikipedia.org/wiki/Subdural_hematoma?utm_source=chatgpt.com)) leaving me in a coma for one month and hospitalised for six months...
+>However, I came out of hospital determined to not let the brain injury defeat me thus I started a Foundation Year in Computer Science at Plymouth University in September 2022. I am going into my third year, aiming for a first-class honours degree, with a particular interest in mathematical modules, Software Engineering, and AI.
 
-However, I came out of hospital determined to not let the brain injury defeat me thus I started a Foundation Year in Computer Science at Plymouth University in September 2022. I am going into my third year, aiming for a first-class honours degree, with a particular interest in mathematical modules, Software Engineering, and AI.
-
-Despite the catastrophic setback, I’ve defied all odds:
+>Despite the catastrophic setback, I’ve defied all odds:
 
 | Year      | Milestone                                       |
 |-----------|-------------------------------------------------|
 | **2021**  | Traumatic brain injury (age 18)                 |
 | **2022**  | Left hospital; immediately started Foundation Year |
-| **2023**  | Year 1 — Achieved a 2:2 but got the second-highest grade out of **166 hand ins** in a mathematical coursework to make an AVL Binary Search Tree (81.6%) |
+| **2023**  | Year 1: Achieved a 2:2 but got the second-highest grade out of **166 hand ins** in a mathematical coursework to make an AVL Binary Search Tree (81.6%) |
 | **2024**  | Completed Year 2 with a strong 2:1 average and 78% in an Android App for the Software Engineering 2 module |
 | **2025**  | Entering Year 3 aiming for a first-class honours |
 
