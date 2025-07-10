@@ -4,6 +4,7 @@ author_profile: true
 header:
   overlay_image: /assets/splash/header.png
 title: "Scripts"
+permalink: /scripts/
 ---
 <!--**the scripts.md page will do the following:**
 

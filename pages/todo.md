@@ -1,3 +1,9 @@
+---
+layout: archive
+title: "Todo List"
+permalink: /todo/
+---
+
 - [X] link to 1003-test.html after revising it
 - [X] link to pdf in docs
 - [X] proof of 71% 1001

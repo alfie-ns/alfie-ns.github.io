@@ -4,6 +4,7 @@ author_profile: true
 header:
   overlay_image: /assets/splash/header.png
 title: "Projects"
+permalink: /projects/
 ---
 
 ## Personal AI Projects
