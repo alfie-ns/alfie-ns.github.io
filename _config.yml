@@ -183,8 +183,7 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
+  - /.theme-files # ignore moved theme files
 keep_files:
   - .git
   - .svn
