@@ -12,7 +12,7 @@ header:
 
 >I’m Alfie, a Computer Science (AI) student at The University of Plymouth. My journey has been "incredible" (as noted by Dr Jeffes): in June 2021, at age 18, I suffered a severe brain injury ([subdural haematoma and diffuse axonal injury](https://en.wikipedia.org/wiki/Subdural_hematoma?utm_source=chatgpt.com)) leaving me in a coma for one month and hospitalised for six months...
 
->However, I came out of hospital determined to not let the brain injury defeat me thus I started a Foundation Year in Computer Science at Plymouth University in September 2022. I am going into my third year, aiming for a first-class honours degree, with a particular interest in mathematical modules, Software Engineering, and AI.
+>However, I came out of hospital determined to not let the brain injury defeat me thus started a Foundation Year in Computer Science at Plymouth University in September 2022. I am going into my third year, aiming for a first-class honours degree, with a particular interest in mathematical modules, Software Engineering, and AI.
 
 >Despite the catastrophic setback, I’ve defied all odds:
 
