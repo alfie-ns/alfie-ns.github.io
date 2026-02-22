@@ -172,19 +172,4 @@ $navicon-height: 0.25rem !default;
 $global-transition: all 0.2s ease-in-out !default;
 $intro-transition: intro 0.3s both !default;
 
-/* ==========================================================================
-   Dark Mode
-   ========================================================================== */
-
-$background-color: #fff !default;
-$text-color: #000 !default;
-
-html[data-theme="dark"] {
-  $background-color: #000 !default;
-  $text-color: #fff !default;
-
-  body {
-    background-color: $background-color;
-    color: $text-color;
-  }
-}
+/* Dark mode styles are handled in assets/css/main.scss */

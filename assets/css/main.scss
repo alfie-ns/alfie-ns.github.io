@@ -10,5 +10,464 @@ $primary-color: #323641 !default;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+/* ==========================================================================
+   Custom Styles for alfie-ns.github.io
+   ========================================================================== */
 
+/* ---- Accent Color ---- */
+$accent: #448c88;
 
+/* ---- Links ---- */
+a.accent-link {
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+  &:hover {
+    border-bottom-color: $accent;
+  }
+}
+
+/* ---- Milestone Timeline ---- */
+.timeline {
+  position: relative;
+  padding: 1em 0;
+  margin: 1.5em 0;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 1.25em;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, $accent, lighten($accent, 25%));
+    border-radius: 2px;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0.5em 0 1.5em 3.5em;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0.65em;
+    top: 0.7em;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 3px solid $accent;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.timeline-year {
+  font-weight: 700;
+  font-size: 0.9em;
+  color: $accent;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.15em;
+}
+
+.timeline-desc {
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ---- Skill Bars ---- */
+.skills-section {
+  margin: 1.5em 0;
+}
+
+.skills-section h3 {
+  font-size: 1.05em;
+  margin-bottom: 0.75em;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.35em;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6em;
+  gap: 0.75em;
+}
+
+.skill-name {
+  min-width: 180px;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #333;
+}
+
+.skill-bar {
+  flex: 1;
+  height: 8px;
+  background: #e8e8e8;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 200px;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.skill-fill.high {
+  background: linear-gradient(90deg, $accent, lighten($accent, 12%));
+  width: 100%;
+}
+
+.skill-fill.medium {
+  background: linear-gradient(90deg, #5da9a5, lighten(#5da9a5, 15%));
+  width: 66%;
+}
+
+.skill-fill.low {
+  background: linear-gradient(90deg, #8dc0bd, lighten(#8dc0bd, 10%));
+  width: 33%;
+}
+
+/* ---- Project Cards ---- */
+.project-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+.project-card h3 a {
+  color: $accent;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.project-card .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin: 0.75em 0;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: lighten($accent, 45%);
+  color: darken($accent, 10%);
+  font-size: 0.78em;
+  font-weight: 600;
+  padding: 0.2em 0.65em;
+  border-radius: 12px;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Goals Section ---- */
+.goals-list {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.goals-list li {
+  position: relative;
+  padding: 0.5em 0 0.5em 2em;
+  font-size: 0.95em;
+  line-height: 1.5;
+  &::before {
+    content: '\f05d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    color: $accent;
+    font-size: 1.1em;
+  }
+}
+
+/* ---- Coursework Links ---- */
+.coursework-list {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.coursework-list li {
+  padding: 0.6em 0;
+  border-bottom: 1px solid #f0f0f0;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.coursework-list li a {
+  color: $accent;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  &:hover {
+    color: darken($accent, 15%);
+  }
+}
+
+/* ---- Section Dividers ---- */
+.section-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ddd, transparent);
+  margin: 2em 0;
+}
+
+/* ---- Blockquote Styling ---- */
+.page__content blockquote {
+  border-left: 4px solid $accent;
+  background: #f9fafb;
+  padding: 1em 1.25em;
+  margin: 1em 0;
+  border-radius: 0 6px 6px 0;
+  font-style: normal;
+  p {
+    margin: 0;
+    line-height: 1.65;
+  }
+}
+
+/* ---- Table Improvements ---- */
+.page__content table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  margin: 1.5em 0;
+  width: 100%;
+}
+
+.page__content table th {
+  background: $accent;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75em 1em;
+  text-align: left;
+}
+
+.page__content table td {
+  padding: 0.65em 1em;
+  border-bottom: 1px solid #eee;
+}
+
+.page__content table tr:last-child td {
+  border-bottom: none;
+}
+
+.page__content table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* ---- Dark Mode Toggle ---- */
+.dark-toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  margin-left: 0.5em;
+  font-size: 1.1em;
+  color: #555;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  &:hover {
+    color: $accent;
+  }
+}
+
+/* ---- Dark Mode Styles ---- */
+html[data-theme="dark"] {
+  body,
+  .page__content,
+  .initial-content,
+  .masthead,
+  .page__footer {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+  }
+
+  .masthead {
+    border-bottom-color: #2a2a4a;
+  }
+
+  .greedy-nav {
+    background: #1a1a2e;
+  }
+
+  .greedy-nav a {
+    color: #e0e0e0;
+    &:hover {
+      color: lighten($accent, 15%);
+    }
+  }
+
+  .page__content {
+    a {
+      color: lighten($accent, 15%);
+    }
+
+    blockquote {
+      background: #222244;
+      border-left-color: lighten($accent, 10%);
+      color: #d0d0d0;
+    }
+
+    table th {
+      background: darken($accent, 5%);
+    }
+
+    table td {
+      border-bottom-color: #333;
+    }
+
+    table tr:nth-child(even) {
+      background: #222244;
+    }
+  }
+
+  .project-card {
+    background: #222244;
+    border-color: #333366;
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .tech-tag {
+    background: rgba(68, 140, 136, 0.2);
+    color: lighten($accent, 20%);
+  }
+
+  .skill-bar {
+    background: #333;
+  }
+
+  .timeline::before {
+    background: linear-gradient(180deg, lighten($accent, 10%), lighten($accent, 30%));
+  }
+
+  .timeline-item::before {
+    background: #1a1a2e;
+    border-color: lighten($accent, 15%);
+  }
+
+  .timeline-desc {
+    color: #ccc;
+  }
+
+  .skill-name {
+    color: #ddd;
+  }
+
+  .author__bio,
+  .author__name {
+    color: #e0e0e0;
+  }
+
+  .page__footer {
+    color: #fff !important;
+  }
+
+  .sidebar,
+  .author__content {
+    color: #ddd;
+  }
+
+  .goals-list li::before {
+    color: lighten($accent, 15%);
+  }
+
+  code {
+    background: #2a2a4a;
+    color: #e0e0e0;
+  }
+
+  pre {
+    background: #1e1e3a !important;
+  }
+
+  .section-divider {
+    background: linear-gradient(90deg, transparent, #444, transparent);
+  }
+
+  .skills-section h3 {
+    color: #ddd;
+    border-bottom-color: #444;
+  }
+
+  .project-card h3 {
+    color: #eee;
+  }
+}
+
+/* ---- Intro Section ---- */
+.intro-section {
+  font-size: 1.02em;
+  line-height: 1.7;
+}
+
+/* ---- Smooth transitions for dark mode ---- */
+body,
+.masthead,
+.greedy-nav,
+.page__footer,
+.project-card,
+.page__content blockquote,
+a {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ---- Code block improvements ---- */
+.page__content pre {
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+/* ---- About page trait list ---- */
+.trait-list {
+  list-style: none;
+  padding: 0;
+}
+
+.trait-list li {
+  position: relative;
+  padding: 0.5em 0 0.5em 1.75em;
+  line-height: 1.6;
+  &::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    color: $accent;
+    font-size: 0.85em;
+  }
+}

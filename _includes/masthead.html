@@ -11,13 +11,9 @@
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
         
-       <!--<div class="theme-switch-wrapper">
-          <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-          </label>
-        </div>
-        -->
+        <button class="dark-toggle" id="dark-mode-toggle" type="button" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
         
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}

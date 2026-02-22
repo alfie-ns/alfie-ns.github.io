@@ -1,15 +1,2 @@
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-/* Style adjustments for other elements */
-a.dark-mode {
-  color: #bb86fc;
-}
-
-header.dark-mode, footer.dark-mode {
-  background-color: #1f1f1f;
-}
-
-/* Add additional styles as needed */
+/* Dark mode styles are now handled in main.scss via data-theme="dark" selectors */
+/* This file is kept for backwards compatibility */
