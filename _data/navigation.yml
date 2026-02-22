@@ -1,23 +1,12 @@
 # main links
 main:
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "Year 2"
-    url: /year-2/
   - title: "About"
-    url: /about
-  - title: "Mathematics"
-    url: /maths/
+    url: /about/
   - title: "Projects"
     url: /projects/
+  - title: "Academic"
+    url: /year-2/
+  - title: "Mathematics"
+    url: /maths/
   - title: "Scripts"
     url: /scripts/
-  
-
-  # TODO : [ ] [ ]
-  # - title: "Business"
-    #url: /business
-  # - title: "Data Science"
-  #  url: /data-science
-
-

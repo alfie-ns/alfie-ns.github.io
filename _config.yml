@@ -20,12 +20,12 @@ title                    : "Alfie Nurse"
 title_separator          : "-"
 icon                     : /assets/images/icon.png
 apple-touch-icon         : /assets/images/iphone-icon.png
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "CS (AI) Student | Plymouth University"
 name                     : "Alfie Nurse"
-description              : "Computer Science Under Graduate"
+description              : "Computer Science Undergraduate"
 url                      : "https://alfie-ns.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "alfie-ns/alfie-ns.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Home" # overrides the website title displayed in the masthead, use " " for no title
@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Alfie Nurse"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Computer Science Under Graduate"
+  bio              : "Computer Science (AI) Undergraduate"
   location         : "Plymouth, UK"
   email            :
   links:
