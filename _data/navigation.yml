@@ -4,8 +4,10 @@ main:
     url: /about/
   - title: "Projects"
     url: /projects/
-  - title: "Academic"
+  - title: "Year 2"
     url: /year-2/
+  - title: "Year 3"
+    url: /year-3/
   - title: "Mathematics"
     url: /maths/
   - title: "Scripts"
