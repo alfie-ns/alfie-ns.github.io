@@ -36,7 +36,7 @@ header:
   </div>
   <div class="timeline-item">
     <div class="timeline-year">2025</div>
-    <div class="timeline-desc">Entering Year 3 aiming for a first-class honours</div>
+    <div class="timeline-desc">Year 3: 78% in Machine Learning (COMP3003) — implemented K-Means clustering and neural networks from first principles in MATLAB, aiming for a first-class honours</div>
   </div>
 </div>
 
@@ -61,6 +61,7 @@ header:
   <li><a href="https://github.com/alfie-ns/1001-cw" target="_blank">COMP1001 Computer Systems: Exploring AVX intrinsics and image processing with C++</a></li>
   <li><a href="https://github.com/alfie-ns/1003-cw" target="_blank">COMP1003 Algorithms & Data Structures: Implementing an AVL Binary Search Tree in C#</a></li>
   <li><a href="https://github.com/alfie-ns/staffsync-app" target="_blank">COMP2000 Software Engineering 2: Android App REST API with Java and XML</a></li>
+  <li><a href="/year-3/">COMP3003 Machine Learning: Bayes classifiers, K-Means/GMM clustering from first principles in MATLAB, Q-learning on MDPs, and neural network vs Naive Bayes classification (78%)</a></li>
 </ul>
 
 I'm genuinely passionate about AI, Machine Learning, Data Science, and Mathematics. I am also interested in Business, particularly Marketing, Entrepreneurship, and Product Development, with the goal of innovating in AI products and services to improve quality-of-life in the coming years.
@@ -97,6 +98,10 @@ I'm genuinely passionate about AI, Machine Learning, Data Science, and Mathemati
 <div class="skill-item">
   <span class="skill-name">Swift</span>
   <div class="skill-bar"><div class="skill-fill low"></div></div>
+</div>
+<div class="skill-item">
+  <span class="skill-name">MATLAB</span>
+  <div class="skill-bar"><div class="skill-fill medium"></div></div>
 </div>
 <div class="skill-item">
   <span class="skill-name">R</span>
