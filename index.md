@@ -104,7 +104,7 @@ I'm genuinely passionate about AI, Machine Learning, Data Science, and Mathemati
 </div>
 <div class="skill-item">
   <span class="skill-name">LaTeX</span>
-  <div class="skill-bar"><div class="skill-fill low"></div></div>
+  <div class="skill-bar"><div class="skill-fill high"></div></div>
 </div>
 </div>
 
@@ -129,10 +129,6 @@ I'm genuinely passionate about AI, Machine Learning, Data Science, and Mathemati
 </div>
 <div class="skill-item">
   <span class="skill-name">Docker</span>
-  <div class="skill-bar"><div class="skill-fill low"></div></div>
-</div>
-<div class="skill-item">
-  <span class="skill-name">Cryptool2</span>
   <div class="skill-bar"><div class="skill-fill low"></div></div>
 </div>
 </div>
