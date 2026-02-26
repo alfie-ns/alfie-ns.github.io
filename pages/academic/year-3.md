@@ -7,7 +7,7 @@ title: "Year 3"
 permalink: /year-3/
 ---
 
-## COMP3003: Machine Learning, 78%
+## COMP3003: Machine Learning: 78%
 
 COMP3003 was my machine learning module in final year, covering both theoretical foundations and practical implementation. The module had two assessed components: **Set Exercises** (Bayes classifiers and clustering) and a **Report** (reinforcement learning and classification). All implementations were built in MATLAB from first principles, and all write-ups were produced in LaTeX.
 
