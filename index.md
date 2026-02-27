@@ -20,7 +20,7 @@ header:
 <div class="timeline">
   <div class="timeline-item">
     <div class="timeline-year">2021</div>
-    <div class="timeline-desc">Traumatic brain injury (age 18)</div>
+    <div class="timeline-desc">1-month coma, severe brain injury (age 18)</div>
   </div>
   <div class="timeline-item">
     <div class="timeline-year">2022</div>
