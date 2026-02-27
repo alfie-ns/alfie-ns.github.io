@@ -36,7 +36,7 @@ header:
   </div>
   <div class="timeline-item">
     <div class="timeline-year">2025</div>
-    <div class="timeline-desc">Year 3: 78% in Machine Learning (COMP3003) — implemented K-Means clustering and neural networks from first principles in MATLAB, aiming for a first-class honours</div>
+    <div class="timeline-desc">Year 3: 78% in Machine Learning (COMP3003), 80% on the main report — implemented K-Means clustering and neural networks from first principles in MATLAB, aiming for a first-class honours</div>
   </div>
 </div>
 
